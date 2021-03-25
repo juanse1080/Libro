@@ -1,0 +1,93 @@
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+%                                Capítulo 2
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+%\chapter{Proposed approach \label{chap:proposed}}
+
+%Descripción de las secuencias MRI, que son? como se obtienen, etc.
+
+\chapter{MARCO DE REFERENCIA}\label{sec:cov}
+
+\section{ESTADO DEL ARTE}
+En la actualidad existen multiples plataformas que permiten desplegar modelos de aprendizaje de máquina como microservicio con diferentes lenguaje o tecnología. Acontinuacion vamos describirimos algunas de estas.
+
+\subsection{Amazon Elastic Container Service} Amazon Elastic Container Service que es un servicio de administración de contenedores altamente escalable\myfootcite{amazon}. Amazon ECS le permite lanzar y detener aplicaciones basadas en contenedores de Docker con llamadas a API sencillas.
+
+\subsection{Microsoft Azure}
+La plataforma Azure\myfootcite{azure} te permiten desplegar contenedores y configurar llamadas API, tambien está compuesta por multiples productos y servicios que provee nuevas soluciones que y resolver dificultades comunes.
+
+\subsection{Algoritmia}
+A diferencia de los servicios nombredos anteriormente, existen otros servicios enfocados en el despliegue específicamente de modelos ML(Machine Learning) como Algoritmia \myfootcite{algorithmia} el cual provee un servicio de despliegue, administración y monitoreo de tráfico de modelos ML servidos desde un API.
+
+\section{MARCO CONCEPTUAL}
+
+\subsection{Requerimientos funcionales y no funcionales}
+Los requerimientos funcionales describen los servicios que prestará un sistema, es decir, de cómo reacciona el sistema a entradas particulares, y los requerimientos no funcionales se refiere a las propiedades que emergen de este, como por ejemplo la fiabilidad, su rendimiento, capacidad de almacenamiento, entre otros. (Metodología Gestión de Requerimientos, 2018)
+
+\subsection{Diagramas de clases y casos de uso}
+UML maneja diversos diagramas que permiten representar las diversas perspectivas de un sistema, a las cuales se les conoce como modelo que es una representación o abstracción simplificada de la realidad. Los Casos de Uso son diagramas que permiten representar que hará el sistema, pero no como funciona (Cevallos, 2015). \\
+El diagrama de clases describe tanto los tipos de objetos de un sistema como los distintos tipos de relaciones que pueden existir entre ellos, siendo los diagramas de clases una herramienta potente para el modelado conceptual de un sistema software, la cual suele recoger los conceptos clave del modelo de objetos que relaciona al método orientado a objetos que la incorpora en el Lenguaje Unificado de Modelado UML (Peñalvo García y Aguilar Pardo, 2015).
+
+\subsection{Framework}
+En lenguaje informático, un Framework es una plataforma de software universal y reutilizable para desarrollar aplicaciones, productos y soluciones, lo cual facilita y agiliza la codificación, en otras palabras, es una pieza de software que proporciona a los desarrolladores web una base de código y formas consistentes y estandarizadas para crear aplicaciones web (Ortiz, 2018).
+
+\section{MARCO TECNOLÓGICO}
+Para el desarrollo del prototipo software se implementaron herramientas tecnológicas que ayudaron en el diseño e implementación de este proyecto. \\
+A continuación se explicaran cada uno de los recursos tecnológicos usados en el desarrollo del proyecto.
+
+\subsection{Visual Studio Code}
+Visual Studio Code es un editor de código fuente de consumo leve pero con gran potencia, este se ejecuta en su escritorio y es multiplataforma. Viene con soporte incorporado para JavaScript, TypeScript y Node.js y tiene un ecosistema rico en extensiones para otros lenguajes (como C ++, C #, Java, Python, PHP, Go). \myfootcite{vscode}
+
+\subsection{MySQL Workbench}
+MySQL Workbench es una herramienta visual unificada para arquitectos, desarrolladores y administradores de bases de datos.\\
+Proporciona modelado de datos, desarrollo SQL y herramientas de administración integrales para la configuración del servidor, administración de usuarios, respaldo y mucho más. MySQL Workbench está disponible en Windows, Linux y Mac OS X.
+\myfootcite{mysql_workbench}
+
+\subsection{GitHub}
+GitHub es una plataforma de colaboración construida sobre el controlador de versiones git. GitHub es el lugar para solicitudes de extracción, comentarios, revisiones, pruebas integradas y mucho más. La mayoría de los desarrolladores trabajan localmente para desarrollar y usan GitHub para la colaboración. Eso va desde el uso de GitHub para alojar el repositorio remoto compartido, hasta trabajar con colegas y capitalizar características como ramas protegidas, revisión de código, acciones de GitHub y más. \myfootcite{github}
+
+\subsection{Trello}
+Trello es una herramienta de colaboración que organiza tus proyectos en tableros. Es decir, que gracias a Trello, podrás saber cuáles son las tareas que se llevan a cabo, quién trabaja en una tarea determinada y cuál es el estado de un proceso. \myfootcite{trello}
+
+\subsection{Django}
+Django es un framework Web de Python de alto nivel que fomenta el desarrollo rápido y el diseño limpio y pragmático. Creado por desarrolladores experimentados, se encarga de gran parte de la molestia del desarrollo web, por lo que puede concentrarse en escribir su aplicación sin necesidad de reinventar la rueda. 
+\myfootcite{django}
+
+\subsection{Django}
+Django es un framework Web de Python de alto nivel que fomenta el desarrollo rápido y el diseño limpio y pragmático. Creado por desarrolladores experimentados, se encarga de gran parte de la molestia del desarrollo web, por lo que puede concentrarse en escribir su aplicación sin necesidad de reinventar la rueda. 
+\myfootcite{django}
+
+\subsection{Django REST Framework}
+Django REST framework es un conjunto de herramientas potentes y flexibles capaces de crear APIs web \myfootcite{django_rest} usando el modelo de arquitectura REST.
+
+\subsection{JSON Web Token}
+Es un estándar abierto ( RFC 7519 ) que define una forma compacta y autónoma de transmitir información de forma segura entre las partes como un objeto JSON. Esta información puede ser verificada y confiable porque está firmada digitalmente. Los JWT se pueden firmar usando un secreto (con el algoritmo HMAC ) o un par de claves pública / privada usando RSA o ECDSA. \myfootcite{jwt}
+
+\subsection{WebSockets}
+Es una tecnología avanzada que hace posible abrir una sesión de comunicación interactiva entre el navegador del usuario y un servidor. Con esta  API, puede enviar mensajes a un servidor y  recibir  respuestas controladas por eventos sin tener que consultar al servidor para una respuesta. \myfootcite{websockets}
+
+\subsection{Redis}
+Redis es un almacén de estructura de datos en memoria de código abierto (con licencia BSD), que se utiliza como base de datos, caché y agente de mensajes. Redis proporciona estructuras de datos como cadenas, hashes, listas, conjuntos, conjuntos ordenados con consultas de rango, mapas de bits, hiperloglogs, índices geoespaciales y flujos. \myfootcite{redis}
+
+\subsection{Django Channels}
+Channels es un proyecto que toma Django y extiende sus capacidades más allá de HTTP, para manejar WebSockets, protocolos de chat, protocolos de IoT y más. Está construido sobre una especificación de Python llamada ASGI. \myfootcite{channels}
+
+\subsection{gRPC}
+gRPC es un sistema de llamada a procedimiento remoto para la conexión de microservicios basado en Protocol Buffers y HTTP/2. gRPC es considerado uno de los del mercado gracias a su rendimiento en cuanto CPU, ancho de banda, mejora en latencia en la propagación de datos de forma masiva. Proporciona características como autenticación, transmisión bidireccional y control de flujo, enlaces bloqueantes o no bloqueantes, cancelaciones y tiempos de espera, es independencia del lenguaje(multiplataforma) y multiplataforma. Cuenta con soporte con Auth - Objective-C, Async - C++, Basic, Android, C#, C++, Dart, Go, Java, Node, Objective-C, PHP, Python, Ruby, Web \myfootcite{grpc}.
+
+\subsection{Docker}
+Docker es un proyecto enfocado a la automatización del despliegue de aplicaciones virtualizadas dentro de contenedores de software aislados \myfootcite{docker, docker.com}. La tecnología de Docker es única gracias a su arquitectura, se centra en los requisitos de los desarrolladores y operadores de sistemas para separar las dependencias de las aplicaciones de la infraestructura \myfootcite{docker.com, dockerBook}.\\
+
+\subsection{React JS}
+Docker es un proyecto enfocado a la automatización del despliegue de aplicaciones virtualizadas dentro de contenedores de software aislados \myfootcite{docker, docker.com}. La tecnología de Docker es única gracias a su arquitectura, se centra en los requisitos de los desarrolladores y operadores de sistemas para separar las dependencias de las aplicaciones de la infraestructura \myfootcite{docker.com, dockerBook}.\\
+
+
+
+
+
+
+

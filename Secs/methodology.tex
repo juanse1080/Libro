@@ -1,0 +1,110 @@
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+%                                Capítulo 3
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+
+
+
+\chapter{METODOLOGÍA}
+
+Para el desarrollo de este proyecto se usara la metodología RAD - Rapid Application Development (figura \ref{img:metodology}) modificada el cual es dirigido a combinar cuestiones de desarrollo estándar como la gestión de proyectos, la garantía de calidad y las pruebas de software con las exigencias del desarrollo rápido. Este es conocida especialmente por su enfoque en la creación rápida de prototipos de productos software \myfootcite{rad}. Esta metodologia se caracteriza por usarse en equipos de desarrollo pequeños. Dichos equipos están formados por desarrolladores y usuarios que están facultados para tomar decisiones de diseño. Esto significa que todos los miembros del equipo RAD deben estar capacitados tanto socialmente como en términos del negocio.\myfootcite{rad}
+
+RAD se divide en cuatro fases, planificación de requerimientos, Ciclos del prototipado, pruebas e implementación. Nos enfocaremos en el cumplimiento de las tres primeras fases mediante un esquema determinado de tareas. \\
+
+
+
+\begin{figure}[h]
+\begin{center}
+    \includegraphics[width=1\textwidth]{img/metodologia.png}
+    \caption{Modificación del metodologia de desarrollo rápido de aplicaciones (RAD)}
+    \label{img:metodology}
+\end{center}
+\end{figure}
+
+\section{PLANIFICACIÓN DE REQUERIMIENTOS}
+Se formalizaron reuniones con el director, codirector y integrantes del grupo de investigacion Bivl2ab para analizar las diferencias y similitudes en el despliegue, ejecución y visualización de múltiples algoritmos de aprendizaje de maquina y visión por computador.
+
+\subsection{Justificación del objetivo del proyecto}
+Se explone al director, codirector y miembros del grupo Bivl2ab el alcance del proyecto con base en los objetivos descritos en el plan de desarrollo. Se da comienzo a la documentación de requerimientos basados en la indicaciones de los implicados del proyecto y la realimentación dada en las primeras reuniones. 
+
+\subsection{Generación de requerimientos}
+Con base en los requisitos descritos por los implicados se procede a la generación de requerimientos técnicos así como la determinación de roles específicos para la plataforma. 
+
+\subsection{Validación de requerimientos}
+Se presenta a los implicados una propuesta de los requerimientos técnicos basados en las anteriores reuniones.
+
+\subsection{Resultados}
+Se genero un documento con los requerimientos funcionales y no funcionales validados por los implicados del proyecto. Esto se enrriquesio mediantes la creación de los casos de uso, diagrama de clases, y diagrama de actores. 
+
+\section{CICLOS DEL PROTOTIPADO}
+En esta etapa se crearon prototipos basado en los análisis anteriores, el objetivo de este fue mostrar al usuario lo antes posible un prototipo funcional para obtener una retroalimentación y poder mejorar este. Este proceso se repitio hasta que los implicados estén totalmente complacidos con el prototipo.
+
+\subsection{Definición de la arquitectura}
+Se definio una arquitectura capaz de cumplir con los requerimientos respetando los atributos de calidad (desempeño, seguridad, modificabilidad). \myfootcite{arquitectura_software}
+
+\subsection{Selección de tecnologias}
+Se seleccionaron las tecnologias capaces de llevar a cabo la arquitectura definida. Tambien se instalaron en un sistema de computo capaz de alojar estas.
+
+\subsection{Generación de las tareas}
+Aqui se definieron las tareas necesarias para el desarrollo completo de la plataforma, esto se hizo mediante la pagina web Trello.
+
+\subsection{Creacion del diagrama UML entidad-relación de la base de datos}
+Esta subfase logro la estructuración de la base de datos a través del diagrama entidad-relación, Esta estructura contribuyo a la organizacion de las tareas seccionando estan mediante modulos.
+
+\subsection{Control de versiones}
+Se creo un repositorio en la plataforma GitHub para llevar el control de versiones del desarrollo del aplicativo.
+
+\subsection{Construción del prototipo}
+Se construyo el prototipo funcional soportando los requerimientos establecidos durante la primera fase de le metodolgia propuesta.
+
+\subsection{Presentación del prototipo}
+En esta subfase se presento el prototipo funcional y el registro de la retroalimentación aportada por los implicados y futuros usuarios del proyecto.
+
+\subsection{Modificaciones en la arquitectura}
+Se modifico la arquitectura ya definida para maximizar el reendimiento del prototipo ya presentado y mejorar la usabilidad para el usuario desarrollador.  
+
+\subsection{Modificaciones en el prototipo}
+Debido a que la arquitectura se modifico se deben hacer modificaciones en el codigo fuente del prototipo.
+
+\subsection{Resultados}
+Se genero un prototipo de software que cumple con los requerimientos establecidos durante la fase de analisis.
+
+\section{PRUEBAS}
+Con el fin de ratificar las funcionalidades y cada uno de los requerimientos identificados en la fase de planificación, se realiza un plan de pruebas en el cual se validaran por los futuros usuarios de la plataforma desarrollada.
+
+\subsection{Pruebas funcionales}
+Se centran en comprobar que la plataforma desarrollada esta acorde a los requerimientos descriptos previamente en la fase de planificación, basándose en la ejecución, revisión y retroalimentación de cada uno de los componentes diseñados para la herramienta software. \myfootcite{pruebas_funcionales}
+
+\subsubsection{Pruebas unitarias}
+Es una forma de corroborrar el correcto funcionamiento de un fragmento de código. Esto para garantizar que cada unidad funcione correctamente y eficientemente por separado. Además de verificar que el código hace lo que tiene que hacer.
+
+\subsubsection{Pruebas de integración}
+Las pruebas de integración permiten que los datos y comandos operativos fluyan entre módulos. En otras palabras hacer que todo actúe como partes de un solo sistema en lugar de aplicativos aislados. \myfootcite{pruebas_integracion}
+
+\subsubsection{Pruebas de regresión}
+Los desarrolladores modifiquan y mejoran las funcionalidades de su desarrollo. Por ello existe una gran posibilidad de que puedan causar ‘efectos’ inesperados en su comportamiento. Estas pruebas de regresión se realizan para asegurar que los cambios o adiciones no hayan alterado ni eliminado las funcionalidades existentes. \myfootcite{pruebas_integracion}
+
+\subsection{Pruebas no funcionales}
+las prueba no funcional son pruebas cuyo objetivo es la validación de un requisito que especifica criterios que son usados para juzgar el funcionamiento de un sistema como por ejemplo la disponibilidad, usabilidad, mantenibilidad, rendimiento, entre otros. En este caso se tuvo en cuenta los requerimientos no funcionales para la ejecución de estas pruebas
+
+\subsection{Resultados}
+
+\begin{enumerate}
+    \item Realizar el test positivo a los requerimientos funcionales del prototipo.
+    \item Realizar el test negativo a los requerimientos funcionales del prototipo.
+    \item Corrección de errores.
+    \item Probar el prototipo de software implementando tres algoritmos de aprendizaje de máquina y visión por computador de los integrantes del grupo BivL2ab.
+\end{enumerate}
+
+\section{ELABORACIÓN DEL REPORTE FINAL}
+
+Cuando se pruebe el funcionamiento del prototipo se realizara la documentación para los usuario y el informe final de la propuesta. Se espera material documentativo para los usuarios del prototipo e informe final de la propuesta de grado.
+
+\begin{enumerate}
+    \item Realizar material documentativo para los diferentes tipos de usuarios del prototipo.
+    \item Elaboración del informe final de la propuesta.
+\end{enumerate}

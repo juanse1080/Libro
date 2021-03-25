@@ -1,0 +1,41 @@
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+%                            Resultados
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+%                                Capítulo 4
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+\chapter{CONCLUSIONES Y PERSPECTIVAS}
+\begin{itemize} 
+    \item Es poco viable realizar un planteamiento definitivo de la solución desde el comienzo, porque aunque el cliente interesado en el desarrollo de la solución tiene una idea de lo que necesita y desea, las reglas del negocio llevan a exigir cosas que llegan a chocar o complementar dicha idea inicial, y la transferencia tecnológica junto con la naturaleza de las herramientas y paradigma de desarrollo generan cambios en esta estructura que viene inmersa en la visión del cliente, por lo que el prototipado evolutivo y desarrollo incremental, con su realimentación, feedback y flexibilidad en términos adaptativos, permiten un proceso más adecuado de construcción de la solución de ingeniería.
+    \item El paradigma de programación en Flutter con los Widgets, al ver los Widgets como un tipo de Objeto, tiene muchas similitudes con el paradigma de POO (Programación Orientada a Objetos) que se puede encontrar en Java, por lo cuál muchas consideraciones al utilizar este paradigma son útiles y aplicables en el desarrollo con este framework.
+    \item La programación asíncrona y la reactiva son inherentemente dirigidas por eventos, por lo cual su integración con el paradigma de programación de Flutter y la programación síncrona en algunos casos llega a ser contraintuitiva y los errores al programar pueden ser difíciles de notar. Se recomienda llevar una muy buena trazabilidad del flujo de la aplicación y prestar especial atención y cuidado al usar métodos o peticiones asíncronas en Flutter.
+    \item El manejo de estados suele ser una de las principales ventajas de utilizar Flutter como framework, al poder redibujar únicamente las partes de cada vista que hayan tenido cambios, en vez de redibujar por completo la vista, pero debido a que hay gran cantidad de aproximaciones a esta tarea puede ser complejo definir un manejo adecuado al contexto. Al plantear la solución software particular, es muy importante buscar la forma más adecuada de manejar el estado de cada parte de la aplicación para procurar el buen rendimiento y la escalabilidad, aprovechando las ventajas que ofrece el framework.
+    \item Flutter está diseñado para tener una fácil y adecuada integración con los productos de Google, tales como Google Cloud Functions, Google Cloud Storage y Firebase. Por este motivo, cuando un requerimiento surge para la solución que se desarrolla con Flutter, es muy recomendable explorar la posibilidad de adquirir e integrar un servicio de Google que cuente con la funcionalidad para satisfacer dicho requerimiento.
+    \item Firebase Realtime Database no permite realizar consultas que filtren por más de un valor o atributo. Para realizar consultas que tengan que filtrar por varios valores, no hay una forma de hacerlo directamente en la consulta, y el manejo más adecuado en términos de rendimiento al cual se llegó en este proyecto es a filtrar sobre el valor que implique mayor carga en términos computacionales en la consulta, y luego filtrar por el resto de valores en la aplicación. Esto supone una carga extra del lado cliente del programa, por lo cual disminuye el rendimiento enormemente. Se recomienda aplicar este enfoque en la medida de la posible al utilizar Realtime Database, o utilizar desde un principio Cloud Firestore que no cuenta con esta limitación, permitiendo realizar consultas compuestas, dejando la computación de los filtros al servidor.
+    \item Se valida los beneficios del uso de la metodología de desarrollo Ágil Scrum para la validación de requerimientos e iteraciones evolutivas por parte del cliente. El método SCRUM, en particular, facilitó la eficiencia y efectividad del desarrollo de la interfaz como de la validación de requerimientos.
+    
+\end{itemize}
+
+\chapter{RECOMENDACIONES Y TRABAJO FUTURO}
+\begin{itemize}
+    \item Debido a la incapacidad de la base de datos Firebase Realtime Database de realizar consultas con más de un filtro, se recomienda para futuros desarrollos realizar una migración evolutiva a Cloud Firestore de Firebase, con el fin de realizar una migración prudente, manteniendo la persistencia de los datos que garantiza el uso del SDK de Firebase. Sin embargo, para futuros desarrollos es posible utilizar otro tipo de base de datos según convenga, si así se considera pertinente.
+    \item Realizar una investigación rigurosa acerca de las posibilidades de pagos dentro de la aplicación. A la fecha no se cuenta con SDK estables para la implementación de pagos en línea. Se recomienda revisar mercadopago sdk\myfootcite{mercadopagosdk} en la tienda de paquetes de Flutter, puesto que es un paquete funcional pero no desarrollado por MercadoPagos para la realización de pagos dentro de la aplicación.
+    \item Implementar una versión beta para verificar el funcionamiento del código fuente en su versión web. Para ello, se recomienda revisar cada uno de los paquetes instalados en la ruta principal del proyecto en el archivo pubspec.yaml, verificando la disponibilidad de estos para una versión web. De no ser posible, investigar paquetes alternos o la viabilidad para una implementación que sustente la necesidad perdida para el uso web.
+    \item Adecuar la facturación desarrollada para que cumpla con los lineamientos de la DIAN y pueda ser legalizada como facturación electrónica, o bien explorar la posibilidad de contratación con un proveedor autorizado de facturación electrónica.
+    \item Inclusión de bonos y promociones relámpago, con la construcción de una metodología y módulo de fidelización adecuado para la promoción del negocio, con promociones focalizadas por clientes que hayan hecho cierta cantidad de pedidos o hayan hecho pedidos por cierto valor.
+    \item Exploración de la viabilidad técnica e implementación de un chat dentro de la aplicación para la comunicación en cualquier momento de la transacción por parte del cliente.
+    \item Eliminación o desactivación de clientes automáticamente después de cierto lapso inactivo.
+    \item Envío de promociones y campañas de mailingship de forma masiva.
+    \item Distribución y manejo de disponibilidad ligado a puntos de venta.
+\end{itemize}
+
+

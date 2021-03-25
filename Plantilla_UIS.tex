@@ -1,0 +1,118 @@
+% ------------------------------------------------------------------------
+%
+% -------------------      Plantilla_UIS.tex       -----------------------
+%
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% Versión de plantilla para realización de informes de trabajo de grado
+% construida para uso de la Universidad Industrial de Santander.
+%
+% Reservados todos los derechos
+%
+% Bucaramanga, Colombia
+%
+% Septiembre 17 de 2018
+%
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+%
+% ------------------------------------------------------------------------
+\documentclass[letter,oneside,12pt]{report}          % Encabezados 12pt
+% ------------------------------------------------------------------------
+\usepackage{uislatexstyleICONTEC}                   % Libreria UIS ICONTEC
+% ------------------------------------------------------------------------
+% Ingrese en este punto las librerías específicas de usuario
+% ------------------------------------------------------------------------
+\usepackage{epsfig}
+\usepackage{longtable}
+\usepackage{biblatex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subfigure}
+\usepackage{graphicx} 
+\usepackage[font=small,labelfont=bf,justification=justified]{caption}
+\interfootnotelinepenalty=10000
+\usepackage{booktabs}
+%\usepackage[table,xcdraw]{xcolor}
+\usepackage{stackengine}
+\newcommand\xrowht[2][0]{\addstackgap[.5\dimexpr#2\relax]{\vphantom{#1}}}
+\usepackage{blindtext}
+
+% ------------------------------------------------------------------------
+% Archivo de bibliografía
+% ------------------------------------------------------------------------
+\addbibresource{xbib.bib}
+% ------------------------------------------------------------------------
+\begin{document}                                     % Inicio de documento
+% ------------------------------------------------------------------------
+% Definición silábica de palabras
+% ------------------------------------------------------------------------
+\hyphenation{}
+% ------------------------------------------------------------------------
+% Elementos previos al contenido del trabajo
+% ------------------------------------------------------------------------
+% Portada, contraportada, formato de nota y autorización
+\input{Secs/cover_page}   
+
+%Agradecimientos
+\input{Secs/gratefulness} 
+% ------------------------------------------------------------------------
+% Tabla de contenido
+\tableofcontents                                      
+% ------------------------------------------------------------------------
+\listoffigures                         % Lista de figuras, tablas y anexos
+%\listoftables
+%\listofanexo
+% ------------------------------------------------------------------------
+% Contenido del Informe
+% ------------------------------------------------------------------------
+% Resumen
+\include{Secs/summary}
+
+% Abstract     
+\include{Secs/abstract}                                              
+% ------------------------------------------------------------------------
+% Capítulos
+% ------------------------------------------------------------------------
+% Introducción
+\input{Secs/introduction} 
+
+% Planteamiento y Justificación del Problema
+\input{Secs/approach} 
+
+% Objetivos
+\input{Secs/objectives} 
+
+% Marco teórico y Estado del Arte
+\input{Secs/theoretical_mark} 
+
+% Metodología
+\input{Secs/methodology} 
+
+% Desarrollo del proyecto
+\input{Secs/develop} 
+
+% Conclusiones
+\input{Secs/conclusions} 
+
+% 
+\input{Secs/future_work} 
+
+
+% ------------------------------------------------------------------------
+% Bibliografía
+% ------------------------------------------------------------------------
+\begingroup
+\printbibliography[heading=bibintoc,title={BIBLIOGRAFÍA},omitnumbers=true]
+\endgroup
+% ------------------------------------------------------------------------
+% Anexos
+% ------------------------------------------------------------------------
+\input{Secs/attachments/anexoA} % Artículos
+\input{Secs/attachments/anexoB} % Sequences for Recording protocol
+\input{Secs/attachments/anexoC} % Consentimiento Informado
+% ------------------------------------------------------------------------
+\end{document}                                          % Fin de documento
+% ------------------------------------------------------------------------ 
