@@ -1,4 +1,4 @@
-            
+
 
 \chapter{DESARROLLO DEL PROYECTO}
 
@@ -15,7 +15,7 @@ Con base en los requerimientos de la solución planteada se identificaron cierto
 \begin{enumerate}
     \item Usuario: El usuario es el consumidor del público general que participa como visitante casual en la pagina web, puede visualizar los proyectos y utilizar los algoritmos con las respectivas entradas y salidas.
     \item Desarrollador: El desarrollador es el tipo de usuario que enriquecen la herramienta DeepTools con contenido relevante y actualizado en torno al área de la visión por computador, sus últimos desarrollos, algoritmos y acercamientos relacionados con esta temática.
-    
+
 \end{enumerate}
 
 \subsection{Arquitectura}
@@ -29,9 +29,9 @@ Esta estará a cargo de varias funciones del ciclo de vida del aplicativo:
 
 \begin{itemize}
     \item Responder al cliente: Se encarga de recibir las peticiones de la capa de presentación, procesa la información y envía las respuestas por el canal correcto.
-    
+
     \item Peticiones a los contenedores: Esta capa tendrá la responsabilidad de crear peticiones a los contenedores y enviar las respectivas respuestas a la capa de presentación.
-    
+
     \item Peticiones de información: Se comunicara con la capa de datos para obtener información de interés para la plataforma.
 \end{itemize}
 
@@ -57,24 +57,28 @@ En esta etapa se realizó el levantamiento de requerimientos funcionales para co
 % \endfirsthead
 % \endhead
 \\ \hline
-\multirow{2}{*}{\textbf{Id}} & \multirow{2}{*}{\textbf{Nombre}} & \multicolumn{5}{c}{\textbf{Usuarios}} \\ \cline{3-7} 
+\multirow{2}{*}{\textbf{Id}} & \multirow{2}{*}{\textbf{Nombre}} & \multicolumn{5}{c}{\textbf{Usuarios}} \\ \cline{3-7}
  &  & \textbf{D} & \textbf{U} \\ \hline \hline
 \endfirsthead
 \endhead
 RF01 & Permitir el despliegue de un algoritmo que cumpla con indicaciones establecidas en la documentación & \checkmark &- \\ \hline
 RF02 & Permitir la visualización de los detalles de los algoritmos desplegados & \checkmark & \checkmark  \\ \hline
-RF02 & Permitir la visualizar de los diferentes algoritmos activos & \checkmark & \checkmark  \\ \hline
-RF03 & Permitir la ejecución de los algoritmos desplegados a usuarios suscritos a un algoritmo & \checkmark & \checkmark \\ \hline
-RF04 & Proveer durante el despliegue de un algoritmo una barra de progreso para el seguimiento en tiempo real del proceso
-& \checkmark &- \\ \hline
-RF02 & Permitir la suscribirsión a un algoritmo activo & \checkmark & \checkmark  \\ \hline
-RF03 &  & \checkmark &- \\ \hline
-RF03 &  & \checkmark &- \\ \hline
-RF03 &  & \checkmark &- \\ \hline
-RF03 &  & \checkmark &- \\ \hline
+RF03 & Permitir eliminar algoritmos desplegados & \checkmark & -  \\ \hline
+RF04 & Permitir la visualizar de los diferentes algoritmos activos & \checkmark & \checkmark  \\ \hline
+RF05 & Permitir la ejecución de los algoritmos desplegados a usuarios suscritos a un algoritmo & \checkmark & \checkmark \\ \hline
+RF06 & Proveer durante el despliegue de un algoritmo el seguimiento en tiempo real del proceso & \checkmark &- \\ \hline
+RF07 & Notificar errores durante la ejecución de algoritmos & \checkmark & \checkmark \\ \hline
+RF08 & Permitir la suscribirsión a un algoritmo activo & \checkmark & \checkmark  \\ \hline
+RF09 & Permitir consultar y eliminar ejecuciones de su autoría & \checkmark & \checkmark \\ \hline
+RF10 & Permitir la descarga de elementos multimedia de ejecuciones de su autoría & \checkmark & \checkmark \\ \hline
+RF11 & Permitir ejecutar pruebas sencillas de un algoritmo para probar su funcionamiento & \checkmark & \checkmark \\ \hline
+RF12 & Notificar cuando haya finalizado las ejecuciones de un algoritmo activo  & \checkmark & \checkmark \\ \hline
+RF13 & Permitir el registro a usuarios no registrados  & \checkmark & \checkmark \\ \hline
+RF14 & Proveer durante la ejecución de un algoritmo el seguimiento en tiempo real del proceso  & \checkmark & \checkmark \\ \hline
+RF15 & Notificar cuando haya finalizado las ejecuciones de un algoritmo activo  & \checkmark & \checkmark \\ \hline
+RF16 & Permitir la administración de usuario suscritos a un algoritmo  & \checkmark & - \\ \hline
+
 \end{longtable}
-
-
 
 
 
@@ -98,7 +102,7 @@ La arquitectura del árbol de Widgets junto con su InheritedProvider se puede ap
 \begin{figure}[h!]
     \centering
     \caption{Diagrama de Arquitectura - Estructura Árbol de Widgets}
-    \includegraphics[width=0.5\textwidth]{Figs/Diagrama de Arquitectura - Estructura Árbol de Widgets}\\
+    \includegraphics[width=0.5\textwidth]{Figs/Diagrama de Arquitectura - Estructura Árbol de Widgets.png}\\
     \label{fig:architecturediagramwidgettree}
 \end{figure}
 
@@ -119,7 +123,7 @@ De esta forma, se tienen relacionadas las cuentas de usuario de Firebase authent
 Para la aplicación de administrador se realizaron las peticiones http de tipo post, put, patch, delete y get utilizando el plugin http de dart\myfootcite{dart2020http}, autenticadas con el token obtenido de Firebase Authentication previamente mencionado.
 
 \subsection{Selección y captura de imágenes}
-Para la selección de imágenes de la galería o su captura desde la cámara se utilizó el plugin image\textunderscore picker\myfootcite{flutter2020imagepicker}, con el cuál permite tener estos archivos en una variable de tipo File temporal, que luego se guarda en el almacenamiento persistente cuando se termina la transacción de introducir información por medio de formularios con el seleccionador de imágenes. 
+Para la selección de imágenes de la galería o su captura desde la cámara se utilizó el plugin image\textunderscore picker\myfootcite{flutter2020imagepicker}, con el cuál permite tener estos archivos en una variable de tipo File temporal, que luego se guarda en el almacenamiento persistente cuando se termina la transacción de introducir información por medio de formularios con el seleccionador de imágenes.
 
 \subsection{Almacenamiento de imágenes}
 El almacenamiento de las imágenes se estableció en Firebase Cloud Storage\myfootcite{firebase2020storage}, utilizando el plugin firebase\textunderscore storage\myfootcite{firebase2020storageplugin} para cargar y descargar los archivos generados por los usuarios del almacenamiento persistente en la nube, en carpetas cuyos nombres se encuentran definidas por los objetos de la realidad que representan, tales como Marcas, Productos, ProductosColores, PuntosVenta y Usuarios. El nombre de los archivos viene del código interno que se asigna a estos objetos en la base de datos, junto con la extensión de archivo correspondiente, tales como jpg y png.
@@ -135,7 +139,7 @@ Debido a que hay operaciones que contienen un gran volumen de datos, tales como 
 Se definieron plantillas para importación y para exportación, con los nombres de las columnas, denominados headers o cabeceras, en los cuáles el usuario puede introducir los datos desde su editor de texto de preferencia, y luego desde una vista para importación puede importarlos a la base de datos tan sólo eligiendo el archivo del almacenamiento de su dispositivo interno de su dispositivo, o elegir qué tabla desea exportar para que sea guardada en el almacenamiento interno de su dispositivo, en una ruta definida específicamente para este propósito.
 La importación de datos comprende las marcas, colecciones, tallas, colores, líneas, grupos, productos y existencias, mientras que la exportación de los datos comprende además de las anteriormente mencionadas, los pedidos.
 La exportación de pedidos tiene una particularidad, y es que permite al usuario definir un intervalo, seleccionando una fecha inicial y una fecha final, además de si quiere filtrar los pedidos exportados de acuerdo al estado y/o al tipo de entrega.
-En la parte técnica se utilizó el plugin csv\myfootcite{christian2019csv}, que permite la conversión de un String de texto en formato csv a estructuras de tipo List de dart (utilizado en el proceso de importación), y al contrario, la conversión de listas de dart a un String en formato csv (utilizado en el proceso de exportación). 
+En la parte técnica se utilizó el plugin csv\myfootcite{christian2019csv}, que permite la conversión de un String de texto en formato csv a estructuras de tipo List de dart (utilizado en el proceso de importación), y al contrario, la conversión de listas de dart a un String en formato csv (utilizado en el proceso de exportación).
 Para cada una de las entidades que se importan y exportan, se definió la lógica de importación y exportación, incluyendo las validaciones de formato de los datos ingresados, existencia de las precondiciones para el cargue de datos (tales como para productos existencia de las línea a la cuál pertenece el producto), y las inserciones y actualizaciones necesarias para la integridad de la base de datos.
 
 \subsection{Gestión y estado del pedido}
@@ -292,7 +296,7 @@ Siendo así, se definieron los siguientes nodos raíz, que serían conceptualmen
     \begin{enumerate}
         \item HistoricosMesClientes: Contiene los siguientes atributos:
         \begin{itemize}
-            \item HistoricosMesClientesCompran: De la totalidad de clientes, cantidad que ha realizado por lo menos un pedido en este lapso. 
+            \item HistoricosMesClientesCompran: De la totalidad de clientes, cantidad que ha realizado por lo menos un pedido en este lapso.
             \item HistoricosMesClientesMonth: Mes correspondiente al lapso, puede tomar valores desde cero hasta doce.
             \item HistoricosMesClientesNuevos: Cantidad de clientes que se han registrado en este lapso.
             \item HistoricosMesClientesTotal: Total acumulado de clientes que se han registrado hasta este lapso.
@@ -325,7 +329,7 @@ Siendo así, se definieron los siguientes nodos raíz, que serían conceptualmen
     \end{itemize}
     Además de esta base genérica, dependiendo de la tabla que afecta y el tipo de log guarda información específica de la operación:
     \begin{itemize}
-        \item Tabla-Productos: 
+        \item Tabla-Productos:
         \begin{enumerate}
             \item Log-Crear: Guarda toda la información del nuevo producto creado. Tiene los siguientes atributos específicos:
             \begin{itemize}
@@ -473,7 +477,7 @@ Siendo así, se definieron los siguientes nodos raíz, que serían conceptualmen
         \item ProductoDescuentoPorcentaje: Porcentaje de descuento actual del producto.
         \item ProductoExisten: Cantidad de unidades existentes del producto, independiente de la talla y color, poseídas por la empresa para la venta.
         \item ProductoGrupo: Código del grupo al que pertenece el producto. Segunda parte del código de inventario del producto.
-        \item ProductoImageLocation: 
+        \item ProductoImageLocation:
         \item ProductoLinea: Código de tres caracteres de la línea a la que pertenece el producto. Primera parte del código de inventario del producto.
         \item ProductoMarca: Código de la marca a la que pertenece el producto.
         \item ProductoPrecioActual: Precio de venta actual del producto después de aplicar el descuento.
@@ -515,7 +519,7 @@ Siendo así, se definieron los siguientes nodos raíz, que serían conceptualmen
 %\section{APP MOI ADMIN}
 %La aplicación de MOI Admin tiene un menú principal con la siguiente estructura:
 %\begin{itemize}
-%    \item 
+%    \item
 %\end{itemize}
 
 \section{IMPLEMENTACIÓN DE LA METODOLOGÍA}
@@ -593,13 +597,13 @@ FR32                                & Visualización de usuarios suscritos a alg
         8 & Manejo de sesiones y autenticación\\\hline
         9 & Menú, corrección de errores y ajustes finales\\\hline
     \end{longtable}
-    
+
 \subsection{Desarrollo de Sprints}
     \subsubsection{Primer Sprint: Verificación de requerimientos y diseño de la Aplicación.}
         Para la realización de este este primer Sprint se realizó un análisis de requerimientos profundo, resolución de dudas con la administración de la compañía con base en el análisis y primeros pasos para la creación de una óptima estructura de datos.\\
-        
+
         El primer Sprint se resume a continuación en las siguientes historias de usuario:\\
-        
+
         \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
             \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
             1 & Muestra de casos de éxito por parte de Juan Camilo Moreno y visualización de Mockup hecho por él & Juan Camilo Moreno\\\hline
@@ -610,16 +614,16 @@ FR32                                & Visualización de usuarios suscritos a alg
             6 & Definición de las vistas principales asociadas al catálogo de productos app Moi Admin & Diego Medina - Luis Páez\\\hline
             7 & Diseño de diagrama UML Entidad relación. & Diego Medina - Luis Páez\\\hline
         \end{longtable}
-        
+
         Al finalizar el primer Sprint pudimos obtener una consolidación de requerimientos válidos con base en las expectativas del cliente y las capacidades del sistema, así como también se definió la estructura de datos base mínima del sistema y los roles de usuario presentes en la solución software.
-        
-        
-        
+
+
+
     \subsubsection{Segundo Sprint: Catálogo de productos}
         Primeros pasos de aplicación móvil de cliente mostrando catálogo de productos en la interfaz inicial. Durante este Sprint se hizo uso de la estructura de datos de productos y su implementación para ser mostrados. Esta etapa permitió identificar la necesidad de crear una nueva Entidad en la estructura de datos llamada Existencia para poder realizar un manejo adecuado de los productos y su inventario. Primeros pasos de aplicación móvil de administración, definiendo las vistas para el soporte y cargue inicial del catálogo de productos.\\
-        
+
         El segundo Sprint se resume a continuación en las siguientes historias de usuario:\\
-        
+
         \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
             \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
             1 & Configuración de la base de datos utilizando el SDK de Firebase para Flutter junto con las normas de seguridad & Luis Ernesto Páez Ortiz\\\hline
@@ -637,72 +641,72 @@ FR32                                & Visualización de usuarios suscritos a alg
             13 & Construcción de vistas para CRUD de Existencias app Moi Admin & Diego Medina\\\hline
             14 & Validación con el administrador de la tienda & Luis Ernesto Páez - Juan Camilo Moreno\\\hline
         \end{longtable}
-        
+
         Al finalizar el segundo Sprint fue posible obtener una vista funcional para mostrar productos recientes, ver los detalles del producto así como los colores, tallas y unidades disponibles en la aplicación Moi Cliente. Se pueden apreciar las vistas correspondientes de este Sprint en las figuras \ref{homeView}, \ref{drawerMenu}, \ref{detailProductView}.
         Como resultado de este sprint en la aplicación Moi Admin se obtuvieron las vistas funcionales para realizar el CRUD hacia todas las entidades necesarias para la creación de los productos y sus correspondientes existencias. Para cada entidad se siguió el mismo patrón de diseño, se desarrolló una página para visualización como la que se puede apreciar en la figura \ref{fig:crudmostrarproductospage} con una barra de búsqueda y filtros como se puede apreciar en la figura \ref{fig:crudmostrarproductosfiltrospage} y otra para creación y edición, que se puede apreciar en la figura \ref{fig:crudcreareditarproductospage}. La vista construida para la visualización de existencias se puede apreciar en la figura \ref{fig:crudmostrarexistenciaspage} y la desarrollada para la modificación de existencias (añadir o sustraer) se puede observar en la figura \ref{fig:crudmodificarexistenciaspage}.
         \newpage
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista inicial de la aplicación móvil del cliente}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Home.png}\\
             \label{homeView}
         \end{figure}\newpage
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Menú lateral principal aplicación móvil del cliente}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Drawer.png}\\
             \label{drawerMenu}
         \end{figure}\newpage
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista para conocer los detalles de un producto con base en los requerimientos de la empresa}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/DetalleProducto.png}\\
             \label{detailProductView}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista para visualizar Productos}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Mostrar Productos Page.png}\\
             \label{fig:crudmostrarproductospage}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista para buscar y filtrar productos}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Mostrar Productos Barra Búsqueda Page.png}\\
             \label{fig:crudmostrarproductosfiltrospage}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista para crear o editar Productos}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Crear o Editar Productos Page.png}\\
             \label{fig:crudcreareditarproductospage}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista para visualizar existencias}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Mostrar Existencias Page.png}\\
             \label{fig:crudmostrarexistenciaspage}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista para modificar Existencias}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Modificar Existencias Page.png}\\
             \label{fig:crudmodificarexistenciaspage}
         \end{figure}
-        
+
     \subsubsection{Tercer Sprint: Canastilla de Compras}
         Durante este Sprint se creó una vista para la canastilla de compras así como la validación de diferentes escenarios a los que un cliente se puede someter a la hora de utilizar una canastilla de compras, además de complementar la definición inicial de la base de datos y preparar las funcionalidades extra necesarias para la generación del pedido desde la app Moi Admin en el siguiente sprint.
-        
+
         El tercer Sprint se resume a continuación en las siguientes historias de usuario:\\
-        
+
         \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
             \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
             1 & Creación de la vista de canastilla de compras & Luis Ernesto Páez\\\hline
@@ -714,30 +718,30 @@ FR32                                & Visualización de usuarios suscritos a alg
             7 & Construcción de vista para visualización y edición de Numeración app Moi Admin & Diego Medina\\\hline
             8 & Ajustes de la interfaz y validación con el administrador de la tienda & Luis Ernesto Páez - Juan Camilo Moreno\\\hline
         \end{longtable}
-        
+
         Al finalizar el tercer Sprint el cliente cuenta la capacidad de agregar los productos que desea a su canastilla de compras, verificando que los productos existan. En la app Moi Admin se obtienen las vistas para realizar el CRUD de ciudades y puntos de venta que serán asociados a los, con una estructura muy similar a las de CRUD obtenidas en el sprint 2. También se obtiene la vista para visualización y edición de Numeración que se puede apreciar en la figura \ref{fig:numeracionpage}
-        
-        
+
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de la canastilla de compras}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Carrito.png}\\
             \label{carritoView}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de la numeración}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Numeración Page.png}\\
             \label{fig:numeracionpage}
         \end{figure}
-        
+
     \subsubsection{Cuarto Sprint: Generación de pedidos a partir de la canastilla de compras}
         Durante este Sprint se creó una vista para la ejecutar la generación de pedidos a partir de los datos recibidos en una canastilla de compras en la aplicación del cliente. Se tuvieron en cuenta diferentes escenarios tales como recoger el producto en un punto de venta o recibirlo a domicilio. Por otro lado, se realiza la transición desde la vista de la canastilla de compras a la vista de generación de pedido.
         En la app Moi Admin se implementan los descuentos para productos y las vistas para manejar el CRUD de los usuarios.
-        
+
         El cuarto Sprint se resume a continuación en las siguientes historias de usuario:\\
-        
+
         \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
             \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
             1 & Creación de la vista para la captación de datos de envío definidos en la estructura de datos & Luis Ernesto Páez\\\hline
@@ -749,35 +753,35 @@ FR32                                & Visualización de usuarios suscritos a alg
             6 & Construcción de vistas para CRUD de usuarios & Diego Medina \\\hline
             7 & Validación de interfaz. & Juan Camilo Moreno \\\hline
         \end{longtable}
-        
+
         Al finalizar el cuarto Sprint el cliente cuenta con la posibilidad de realizar un pedido con todos los items que contiene su canastilla de compras, como se puede evidenciar en las figuras \ref{pedidoDomicilioView} y \ref{pedidoTiendaView} En la app Moi Admin se obtienen la vista funcional para que el usuario pueda aplicar descuentos a los productos por Línea, Grupo, Colección o Marca, como se puede apreciar en la figura \ref{fig:admindescuentospage}. Y las vistas para el manejo del CRUD de usuarios con una estructura similar a la evidenciada en las vistas de CRUD de los anteriores dos sprints.
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista para la creación de pedidos a domicilio en la aplicación del cliente}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/PedidoDomicilio.png}\\
             \label{pedidoDomicilioView}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista para la creación de pedidos que serán recogidos en la tienda en la aplicación del cliente}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/PedidoTienda.png}\\
             \label{pedidoTiendaView}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de descuentos por tabla}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Descuentos Page.png}
             \label{fig:admindescuentospage}
         \end{figure}
-        
+
     \subsubsection{Quinto Sprint: Gestión de pedidos y facturación de pedidos pendientes}
-        Durante este Sprint se procedió a implementar las vistas y la lógica para ver y entregar pedidos con facturación incluida por parte del usuario con rol de repartidor, y para ver y cancelar pedidos por parte del usuario con rol de administrador con la posibilidad de reimprimir factura. 
-        
+        Durante este Sprint se procedió a implementar las vistas y la lógica para ver y entregar pedidos con facturación incluida por parte del usuario con rol de repartidor, y para ver y cancelar pedidos por parte del usuario con rol de administrador con la posibilidad de reimprimir factura.
+
         El quinto Sprint se resume a continuación en las siguientes historias de usuario:\\
-        
+
         \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
             \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
             1 & Creación de la vista de pedidos pendientes para el usuario de rol repartidor & Diego Medina\\\hline
@@ -789,56 +793,56 @@ FR32                                & Visualización de usuarios suscritos a alg
             7 & Vista para la gestión de usuarios. & Diego Medina\\\hline
             8 & Validación de progreso con el administrador. & Diego Medina - Luis Páez - Juan Camilo Moreno\\\hline
         \end{longtable}
-        
+
         Al finalizar el quinto Sprint el administrador puede visualizar y gestionar los pedidos filtrando y cancelando en caso de ser necesario, y reimprimir facturas, como se puede apreciar en las figuras \ref{fig:adminmostrarpedidospage}, \ref{fig:adminmostrarpedidosfiltrospage} y \ref{fig:adminmostrarpedidositemspage}. También se obtienen las vistas para que el repartidor pueda visualizar y gestionar los pedidos pendientes, filtrando y entregando eligiendo la cantidad entregada, pasando el pedido a un estado ya sea completo o incompleto, y generando la factura correspondiente, como se puede apreciar en las figuras \ref{fig:repartidormostrarpedidospage}, \ref{fig:repartidormostrarpedidositemspage} y \ref{fig:repartidorverfacturapage}.
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de Pedidos para administrador}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Mostrar Pedidos Page.png}
             \label{fig:adminmostrarpedidospage}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de filtros para Pedidos para administrador}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Mostrar Pedidos Filtros Page.png}
             \label{fig:adminmostrarpedidosfiltrospage}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de detalles del pedido para administrador}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Mostrar Detalles del Pedido Page.png}
             \label{fig:adminmostrarpedidositemspage}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de pedidos pendientes para repartidor}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Repartidor/Repartidor Mostrar Pedidos Page.png}
             \label{fig:repartidormostrarpedidospage}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de detalles del pedido para repartidor}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Repartidor/Repartidor Mostrar Detalles del Pedido Page.png}
             \label{fig:repartidormostrarpedidositemspage}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de visualización factura para repartidor}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Repartidor/Repartidor Ver Factura Page.png}
             \label{fig:repartidorverfacturapage}
         \end{figure}
-        
+
     \subsubsection{Sexto Sprint: Históricos, logs y preguntas frecuentes}
         Durante este Sprint se procedió a implementar la parte de análisis y seguridad del sistema, con los históricos y los logs de operaciones definidas como sensibles en el sistema.
-        
+
         El sexto Sprint se resume a continuación en las siguientes historias de usuario:\\
-        
+
         \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
             \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
             1 & Implementación de la lógica para guardar históricos de pedidos e históricos de clientes & Diego Medina - Luis Páez\\\hline
@@ -850,21 +854,21 @@ FR32                                & Visualización de usuarios suscritos a alg
             7 & Creación de vista para visualización de preguntas frecuentes en la aplicación del cliente & Luis Páez\\\hline
             8 & Validación de progreso con el administrador. & Diego Medina - Luis Páez - Juan Camilo Moreno\\\hline
         \end{longtable}
-        
+
         Al finalizar el sexto Sprint el administrador puede visualizar los históricos en el apartado de consultar estadísticas, por mes, año y desde el inicio del uso de la solución, como se puede apreciar en la figura \ref{fig:adminhistoricosmespedidospage}. Asimismo, se obtuvo el diseño de una estructura de log para las operaciones definidas como sensibles y luego de crear estos logs se registran en la base de datos. También se obtuvieron las vistas de CRUD de preguntas frecuentes en la app Moi Admin con una estructura muy similar a utilizada en sprints anteriores, y se obtuvo la vista para visualización de preguntas frecuentes en la aplicación de cliente.
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de consulta de estadísticas, históricos de pedidos}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Historicos Mes Pedidos Page.png}
             \label{fig:adminhistoricosmespedidospage}
         \end{figure}
-        
+
     \subsubsection{Séptimo Sprint: Importación y exportación masiva}
         Durante este Sprint se procedió a implementar la funcionalidad de importación para el cargue masivo de datos para las entidades pertinentes en la base de datos, además de la exportación del contenido de estas "tablas" de entidades.
-        
+
         El séptimo Sprint se resume a continuación en las siguientes historias de usuario:\\
-        
+
         \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
             \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
             1 & Definición de entidades a importar, cabeceras y formatos de importación & Diego Medina\\\hline
@@ -875,61 +879,61 @@ FR32                                & Visualización de usuarios suscritos a alg
             6 & Creación de vista para exportación & Diego Medina\\\hline
             7 & Validación de progreso con el administrador. & Diego Medina - Luis Páez - Juan Camilo Moreno\\\hline
         \end{longtable}
-        
+
         Al finalizar el séptimo Sprint el administrador puede realizar por medio de archivos con formato csv el cargue masivo de Marcas, Colecciones, Tallas, Colores, Líneas, Grupos, Productos y Existencias con las cabeceras y estructura definidas como se puede apreciar en las vistas ilustradas en las figuras \ref{fig:adminimportarpage} y \ref{fig:adminimportartablaspage}, así como también puede realizar la exportación de tablas de las entidades mencionadas anteriormente además de Pedidos, con la particularidad de que para esta última permite el filtrado de dichos pedidos a exportar por estado, por tipo de entrega y/o a un lapso de tiempo, como se puede apreciar en la figura \ref{fig:adminexportarpedidospage}. Un ejemplo de archivo exportado de pedidos se puede observar en la figura \ref{fig:csvexportarpedidos}, así como un ejemplo de archivo para importación de existencias en la figura \ref{fig:csvimportarexistencias}.
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de importación}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Importar Page.png}
             \label{fig:adminimportarpage}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de importación tablas}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Importar Tablas Page.png}
             \label{fig:adminimportartablaspage}
         \end{figure}
-        
+
         %\begin{figure}[h!]
         %    \centering
         %    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Exp%ortar Page.png}
         %    \caption{Vista de exportación}
         %    \label{fig:adminexportarpage}
         %\end{figure}
-        
+
         % \begin{figure}[h!]
         %    \centering
         %    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Exp%ortar Tablas Page.png}
         %    \caption{Vista de exportación tablas}
         %    \label{fig:adminexportartablaspage}
         %\end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de exportación de pedidos}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Exportar Pedidos Page.png}
             \label{fig:adminexportarpedidospage}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Archivo ejemplo de exportación de pedidos}
             \includegraphics[width=1.0\textwidth]{Figs/Exportación Pedidos.png}
             \label{fig:csvexportarpedidos}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Archivo ejemplo de importación de existencias}
             \includegraphics[width=1.0\textwidth]{Figs/Importación Existencias.png}
             \label{fig:csvimportarexistencias}
         \end{figure}
-        
+
 
     \subsubsection{Octavo Sprint: Manejo de sesiones y autenticación}.
-    
+
     En este sprint se construyeron las vistas y funcionalidades ligadas al manejo de sesiones y autenticación dentro de la aplicación.
 
         \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
@@ -942,25 +946,25 @@ FR32                                & Visualización de usuarios suscritos a alg
             6 & Implementar la funcionalidad de envío de email para restaurar clave & Diego Medina\\\hline
             7 & Validación de progreso con el administrador & Diego Medina - Luis Páez - Juan Camilo Moreno\\\hline
         \end{longtable}
-        
+
         Al finalizar el octavo Sprint se obtienen las vistas funcionales para el inicio y manejo de sesiones de usuario, junto con su relación a las llamadas a la base de datos. Para la app Moi Admin se puede apreciar la vista del inicio de sesión en la figura \ref{fig:admininiciosesion}, la vista de restauración de clave en la figura \ref{fig:adminrestablecercontraseña}.
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de inicio de sesión Moi Admin}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Inicio de Sesión.png}
             \label{fig:admininiciosesion}
         \end{figure}
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Vista de restablecer contraseña Moi Admin}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Restablecer Contraseña.png}
             \label{fig:adminrestablecercontraseña}
         \end{figure}
-        
-        
-        
+
+
+
     \subsubsection{Noveno Sprint: Menú, corrección de errores y ajustes finales}.
 
         \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
@@ -972,25 +976,25 @@ FR32                                & Visualización de usuarios suscritos a alg
             5 & Adición de módulo para ubicación de las tiendas en la aplicación del cliente. & Luis Ernesto Páez\\\hline
             6 & Verificación del funcionamiento de las dos aplicaciones en conjunto. & Diego Medina - Luis Páez - Juan Camilo Moreno\\\hline
         \end{longtable}
-        
+
         Al finalizar el noveno Sprint se validó el correcto funcionamiento de la solución integrada a través de la creación de pedidos, verificando diferentes escenarios tales como entrega completa de pedido, cancelación, entrega parcial, así como el uso de la canastilla de compras en tiempos asíncronos para la correcta gestión del inventario en el sistema. Se válida un prototipo de software útil.
-        
+
         Para la app Moi Admin para el rol de administrador se puede apreciar el menú drawer en la figura \ref{fig:admindrawermenu}, el menú seleccionando la opción de Personalización del sistema en la figura \ref{fig:admindrawermenupersonalizacion} y el menú seleccionando las opciones clasificación y codificación en la figura \ref{fig:admindrawermenupersonalizacionclasificacioncodificacion}.
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Menú drawer de la app Moi Admin rol administrador}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Drawer Menu.png}\\
             \label{fig:admindrawermenu}
         \end{figure}\newpage
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Menú drawer seleccionando personalización del sistema de la app Moi Admin rol administrador}
             \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Drawer Menu Personalización del sistema.png}\\
             \label{fig:admindrawermenupersonalizacion}
         \end{figure}\newpage
-        
+
         \begin{figure}[h!]
             \centering
             \caption{Menú drawer seleccionando codificación y clasificación de la app Moi Admin rol administrador}
