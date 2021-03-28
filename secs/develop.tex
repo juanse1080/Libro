@@ -3,7 +3,38 @@
 \chapter{DESARROLLO DEL PROYECTO}
 
 \section{DESCRIPCIÓN GENERAL}
-De acuerdo con el resultado de la fase de análisis se planeo una arquitectura de software para una plataforma web que implementada con , se proyecto una arquitectura para la solución de software llamada DeepTools
+De acuerdo con el resultado de la fase de análisis se planeo una arquitectura de software para una plataforma web que desarrollada con Django 3.0, MySQL 8.0 como motor de base de datos, React JS 16.8, Docker 20.10, gRPC 1.35 y Redis 5.0 para permitir la comunicación en tiempo real con el client.
+
+
+
+\subsection{Léxico}
+Durante el desarrollo se definió léxico propio del aplicativo que ayudara mucho para el entendimiento de su funcionamiento, por eso abrimos esta espacio para explicar cada uno de estos conceptos.
+
+\subsubsection{Algoritmo}
+Un algoritmo son segmentos de código listo capaz de solucionar una problemática y esta listo para ser usados por otros usuarios de la plataforma. Estos algoritmos cuentan con diferentes estados:
+
+\begin{itemize}
+    \item textbf{Desplegado: } Es un algoritmo que esta registrado en la plataforma y cumple con los requerimientos para ser usado, pero este aun no ha sido probado. En otras palabras esta en su fase de pruebas. En este estado el algoritmo solo pueden ser usados por su creador.
+    \item textbf{Activo: } Es un algoritmo que anteriormente fue desplegado y fue probado en diferentes escenarios por su creador, esto para garantizar la integración de este con la plataforma. En este estado el algoritmo puede ser usado por su creador y por los usuarios suscritos.
+    \item textbf{Desactivado: } Es un algoritmo que anteriormente estuvo activo pero por distintas razones fallo para un escenario especifico. Este caso ocurre cuando un algoritmo falla para cualquier usuario, el aplicativo se encarga de notificar a su creador de la falla y automáticamente cambia de estado, desactivándose hasta que su creador solucione la falla.
+\end{itemize}
+
+Según la RAE un algoritmo es un conjunto ordenado y finito de operaciones que permite hallar la solución de un problema. En nuestro caso especifico lo acotamos a algoritmos implementados con ramas de IA.
+
+
+Cada una de las tecnologías mencionadas anteriormente son la solución a los requerimientos funcionales y no funcionales definidos en la fase de análisis, debido a esta tomaremos una pequeña sección explicar su razón de uso.
+
+\subsection{Razones y problemáticas}
+
+\subsubsection{Interfaz dinamica}
+Durante la fase de análisis se concluyo que el usuario
+
+
+
+
+
+
+, se proyecto una arquitectura para la solución de software llamada DeepTools
 %INFORMACION DETALLADA DE LO USADO consta de esta mierda, basada en esta otra mierda, en tecnologia de mierda v 10.0 cuyo principal objetivo es la visualizacion de algoritmos para la difusion cientifica
 
 El desarrollo de la aplicación web cuenta con dos tipos diferentes de usuario, el usuario común que cumple el rol mayormente de visitante, y un usuario tipo desarrollador, cumpliendo el papel de aquel usuario que crea contenido, lo actualiza y verifica su correcto funcionamiento y visualización en la plataforma, el usuario tipo desarrollador no tiene la necesidad de ser un experto en desarrollo web, pues una de las metas de este proyecto es facilitar el trabajo de cualquier tipo usuario en este proceso especifico para la difusión científica.
@@ -52,10 +83,10 @@ En esta etapa se realizó el levantamiento de requerimientos funcionales para co
 \caption{Requerimientos funcionales}
 \label{tab:requerimientosFuncionales}
 \\ \hline
-\multirow{2}{*}{\textbf{Id}} 
-& \multirow{2}{*}{\textbf{Nombre}} 
+\multirow{2}{*}{\textbf{Id}}
+& \multirow{2}{*}{\textbf{Nombre}}
 & \multicolumn{2}{c}{\textbf{Usuarios}} \\ \cline{3-4}
-&  & \textbf{D} & \textbf{U} \\ \hline 
+&  & \textbf{D} & \textbf{U} \\ \hline
 \endfirsthead
 \endhead
 \multicolumn{4}{r}{{D: Desarrollador U: Usuario}} \\
