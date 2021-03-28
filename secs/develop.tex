@@ -3,11 +3,10 @@
 \chapter{DESARROLLO DEL PROYECTO}
 
 \section{DESCRIPCIÓN GENERAL}
-
-De acuerdo con los requerimientos obtenidos en el planteamiento de la web, se proyecto una arquitectura para la solucion de software llamada DeepTools
+De acuerdo con los requerimientos obtenidos en el planteamiento de la web, se proyecto una arquitectura para la solución de software llamada DeepTools
 %INFORMACION DETALLADA DE LO USADO consta de esta mierda, basada en esta otra mierda, en tecnologia de mierda v 10.0 cuyo principal objetivo es la visualizacion de algoritmos para la difusion cientifica
 
-El desarrollo de la aplicación web cuenta con dos tipos diferentes de usuario, el usuario comun que cumple el rol mayormente de visitante, y un usuario tipo desarrollador, cumpliendo el papel de aquel usuario que crea contenido, lo actualiza y verifica su correcto funcionamiento y visualización en la plataforma, el usuario tipo desarrollador no tiene la necesidad de ser un experto en desarrollo web, pues una de las metas de este proyecto es facilitar el trabajo de cualquier tipo usuario en este proceso especifico para la difusión científica.
+El desarrollo de la aplicación web cuenta con dos tipos diferentes de usuario, el usuario común que cumple el rol mayormente de visitante, y un usuario tipo desarrollador, cumpliendo el papel de aquel usuario que crea contenido, lo actualiza y verifica su correcto funcionamiento y visualización en la plataforma, el usuario tipo desarrollador no tiene la necesidad de ser un experto en desarrollo web, pues una de las metas de este proyecto es facilitar el trabajo de cualquier tipo usuario en este proceso especifico para la difusión científica.
 
 
 \subsection{Roles}
@@ -49,34 +48,34 @@ En esta etapa se realizó el levantamiento de requerimientos funcionales para co
     \item U: Usuario
 \end{itemize}
 
-\begin{longtable}{lp{11cm}lllll}
+\begin{longtable}{lp{11cm}ll}
 \caption{Requerimientos funcionales}
 \label{tab:requerimientosFuncionales}
-% \hline
-% \multicolumn{7}{c}{\textbf{Requerimientos funcionales}} \\ \hline \hline
-% \endfirsthead
-% \endhead
 \\ \hline
-\multirow{2}{*}{\textbf{Id}} & \multirow{2}{*}{\textbf{Nombre}} & \multicolumn{5}{c}{\textbf{Usuarios}} \\ \cline{3-7}
- &  & \textbf{D} & \textbf{U} \\ \hline \hline
+\multirow{2}{*}{\textbf{Id}} 
+& \multirow{2}{*}{\textbf{Nombre}} 
+& \multicolumn{2}{c}{\textbf{Usuarios}} \\ \cline{3-4}
+&  & \textbf{D} & \textbf{U} \\ \hline 
 \endfirsthead
 \endhead
-RF01 & Permitir el despliegue de un algoritmo que cumpla con indicaciones establecidas en la documentación & \checkmark &- \\ \hline
-RF02 & Permitir la visualización de los detalles de los algoritmos desplegados & \checkmark & \checkmark  \\ \hline
-RF03 & Permitir eliminar algoritmos desplegados & \checkmark & -  \\ \hline
-RF04 & Permitir la visualizar de los diferentes algoritmos activos & \checkmark & \checkmark  \\ \hline
-RF05 & Permitir la ejecución de los algoritmos desplegados a usuarios suscritos a un algoritmo & \checkmark & \checkmark \\ \hline
-RF06 & Proveer durante el despliegue de un algoritmo el seguimiento en tiempo real del proceso & \checkmark &- \\ \hline
-RF07 & Notificar errores durante la ejecución de algoritmos & \checkmark & \checkmark \\ \hline
-RF08 & Permitir la suscribirsión a un algoritmo activo & \checkmark & \checkmark  \\ \hline
-RF09 & Permitir consultar y eliminar ejecuciones de su autoría & \checkmark & \checkmark \\ \hline
-RF10 & Permitir la descarga de elementos multimedia de ejecuciones de su autoría & \checkmark & \checkmark \\ \hline
-RF11 & Permitir ejecutar pruebas sencillas de un algoritmo para probar su funcionamiento & \checkmark & \checkmark \\ \hline
-RF12 & Notificar cuando haya finalizado las ejecuciones de un algoritmo activo  & \checkmark & \checkmark \\ \hline
-RF13 & Permitir el registro a usuarios no registrados  & \checkmark & \checkmark \\ \hline
-RF14 & Proveer durante la ejecución de un algoritmo el seguimiento en tiempo real del proceso  & \checkmark & \checkmark \\ \hline
-RF15 & Notificar cuando haya finalizado las ejecuciones de un algoritmo activo  & \checkmark & \checkmark \\ \hline
-RF16 & Permitir la administración de usuario suscritos a un algoritmo  & \checkmark & - \\ \hline
+\multicolumn{4}{r}{{D: Desarrollador U: Usuario}} \\
+\endlastfoot
+\textbf{RF01} & Permitir el despliegue de un algoritmo que cumpla con indicaciones establecidas en la documentación & \checkmark &- \\ \hline
+\textbf{RF02} & Permitir la visualización de los detalles de los algoritmos desplegados & \checkmark & \checkmark  \\ \hline
+\textbf{RF03} & Permitir eliminar algoritmos desplegados & \checkmark & -  \\ \hline
+\textbf{RF04} & Permitir la visualizar de los diferentes algoritmos activos & \checkmark & \checkmark  \\ \hline
+\textbf{RF05} & Permitir la ejecución de los algoritmos desplegados a usuarios suscritos a un algoritmo & \checkmark & \checkmark \\ \hline
+\textbf{RF06} & Proveer durante el despliegue de un algoritmo el seguimiento en tiempo real del proceso & \checkmark &- \\ \hline
+\textbf{RF07} & Notificar errores durante la ejecución de algoritmos & \checkmark & \checkmark \\ \hline
+\textbf{RF08} & Permitir la suscribirse a un algoritmo activo & \checkmark & \checkmark  \\ \hline
+\textbf{RF09} & Permitir consultar y eliminar ejecuciones de su autoría & \checkmark & \checkmark \\ \hline
+\textbf{RF10} & Permitir la descarga de elementos multimedia de ejecuciones de su autoría & \checkmark & \checkmark \\ \hline
+\textbf{RF11} & Permitir ejecutar pruebas sencillas de un algoritmo para probar su funcionamiento & \checkmark & \checkmark \\ \hline
+\textbf{RF12} & Notificar cuando haya finalizado las ejecuciones de un algoritmo activo  & \checkmark & \checkmark \\ \hline
+\textbf{RF13} & Permitir el registro a usuarios no registrados  & \checkmark & \checkmark \\ \hline
+\textbf{RF14} & Proveer durante la ejecución de un algoritmo el seguimiento en tiempo real del proceso  & \checkmark & \checkmark \\ \hline
+\textbf{RF15} & Notificar cuando haya finalizado las ejecuciones de un algoritmo activo  & \checkmark & \checkmark \\ \hline
+\textbf{RF16} & Permitir la administración de usuario suscritos a un algoritmo  & \checkmark & - \\ \hline
 
 \end{longtable}
 
