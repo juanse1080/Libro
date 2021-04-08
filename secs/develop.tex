@@ -9,12 +9,12 @@ De acuerdo con el resultado de la fase de análisis se planeo una arquitectura d
 Durante el desarrollo se definió léxico propio del aplicativo que ayudara mucho para el entendimiento de su funcionamiento, por eso abrimos esta espacio para explicar cada uno de estos conceptos.
 
 \subsubsection{Algoritmo}
-Un algoritmo son segmentos de código listo capaz de solucionar una problemática y esta listo para ser usados por otros usuarios de la plataforma. Estos algoritmos cuentan con diferentes estados:
+Un algoritmo son segmentos de código capaz de solucionar una problemática creados por usuarios de la plataforma. Estos algoritmos cuentan con diferentes estados que afectan su visibilidad:
 
 \begin{itemize}
-    \item textbf{Desplegado: } Es un algoritmo que esta registrado en la plataforma y cumple con los requerimientos para ser usado, pero este aun no ha sido probado. En otras palabras esta en su fase de pruebas. En este estado el algoritmo solo pueden ser usados por su creador.
-    \item textbf{Activo: } Es un algoritmo que anteriormente fue desplegado y fue probado en diferentes escenarios por su creador, esto para garantizar la integración de este con la plataforma. En este estado el algoritmo puede ser usado por su creador y por los usuarios suscritos.
-    \item textbf{Desactivado: } Es un algoritmo que anteriormente estuvo activo pero por distintas razones fallo para un escenario especifico. Este caso ocurre cuando un algoritmo falla para cualquier usuario, el aplicativo se encarga de notificar a su creador de la falla y automáticamente cambia de estado, desactivándose hasta que su creador solucione la falla.
+    \item \textbf{Desplegado: } Es un algoritmo que esta registrado en la plataforma y cumple con los requerimientos para ser usado, pero este aun no ha sido probado. En otras palabras esta en su fase de pruebas. En este estado el algoritmo solo pueden ser usados por su creador.
+    \item \textbf{Activo: } Es un algoritmo que anteriormente fue desplegado y fue probado en diferentes escenarios por su creador, esto para garantizar la integración de este con la plataforma. En este estado el algoritmo puede ser usado por su creador y por los usuarios suscritos.
+    \item \textbf{Desactivado: } Es un algoritmo que anteriormente estuvo activo pero por distintas razones fallo para un escenario especifico. Este caso ocurre cuando un algoritmo falla para cualquier usuario, el aplicativo se encarga de notificar a su creador de la falla y automáticamente cambia de estado, desactivándose hasta que su creador solucione la falla.
 \end{itemize}
 
 Según la RAE un algoritmo es un conjunto ordenado y finito de operaciones que permite hallar la solución de un problema. En nuestro caso especifico lo acotamos a algoritmos implementados con ramas de IA.
