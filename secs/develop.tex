@@ -9,14 +9,17 @@ De acuerdo con el resultado de la fase de análisis se planeo una arquitectura d
 Durante el desarrollo se definieron conceptos propios del aplicativo que serán mencionados durante este capitulo, dado esto explicaremos cada uno de estos para ayudar a el entendimiento de este.
 
 \subsubsection{Roles}
-Con base en los requerimientos de la solución planteada se identificaron ciertos perfiles, y con base en estos se definieron los siguientes roles de usuario dentro del sistema:
+
+Con base en los requerimientos de la solución planteada se identificaron perfiles relevantes para el flujo de la plataforma, partiendo de estos se definieron los siguientes roles de usuario dentro del sistema:
+
 \begin{enumerate}
-    \item \textbf{Usuario: } El usuario es el consumidor del público general que participa como visitante casual en la pagina web, puede visualizar los proyectos y utilizar los algoritmos con las respectivas entradas y salidas.
-    \item \textbf{Desarrollador: } El desarrollador es el tipo de usuario que enriquecen la herramienta DeepTools con contenido relevante y actualizado en torno al área de la visión por computador, sus últimos desarrollos, algoritmos y acercamientos relacionados con esta temática.
+    \item \textbf{Usuario: } El usuario es el consumidor del público general que participa como visitante casual en la pagina web, puede visualizar los algoritmos activos y utilizar estos con las respectivas entradas y salidas establecidas en este.
+    
+    \item \textbf{Desarrollador: } El desarrollador es el tipo de usuario que enriquecen la herramienta DeepTools con contenido relevante y actualizado en torno al área de la visión por computador, sus últimos desarrollos, algoritmos y acercamientos relacionados con esta temática. Este usuario no tiene la necesidad de ser un experto en desarrollo web, pues una de las metas de este proyecto es facilitar el trabajo de cualquier tipo usuario en este proceso especifico para la difusión científica
 \end{enumerate}
 
 \subsubsection{Algoritmo}
-Un algoritmo son segmentos de código capaz de solucionar una problemática creados por usuarios de la plataforma. Estos algoritmos cuentan con diferentes estados que afectan su visibilidad en la plataforma, además estos pueden llegar limitar su uso:
+Un algoritmo son segmentos de código capaz de solucionar una problemática creados por usuarios desarrolladores de la plataforma. Estos algoritmos cuentan con diferentes estados que afectan su visibilidad en la plataforma, además de limitar su uso:
 
 \begin{itemize}
     \item \textbf{Desplegado: } Es un algoritmo que esta registrado en la plataforma y cumple con los requerimientos para ser usado, pero este aun no ha sido probado. En otras palabras esta en su fase de pruebas. En este estado el algoritmo solo pueden ser usados por su creador.
@@ -38,80 +41,28 @@ Cada algoritmo tiene distintos elementos los cuales son seleccionados previament
 Debido a la alta aplicabilidad de estos algoritmos se tiene que acotar estos elementos para la finalización de la primera versión de este prototipo. A continuación se mencionaran cada uno de los elementos que puede tener un algoritmo y sus tipos de datos:
 
 \begin{itemize}
-    \item \textbf{Entrada: } Los elementos de entrada son los elementos multimedia necesarios para un algoritmo, estos van a ser proveídos por el usuario. Los elementos de entrada pueden ser imágenes o vídeos con cualquier formato compatible con el navegador Chrome v89.0.4389.114 (gif, jpg, png, h264).
-    \item \textbf{Salida: } Los elementos de salida son los elementos multimedia generados por un algoritmo como resultado del algoritmo, estos van a ser proveídos por el algoritmo, dado esto el desarrollador deberá encargarse de que el algoritmo logre generar estos. Los elementos de salida pueden ser imágenes o vídeos con cualquier formato compatible con el navegador Chrome v89.0.4389.114 (gif, jpg, png, h264).
+    \item \textbf{Entrada: } Los elementos de entrada son los elementos multimedia necesarios para un algoritmo, estos van a ser proveídos por el usuario. Los elementos de entrada pueden ser imágenes o vídeos con cualquier formato compatible con el navegador Google Chrome v89.0.4389.114 (gif, jpg, png, h264).
+    \item \textbf{Salida: } Los elementos de salida son los elementos multimedia generados por un algoritmo como resultado del algoritmo, estos van a ser proveídos por el algoritmo, dado esto el desarrollador deberá encargarse de que el algoritmo logre generar estos. Los elementos de salida pueden ser imágenes o vídeos con cualquier formato compatible con el navegador Google Chrome v89.0.4389.114 (gif, jpg, png, h264).
 
-    \item \textbf{Gráficos: } Los elementos gráficos son todos lo elementos que deben ser representados como gráficos o diagramas, estos van a ser proveídos por el algoritmo, dado esto el desarrollador deberá encargarse de que el algoritmo logre generar estos. Los elementos graficos pueden ser cualquier gráfico 2d representado por la libreria HIGHCHARTS v9.0.1.
+    \item \textbf{Gráficos: } Los elementos gráficos son todos lo elementos que deben ser representados como gráficos o diagramas, estos van a ser proveídos por el algoritmo, dado esto el desarrollador deberá encargarse de que el algoritmo logre generar estos. Los elementos gráficos pueden ser cualquier gráfico 2d representado por la librería HIGHCHARTS v9.0.1.
 
     \item \textbf{Respuesta: } Los elementos de respuesta son todos lo elementos que no pueden ser representados por los anteriores, estos son proveídos por el algoritmo, por ello el desarrollador deberá pensar en como representar estos de manera ordenada y concisa para el usuario. Estos elementos es cualquier tipo de datos que puede representarse por medio de markdown y html.
 \end{itemize}
 
 \subsubsection{Visualización}
-La visualización de un algoritmo se refiere la accion de observar los resultados de una ejecución de un algoritmo desplegado. Esta se limita a los elementos del algoritmo, dado esto solo se podran visualizar algoritmos compatibles con los elementos preestablecidos por el desarrollador antes de su despligue.
+La visualización de un algoritmo se refiere la acción de observar los resultados de una ejecución de un algoritmo desplegado. Esta se limita a los elementos del algoritmo, dado esto solo se podrán visualizar algoritmos compatibles con los elementos preestablecidos por el desarrollador antes de su desplegué.
 
-
-Cada una de las tecnologías mencionadas anteriormente son la solución a los requerimientos funcionales y no funcionales definidos en la fase de análisis, debido a esta tomaremos una pequeña sección explicar su razón de uso.
-
-\subsection{Razones y problemáticas}
-
-\subsubsection{Interfaz dinamica}
-Durante la fase de análisis se concluyo que el usuario
-
-
-
-
-
-
-, se proyecto una arquitectura para la solución de software llamada DeepTools
-%INFORMACION DETALLADA DE LO USADO consta de esta mierda, basada en esta otra mierda, en tecnologia de mierda v 10.0 cuyo principal objetivo es la visualizacion de algoritmos para la difusion cientifica
-
-El desarrollo de la aplicación web cuenta con dos tipos diferentes de usuario, el usuario común que cumple el rol mayormente de visitante, y un usuario tipo desarrollador, cumpliendo el papel de aquel usuario que crea contenido, lo actualiza y verifica su correcto funcionamiento y visualización en la plataforma, el usuario tipo desarrollador no tiene la necesidad de ser un experto en desarrollo web, pues una de las metas de este proyecto es facilitar el trabajo de cualquier tipo usuario en este proceso especifico para la difusión científica.
-
-
-\subsection{Roles}
-Con base en los requerimientos de la solución planteada se identificaron ciertos perfiles, y con base en estos se definieron los siguientes roles de usuario dentro del sistema:
-\begin{enumerate}
-    \item Usuario: El usuario es el consumidor del público general que participa como visitante casual en la pagina web, puede visualizar los proyectos y utilizar los algoritmos con las respectivas entradas y salidas.
-    \item Desarrollador: El desarrollador es el tipo de usuario que enriquecen la herramienta DeepTools con contenido relevante y actualizado en torno al área de la visión por computador, sus últimos desarrollos, algoritmos y acercamientos relacionados con esta temática.
-
-\end{enumerate}
-
-\subsection{Arquitectura}
-Para este proyecto se realizo una arquitectura de 3 capas, para simplificar la comprensión y la organización del desarrollo, con el fin que cada capa tenga su propia función, al separar la lógica de la aplicación y de la interfaz de usuario añade una flexibilidad al diseño de la aplicación, el cual se puede construir y desplegar múltiples interfaces de usuario sin cambiar la lógica de la aplicación. \myfootcite{arquitectura_tres_niveles}
-
-\subsubsection{Capa de presentación}
-Capa constituida por el modelo MVC (Modelo Vista Controlador) el cual se encarga de que el sistema interactúe con el usuario y viceversa.
-
-\subsubsection{Capa del servidor}
-Esta estará a cargo de varias funciones del ciclo de vida del aplicativo:
-
-\begin{itemize}
-    \item Responder al cliente: Se encarga de recibir las peticiones de la capa de presentación, procesa la información y envía las respuestas por el canal correcto.
-
-    \item Peticiones a los contenedores: Esta capa tendrá la responsabilidad de crear peticiones a los contenedores y enviar las respectivas respuestas a la capa de presentación.
-
-    \item Peticiones de información: Se comunicara con la capa de datos para obtener información de interés para la plataforma.
-\end{itemize}
-
-\subsubsection{Capa de datos}
-Es la capa encargada de almacenar los datos del sistema y su función es almacenar y devolver los datos a la capa del servidor. \myfootcite{arquitectura_tres_niveles}
-
-\section{FASE DE DISEÑO}
+\section{Planificación de requerimientos}
 En esta fase se definió el alcance del proyecto mediante reuniones con el director, codirector y integrantes del grupo de investigación Bivl2ab para analizar las distintas problemáticas en el despliegue de algoritmos de visión por computador, se generaron de modelos y documentos que facilitaron proponer una visión general de la arquitectura de software y la producción del plan de acción de las siguientes fases de desarrollo.
 
 \subsection{Requerimientos funcionales}
 En esta etapa se realizó el levantamiento de requerimientos funcionales para continuar con cumplimiento del objetivo general planteado, llevando a cabo reuniones con con el director, codirector y integrantes del grupo de investigación Bivl2ab ya que cuentan con la experiencia en la creación de algoritmos de visión por computador.
 
-\begin{itemize}
-    \item D: Desarrollador
-    \item U: Usuario
-\end{itemize}
-
 \begin{longtable}{lp{11cm}ll}
 \caption{Requerimientos funcionales}
 \label{tab:requerimientosFuncionales}
 \\ \hline
-\multirow{2}{*}{\textbf{Id}}
+\multirow{2}{*}{\textbf{Código}}
 & \multirow{2}{*}{\textbf{Nombre}}
 & \multicolumn{2}{c}{\textbf{Usuarios}} \\ \cline{3-4}
 &  & \textbf{D} & \textbf{U} \\ \hline
@@ -133,10 +84,69 @@ En esta etapa se realizó el levantamiento de requerimientos funcionales para co
 \textbf{RF12} & Notificar cuando haya finalizado las ejecuciones de un algoritmo activo  & \checkmark & \checkmark \\ \hline
 \textbf{RF13} & Permitir el registro a usuarios no registrados  & \checkmark & \checkmark \\ \hline
 \textbf{RF14} & Proveer durante la ejecución de un algoritmo el seguimiento en tiempo real del proceso  & \checkmark & \checkmark \\ \hline
-\textbf{RF15} & Notificar cuando haya finalizado las ejecuciones de un algoritmo activo  & \checkmark & \checkmark \\ \hline
-\textbf{RF16} & Permitir la administración de usuario suscritos a un algoritmo  & \checkmark & - \\ \hline
+\textbf{RF15} & Notificar al usuario cuando haya finalizado las ejecuciones de un algoritmo activo  & \checkmark & \checkmark \\ \hline
+\textbf{RF16} & Permitir agregar y eliminar usuarios suscritos a un algoritmo de su autoría  & \checkmark & - \\ \hline
 
 \end{longtable}
+
+\subsection{Requerimientos no funcionales}
+Se definieron ciertos requerimientos no funcionales debido a especificaciones puntuales por los integrantes del grupo Bivl2ab durante la fase de análisis del prototipo. 
+
+\begin{longtable}{ll}
+\caption{Requerimientos no funcionales}
+\label{tab:requerimientosNoFuncionales}
+\hline
+\textbf{Código} & \textbf{Nombre} \\ \hline
+\endfirsthead
+\textbf{RNF01} & Interfaz de usuario adaptable a distintos dispositivos. \\ \hline
+\textbf{RNF03} & Interfaz de usuario amigable con los usuarios. \\ \hline
+\textbf{RNF04} & Interfaz de usuario reactiva. \\ \hline
+\end{longtable}
+
+\subsection{Casos de uso}
+Con el propósito de detallar el comportamiento del sistema mediante la interacción con el usuario se definieron los siguientes casos de uso. 
+
+\subsubsection{Diagrama de actores}
+Para realizar los diagramas de casos de uso se identificaron los principales usuarios que interactúan con el sistema. En la figura \ref{img:actors} se evidencia el diagrama de actores.
+
+\begin{figure}[h]
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{img/Diagrama de actores.png}
+    \caption{Diagrama de actores del sistema}
+    \label{img:actors}
+\end{center}
+\end{figure}
+
+\subsubsection{Diagrama de casos de uso}
+Una vez identificados los actores y los requerimientos funcionales podemos diseñar los respectivos diagramas de casos de uso. En la figura \ref{img:use_cases} se evidencia el diagrama de casos de uso con el fin de representar de manera simplificada que hará el sistema. 
+
+\begin{figure}[h]
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{img/Casos de uso.png}
+    \caption{Diagrama de casos de uso del sistema}
+    \label{img:use_cases}
+\end{center}
+\end{figure}
+
+\section{Arquitectura}
+Para este proyecto se realizo una arquitectura de 3 capas, para simplificar la comprensión y la organización del desarrollo, con el fin que cada capa tenga su propia función, al separar la lógica de la aplicación y de la interfaz de usuario añade una flexibilidad al diseño de la aplicación, el cual se puede construir y desplegar múltiples interfaces de usuario sin cambiar la lógica de la aplicación. \myfootcite{arquitectura_tres_niveles}
+
+\subsection{Capa de presentación}
+Capa constituida por el modelo MVC (Modelo Vista Controlador) el cual se encarga de que el sistema interactúe con el usuario y viceversa.
+
+\subsection{Capa del servidor}
+Esta estará a cargo de varias funciones del ciclo de vida del aplicativo:
+
+\begin{itemize}
+    \item Responder al cliente: Se encarga de recibir las peticiones de la capa de presentación, procesa la información y envía las respuestas por el canal correcto.
+
+    \item Peticiones a los contenedores: Esta capa tendrá la responsabilidad de crear peticiones a los contenedores y enviar las respectivas respuestas a la capa de presentación.
+
+    \item Peticiones de información: Se comunicara con la capa de datos para obtener información de interés para la plataforma.
+\end{itemize}
+
+\subsubsection{Capa de datos}
+Es la capa encargada de almacenar los datos del sistema y su función es almacenar y devolver los datos a la capa del servidor. \myfootcite{arquitectura_tres_niveles}
 
 
 
