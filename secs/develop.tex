@@ -14,7 +14,7 @@ Con base en los requerimientos de la solución planteada se identificaron perfil
 
 \begin{enumerate}
     \item \textbf{Usuario: } El usuario es el consumidor del público general que participa como visitante casual en la pagina web, puede visualizar los algoritmos activos y utilizar estos con las respectivas entradas y salidas establecidas en este.
-    
+
     \item \textbf{Desarrollador: } El desarrollador es el tipo de usuario que enriquecen la herramienta DeepTools con contenido relevante y actualizado en torno al área de la visión por computador, sus últimos desarrollos, algoritmos y acercamientos relacionados con esta temática. Este usuario no tiene la necesidad de ser un experto en desarrollo web, pues una de las metas de este proyecto es facilitar el trabajo de cualquier tipo usuario en este proceso especifico para la difusión científica
 \end{enumerate}
 
@@ -59,74 +59,134 @@ En esta fase se definió el alcance del proyecto mediante reuniones con el direc
 En esta etapa se realizó el levantamiento de requerimientos funcionales para continuar con cumplimiento del objetivo general planteado, llevando a cabo reuniones con con el director, codirector y integrantes del grupo de investigación Bivl2ab ya que cuentan con la experiencia en la creación de algoritmos de visión por computador.
 
 \begin{longtable}{lp{11cm}ll}
-\caption{Requerimientos funcionales}
-\label{tab:requerimientosFuncionales}
-\\ \hline
-\multirow{2}{*}{\textbf{Código}}
-& \multirow{2}{*}{\textbf{Nombre}}
-& \multicolumn{2}{c}{\textbf{Usuarios}} \\ \cline{3-4}
-&  & \textbf{D} & \textbf{U} \\ \hline
-\endfirsthead
-\endhead
-\multicolumn{4}{r}{{D: Desarrollador U: Usuario}} \\
-\endlastfoot
-\textbf{RF01} & Permitir el despliegue de un algoritmo que cumpla con indicaciones establecidas en la documentación & \checkmark &- \\ \hline
-\textbf{RF02} & Permitir la visualización de los detalles de los algoritmos desplegados & \checkmark & \checkmark  \\ \hline
-\textbf{RF03} & Permitir eliminar algoritmos desplegados & \checkmark & -  \\ \hline
-\textbf{RF04} & Permitir la visualizar de los diferentes algoritmos activos & \checkmark & \checkmark  \\ \hline
-\textbf{RF05} & Permitir la ejecución de los algoritmos desplegados a usuarios suscritos a un algoritmo & \checkmark & \checkmark \\ \hline
-\textbf{RF06} & Proveer durante el despliegue de un algoritmo el seguimiento en tiempo real del proceso & \checkmark &- \\ \hline
-\textbf{RF07} & Notificar errores durante la ejecución de algoritmos & \checkmark & \checkmark \\ \hline
-\textbf{RF08} & Permitir la suscribirse a un algoritmo activo & \checkmark & \checkmark  \\ \hline
-\textbf{RF09} & Permitir consultar y eliminar ejecuciones de su autoría & \checkmark & \checkmark \\ \hline
-\textbf{RF10} & Permitir la descarga de elementos multimedia de ejecuciones de su autoría & \checkmark & \checkmark \\ \hline
-\textbf{RF11} & Permitir ejecutar pruebas sencillas de un algoritmo para probar su funcionamiento & \checkmark & \checkmark \\ \hline
-\textbf{RF12} & Notificar cuando haya finalizado las ejecuciones de un algoritmo activo  & \checkmark & \checkmark \\ \hline
-\textbf{RF13} & Permitir el registro a usuarios no registrados  & \checkmark & \checkmark \\ \hline
-\textbf{RF14} & Proveer durante la ejecución de un algoritmo el seguimiento en tiempo real del proceso  & \checkmark & \checkmark \\ \hline
-\textbf{RF15} & Notificar al usuario cuando haya finalizado las ejecuciones de un algoritmo activo  & \checkmark & \checkmark \\ \hline
-\textbf{RF16} & Permitir agregar y eliminar usuarios suscritos a un algoritmo de su autoría  & \checkmark & - \\ \hline
-
+    \caption{Requerimientos funcionales}
+    \label{tab:requerimientosFuncionales}
+    \\ \hline
+    \multirow{2}{*}{\textbf{Código}}
+                  & \multirow{2}{*}{\textbf{Nombre}}
+                  & \multicolumn{2}{c}{\textbf{Usuarios}}                                                             \\ \cline{3-4}
+                  &                                                                         & \textbf{D} & \textbf{U} \\ \hline
+    \endfirsthead
+    \endhead
+    \multicolumn{4}{r}{{D: Desarrollador U: Usuario}}                                                                 \\
+    \endlastfoot
+    \textbf{RF00} & Registro de usuario                                                     & \checkmark & \checkmark \\ \hline
+    \textbf{RF01} & Inicio sesión                                                           & \checkmark & \checkmark \\ \hline
+    \textbf{RF02} & Cierre sesión                                                           & \checkmark & \checkmark \\ \hline
+    \textbf{RF03} & Edición de cuenta                                                       & \checkmark & \checkmark \\ \hline
+    \textbf{RF04} & Despliegue de algoritmos de visión por computador                       & -          & \checkmark \\ \hline
+    \textbf{RF05} & Visualización de algoritmos desplegados                                 & -          & \checkmark \\ \hline
+    \textbf{RF06} & Visualización de la información de despliegue de algoritmos desplegados & -          & \checkmark \\ \hline
+    \textbf{RF07} & Visualización de ejecuciones de algoritmos desplegados                  & -          & \checkmark \\ \hline
+    \textbf{RF08} & Eliminación de ejecuciones de algoritmos desplegados                    & -          & \checkmark \\ \hline
+    \textbf{RF09} & Clonación de ejecuciones de algoritmos desplegados                      & -          & \checkmark \\ \hline
+    \textbf{RF10} & Agregación de suscripciones a algoritmos desplegados                    & -          & \checkmark \\ \hline
+    \textbf{RF11} & Eliminación de suscripciones a algoritmos desplegados                   & -          & \checkmark \\ \hline
+    \textbf{RF12} & Detención de algoritmos desplegados                                     & -          & \checkmark \\ \hline
+    \textbf{RF13} & Inicio de algoritmos desplegados                                        & -          & \checkmark \\ \hline
+    \textbf{RF14} & Eliminación de algoritmos desplegados                                   & -          & \checkmark \\ \hline
+    \textbf{FR15} & Notificación de los cambios de estado de las ejecuciones                & \checkmark & \checkmark \\ \hline
+    \textbf{FR16} & Notificación de los cambios de estado de los algoritmos desplegados     & -          & \checkmark \\ \hline
+    \textbf{FR17} & Visualización de notificaciones                                         & \checkmark & \checkmark \\ \hline
+    \textbf{FR18} & Visualización de algoritmos activos                                     & \checkmark &            \\ \hline
+    \textbf{FR19} & Suscripción a algoritmos activos                                        & \checkmark &            \\ \hline
+    \textbf{FR20} & Dar de baja una suscripción                                             & \checkmark &            \\ \hline
+    \textbf{FR21} & Ejecución de algoritmos suscritos                                       & \checkmark &            \\ \hline
+    \textbf{FR22} & Visualización de ejecuciones de algoritmos suscritos                    & \checkmark &            \\ \hline
+    \textbf{FR23} & Eliminación de ejecuciones de algoritmos suscritos                      & \checkmark &            \\ \hline
+    \textbf{FR24} & Clonación de ejecuciones de algoritmos suscritos                        & \checkmark &            \\ \hline
+    \textbf{FR25} & Visualización de algoritmos suscritos                                   & \checkmark &            \\ \hline
+    \textbf{FR26} & Visualizar ejecuciones de algoritmos activos                            & \checkmark &            \\ \hline
+    \textbf{FR27} & Visualizar ejecuciones de algoritmos desplegados                        & \checkmark &            \\ \hline
+    \textbf{FR28} & Visualización de ejecuciones en ejecución                               & \checkmark & \checkmark \\ \hline
+    \textbf{FR29} & Visualización de una vista resumen al iniciar sesión                    & \checkmark & \checkmark \\ \hline
+    \textbf{FR30} & Filtrar por palabras claves los algoritmos activos                      & \checkmark & \checkmark \\ \hline
+    \textbf{FR31} & Visualización de usuarios con algoritmos activos                        & \checkmark &            \\ \hline
+    \textbf{FR32} & Visualización de usuarios suscritos a algoritmos desplegados            & -          & \checkmark \\ \hline
 \end{longtable}
 
 \subsection{Requerimientos no funcionales}
-Se definieron ciertos requerimientos no funcionales debido a especificaciones puntuales por los integrantes del grupo Bivl2ab durante la fase de análisis del prototipo. 
+Se definieron ciertos requerimientos no funcionales debido a especificaciones puntuales por los integrantes del grupo Bivl2ab durante la fase de análisis del prototipo.
 
 \begin{longtable}{ll}
-\caption{Requerimientos no funcionales}
-\label{tab:requerimientosNoFuncionales}
-\hline
-\textbf{Código} & \textbf{Nombre} \\ \hline
-\endfirsthead
-\textbf{RNF01} & Interfaz de usuario adaptable a distintos dispositivos. \\ \hline
-\textbf{RNF03} & Interfaz de usuario amigable con los usuarios. \\ \hline
-\textbf{RNF04} & Interfaz de usuario reactiva. \\ \hline
+    \caption{Requerimientos no funcionales}
+    \label{tab:requerimientosNoFuncionales}
+    \hline
+    \textbf{Código} & \textbf{Nombre}                                         \\ \hline
+    \endfirsthead
+    \textbf{RNF01}  & Interfaz de usuario adaptable a distintos dispositivos. \\ \hline
+    \textbf{RNF03}  & Interfaz de usuario amigable con los usuarios.          \\ \hline
+    \textbf{RNF04}  & Interfaz de usuario reactiva.                           \\ \hline
 \end{longtable}
 
 \subsection{Casos de uso}
-Con el propósito de detallar el comportamiento del sistema mediante la interacción con el usuario se definieron los siguientes casos de uso. 
+Con el propósito de detallar el comportamiento del sistema mediante la interacción con el usuario se definieron los siguientes casos de uso.
 
 \subsubsection{Diagrama de actores}
 Para realizar los diagramas de casos de uso se identificaron los principales usuarios que interactúan con el sistema. En la figura \ref{img:actors} se evidencia el diagrama de actores.
 
 \begin{figure}[h]
-\begin{center}
-    \includegraphics[width=0.4\textwidth]{img/Diagrama de actores.png}
-    \caption{Diagrama de actores del sistema}
-    \label{img:actors}
-\end{center}
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{img/Diagrama de actores.png}
+        \caption{Diagrama de actores del sistema}
+        \label{img:actors}
+    \end{center}
 \end{figure}
 
 \subsubsection{Diagrama de casos de uso}
-Una vez identificados los actores y los requerimientos funcionales podemos diseñar los respectivos diagramas de casos de uso. En la figura \ref{img:use_cases} se evidencia el diagrama de casos de uso con el fin de representar de manera simplificada que hará el sistema. 
+Una vez identificados los actores y los requerimientos funcionales podemos diseñar los respectivos diagramas de casos de uso. En la figura \ref{img:use_cases} se evidencia el diagrama de casos de uso con el fin de representar de manera simplificada que hará el sistema.
 
 \begin{figure}[h]
-\begin{center}
-    \includegraphics[width=0.8\textwidth]{img/Casos de uso.png}
-    \caption{Diagrama de casos de uso del sistema}
-    \label{img:use_cases}
-\end{center}
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{img/Casos de uso.png}
+        \caption{Diagrama de casos de uso del sistema}
+        \label{img:use_cases}
+    \end{center}
 \end{figure}
+
+\begin{longtable}{llllc}
+    \caption{Casos de uso}
+    \label{tab:use_cases}
+    \\ \hline
+    Id   & Nombre                                                          & RF/RNF                       \\
+         &                                                                 &                            & \\ \hline \hline
+    \endfirsthead
+    %
+    \endhead
+    %
+    CU01 & Iniciar sesión (Tabla \ref{table:CU01})                         & RF01                         \\
+    CU02 & Cerrar sesión (Tabla \ref{table:CU02})                          & RF02                         \\
+    CU03 & Registrar usuario DeepTools (Tabla \ref{table:CU03})            & RF00                         \\
+
+    CU04 & Ver perfil de usuario (Tabla \ref{table:CU04})                  & -                            \\
+    CU05 & Editar perfil de usuario (Tabla \ref{table:CU05})               & RF03                         \\
+    CU06 & Ver perfil de usuarios desarrolladores (Tabla \ref{table:CU06}) & -                            \\
+
+    CU07 & Listar notificaciones (Tabla \ref{table:CU07})                  & FR17                         \\
+    CU08 & Notificar novedades a los usuarios (Tabla \ref{table:CU11})     & \begin{tabular}[c]{@{}l@{}}RF15,\\ RF16\end{tabular}    \\
+
+    CU09 & Suscribirse a un algoritmo (Tabla \ref{table:CU08})             & RF10                         \\
+    CU10 & Cancelar suscripción (Tabla \ref{table:CU09})                   & RF11                         \\
+    CU11 & Listar suscripciones (Tabla \ref{table:CU10})                   & -                            \\
+
+    CU12 & Crear solicitud (Tabla \ref{table:CU12})                        & \begin{tabular}[c]{@{}l@{}}RF03,\\ RF24,\\ RF13,\\ RF21,\\ RF22,\\ RF23\end{tabular}    \\
+    CU13 & Inactivar solicitud (Tabla \ref{table:CU13})                    & RF28                         \\
+    CU14 & Crear propuesta (Tabla \ref{table:CU14})                        & \begin{tabular}[c]{@{}l@{}}RF23,\\ RF21,\\ RF22\end{tabular}   \\
+    CU15 & Rechazar propuesta (Tabla \ref{table:CU15})                     & -                            \\ \hline
+    CU16 & Asignar usuario (Tabla \ref{table:CU16})                        & \begin{tabular}[c]{@{}l@{}}RF27,\\ RF21,\\ RF22,\\ RF23\end{tabular}   \\
+    CU17 & Entregar actividad (Tabla \ref{table:CU17})                     & -                            \\
+    CU18 & Aprobar actividad (Tabla \ref{table:CU18})                      & -                            \\
+    CU19 & CR una versión de archivo (Tabla \ref{table:CU19})              & \begin{tabular}[c]{@{}l@{}}RF09,\\ RF25\end{tabular}   \\
+    CU20 & Editar versión abierta de archivo (Tabla \ref{table:CU20})      & RF25                         \\
+    CU21 & CR comentar (Tabla \ref{table:CU21})                            & RF05                         \\ \hline
+    CU22 & Visualizar modelo (Tabla \ref{table:CU22})                      & RF06                         \\
+    CU23 & CRD marcadores (Tabla \ref{table:CU23})                         & RF06                         \\
+    CU24 & Cerrar modelo (Tabla \ref{table:CU24})                          & -                            \\
+    CU25 & CR comentar modelo (Tabla \ref{table:CU25})                     & RF06                         \\
+    CU26 & Screenshoot (Tabla \ref{table:CU26})                            & RF06                         \\
+    CU27 & Visualizar y crear flujos (Tabla \ref{table:CU27})              & \begin{tabular}[c]{@{}l@{}}RF20,\\ RNF01\end{tabular}   \\
+    CU28 & Visualizar DICOMs (Tabla \ref{table:CU28})                      & RNF01                        \\ \hline
+\end{longtable}
 
 \section{Arquitectura}
 Para este proyecto se realizo una arquitectura de 3 capas, para simplificar la comprensión y la organización del desarrollo, con el fin que cada capa tenga su propia función, al separar la lógica de la aplicación y de la interfaz de usuario añade una flexibilidad al diseño de la aplicación, el cual se puede construir y desplegar múltiples interfaces de usuario sin cambiar la lógica de la aplicación. \myfootcite{arquitectura_tres_niveles}
@@ -211,9 +271,9 @@ En la parte técnica se utilizó el plugin csv\myfootcite{christian2019csv}, que
 Para cada una de las entidades que se importan y exportan, se definió la lógica de importación y exportación, incluyendo las validaciones de formato de los datos ingresados, existencia de las precondiciones para el cargue de datos (tales como para productos existencia de las línea a la cuál pertenece el producto), y las inserciones y actualizaciones necesarias para la integridad de la base de datos.
 
 \subsection{Gestión y estado del pedido}
- Cuando un cliente realiza un pedido exitosamente, este pedido se inicializa en estado pendiente y tiene la información o cabecera del pedido, la información de entrega o despacho, y sus items definidos cada cual con el producto, talla, color y cantidad pedida. Las acciones que cambian el estado se dan por medio de los botones desde la UI: para cambiar al estado cancelado un usuario con rol Administrador debe deslizar la tarjeta de pedido en la vista de "Pedidos", y para cambiar el estado a entregado o incompleto un usuario con rol Repartidor debe tocar el botón de despachar, y a nivel de código se verifica que la cantidad entregada sea igual a la pedida, si es así el estado cambia a entregado, en caso contrario cambia su estado a incompleto. Para apreciar la dinámica del estado del pedido ver la Figura \ref{fig:umldiagramstateorder}.
+Cuando un cliente realiza un pedido exitosamente, este pedido se inicializa en estado pendiente y tiene la información o cabecera del pedido, la información de entrega o despacho, y sus items definidos cada cual con el producto, talla, color y cantidad pedida. Las acciones que cambian el estado se dan por medio de los botones desde la UI: para cambiar al estado cancelado un usuario con rol Administrador debe deslizar la tarjeta de pedido en la vista de "Pedidos", y para cambiar el estado a entregado o incompleto un usuario con rol Repartidor debe tocar el botón de despachar, y a nivel de código se verifica que la cantidad entregada sea igual a la pedida, si es así el estado cambia a entregado, en caso contrario cambia su estado a incompleto. Para apreciar la dinámica del estado del pedido ver la Figura \ref{fig:umldiagramstateorder}.
 
- \begin{figure}[h!]
+\begin{figure}[h!]
     \centering
     \caption{Diagrama UML de estados - Estados del pedido}
     \includegraphics[width=0.5\textwidth]{Figs/Diagrama de estados pedido.jpg}\\
@@ -233,12 +293,12 @@ Esta factura cuenta con la siguiente información:
     \item Documento de identidad o NIT del cliente.
     \item Nombre y apellido del cliente.
     \item Información de cada artículo del pedido, de la siguiente forma:
-    \begin{enumerate}
-        \item Nombre del artículo.
-        \item Precio unitario.
-        \item Cantidad entregada.
-        \item valor total del artículo
-    \end{enumerate}
+          \begin{enumerate}
+              \item Nombre del artículo.
+              \item Precio unitario.
+              \item Cantidad entregada.
+              \item valor total del artículo
+          \end{enumerate}
     \item Subtotal de la compra.
     \item Valor del IVA.
     \item Total a pagar de la compra.
@@ -298,289 +358,289 @@ Al utilizar la base de datos de Firebase de tipo Realtime Database no existen ta
 La estructura de la base de datos se puede apreciar en la Figura \ref{fig:umldiagramserdatabase}.
 
 \begin{figure}[h!]
-	\centering
-	\caption{Diagrama Entidad-Relación Base de Datos}
-	\includegraphics[width=1\textwidth]{Figs/MOI database diagram.png}\\
-	\label{fig:umldiagramserdatabase}
+    \centering
+    \caption{Diagrama Entidad-Relación Base de Datos}
+    \includegraphics[width=1\textwidth]{Figs/MOI database diagram.png}\\
+    \label{fig:umldiagramserdatabase}
 \end{figure}
 
 
 Siendo así, se definieron los siguientes nodos raíz, que serían conceptualmente equiparables a las tablas de una base de datos relacional tradicional, con sus correspondientes registros, cada cuál con atributos específicos:
 \begin{enumerate}
     \item Ciudades: Contiene registros de las ciudades en las cuáles está definido el valor del flete, y sirve para añadir los costos de envío cuando el pedido se entregue a domicilio. Cada nodo tiene los siguientes atributos:
-    \begin{itemize}
-        \item CiudadFlete: Valor del flete para la ciudad.
-        \item CiudadNombre: Nombre de la ciudad.
-        \item CiudadSigla: Identificador corto de la ciudad.
-    \end{itemize}
+          \begin{itemize}
+              \item CiudadFlete: Valor del flete para la ciudad.
+              \item CiudadNombre: Nombre de la ciudad.
+              \item CiudadSigla: Identificador corto de la ciudad.
+          \end{itemize}
     \item Clientes: Esta colección contiene los datos requeridos para los usuarios de la aplicación móvil del cliente. Trabaja de la manejo del servicio de Firebase Authentication para permitir la autenticación de los usuarios de la app y llevar un control de los datos de usuario y movimientos. Cada nodo contiene los siguientes atributos:
-    \begin{itemize}
-        \item ClienteNombres: Nombres del cliente. Variable utilizada para los envíos.
-        \item ClienteApellidos: Apellidos del cliente. Variable utilizada para los envíos.
-        \item ClienteEmail: Correo electrónico del cliente. Variable utilizada para la gestión de autenticación del cliente y mostrar al usuario sus datos dentro de la sesión.
-        \item ClienteFechaNacimiento: Fecha de nacimiento del cliente. Información no utilizada actualmente. Se recomienda su uso hacia el futuro para campañas personalizadas y manejo de datos.
-        \item ClienteGenero: Género del cliente. Información no utilizada actualmente. Se recomienda su uso hacia el futuro para campañas personalizadas y manejo de datos.
-        \item ClienteDocumento: Número de documento de identidad del cliente. Dato utilizado para los envíos y generación de factura no oficial.
-        \item ClienteDocumentoTipo: Tipo de documento de identidad.
-        \item ClienteCiudad: Ciudad donde reside el cliente. Dato utilizado para los envíos a domicilio.
-        \item ClienteBarrio: Barrio donde reside el cliente. Dato utilizado para los envíos a domicilio.
-        \item ClienteDireccion: Dirección donde reside el cliente. Dato utilizado para los envíos a domicilio.
-        \item ClienteTelefono: Teléfono del cliente. Dato utilizado para los envíos a domicilio. Con este dato la empresa tiene la oportunidad de contactar al cliente.
-        \item ClienteFechaRegistro: Fecha en la que el cliente se registró en la plataforma. Dato utilizado para futuras estadísticas.
-        \item ClienteFechaUltimoPedido: Fecha en la que el cliente realizó su ultimo pedido. Debe ser vacío al crear la cuenta.
-    \end{itemize}
+          \begin{itemize}
+              \item ClienteNombres: Nombres del cliente. Variable utilizada para los envíos.
+              \item ClienteApellidos: Apellidos del cliente. Variable utilizada para los envíos.
+              \item ClienteEmail: Correo electrónico del cliente. Variable utilizada para la gestión de autenticación del cliente y mostrar al usuario sus datos dentro de la sesión.
+              \item ClienteFechaNacimiento: Fecha de nacimiento del cliente. Información no utilizada actualmente. Se recomienda su uso hacia el futuro para campañas personalizadas y manejo de datos.
+              \item ClienteGenero: Género del cliente. Información no utilizada actualmente. Se recomienda su uso hacia el futuro para campañas personalizadas y manejo de datos.
+              \item ClienteDocumento: Número de documento de identidad del cliente. Dato utilizado para los envíos y generación de factura no oficial.
+              \item ClienteDocumentoTipo: Tipo de documento de identidad.
+              \item ClienteCiudad: Ciudad donde reside el cliente. Dato utilizado para los envíos a domicilio.
+              \item ClienteBarrio: Barrio donde reside el cliente. Dato utilizado para los envíos a domicilio.
+              \item ClienteDireccion: Dirección donde reside el cliente. Dato utilizado para los envíos a domicilio.
+              \item ClienteTelefono: Teléfono del cliente. Dato utilizado para los envíos a domicilio. Con este dato la empresa tiene la oportunidad de contactar al cliente.
+              \item ClienteFechaRegistro: Fecha en la que el cliente se registró en la plataforma. Dato utilizado para futuras estadísticas.
+              \item ClienteFechaUltimoPedido: Fecha en la que el cliente realizó su ultimo pedido. Debe ser vacío al crear la cuenta.
+          \end{itemize}
     \item Colecciones: Usado en la clasificación de productos. Parte de la estructuración específica del negocio particular de la moda, en el cuál se maneja el concepto de las colecciones, tales como por ejemplo colección 2019, 2020, colección de verano, otoño. Cada nodo tiene los siguientes atributos:
-    \begin{itemize}
-        \item ColeccionColeccion: Código interno de la colección.
-        \item ColeccionSigla: Nombre de la colección para desplegar en la interfaz de usuario.
-    \end{itemize}
+          \begin{itemize}
+              \item ColeccionColeccion: Código interno de la colección.
+              \item ColeccionSigla: Nombre de la colección para desplegar en la interfaz de usuario.
+          \end{itemize}
     \item Colores: Usado en la clasificación de productos e interfaz de usuario, cada instancia o unidad del producto, en este caso prenda, hace referncia a una existencia del producto, y tiene un color asociado, siendo tal que aunque sea el mismo producto puede venir en diferentes colores. Cada nodo tiene los siguientes atributos:
-    \begin{itemize}
-        \item ColorColor: Código interno del color.
-        \item ColorHexadecimal: Código hexadecimal utilizado para identificar los valores RGB de cada color asociado a los productos, usado para la presentación en la interfaz de usuario.
-        \item ColorSigla: Nombre del color para desplegar en la interfaz de usuario.
-    \end{itemize}
+          \begin{itemize}
+              \item ColorColor: Código interno del color.
+              \item ColorHexadecimal: Código hexadecimal utilizado para identificar los valores RGB de cada color asociado a los productos, usado para la presentación en la interfaz de usuario.
+              \item ColorSigla: Nombre del color para desplegar en la interfaz de usuario.
+          \end{itemize}
     \item DocumentosTipo: Lista de los posibles tipos de documentos a ingresar al realizar el registro de un cliente, o la identificación con documento de una persona o entidad interactuando con el sistema. Cada nodo tiene los siguietes atributos:
-    \begin{itemize}
-        \item DocumentosTipoNombre: Nombre del tipo de documento a desplegar en la interfaz de usuario.
-        \item DocumentosTipoSigla: Identificador corto del tipo de documento.
-    \end{itemize}
+          \begin{itemize}
+              \item DocumentosTipoNombre: Nombre del tipo de documento a desplegar en la interfaz de usuario.
+              \item DocumentosTipoSigla: Identificador corto del tipo de documento.
+          \end{itemize}
     \item Existencias: Contiene el recuento de existencias de los productos que vende la empresa, siendo tal que cada nodo corresponde a un trío de valor producto-talla-color, y sus cantidades existentes y comprometidas. Al restar las comprometidas a las existentes, se obtiene la cantidad de prendas disponibles para la venta. Cada nodo tiene los siguientes atributos:
-    \begin{itemize}
-        \item ExistenciaColor: Código del color que corresponde a dicho registro de existencias.
-        \item ExistenciaComprometidas:  Cantidad de prendas correspondientes al trío producto-talla-color que se encuentran comprometidas o apartadas para su despacho al cliente.
-        \item ExistenciaExisten: Cantidad de prendas correspondientes al trío producto-talla-color poseídas por la empresa para la venta.
-        \item ExistenciaProductoCodigo: Código de inventario del producto que corresponde a dicho registro de existencias.
-        \item ExistenciaTalla: Código de la talla que corresponde a dicho registro de existencias.
-    \end{itemize}
+          \begin{itemize}
+              \item ExistenciaColor: Código del color que corresponde a dicho registro de existencias.
+              \item ExistenciaComprometidas:  Cantidad de prendas correspondientes al trío producto-talla-color que se encuentran comprometidas o apartadas para su despacho al cliente.
+              \item ExistenciaExisten: Cantidad de prendas correspondientes al trío producto-talla-color poseídas por la empresa para la venta.
+              \item ExistenciaProductoCodigo: Código de inventario del producto que corresponde a dicho registro de existencias.
+              \item ExistenciaTalla: Código de la talla que corresponde a dicho registro de existencias.
+          \end{itemize}
     \item Grupos: Clasificación o división más específica de los productos, reúne y organiza bajo criterios cada línea. Cada nodo tiene los siguientes atributos:
-    \begin{itemize}
-        \item GrupoGrupo: Código interno del grupo.
-        \item GrupoIVA: porcentaje del iva para el grupo, con este se realiza un control del requerimiento legal del IVA, y se pueden tener grupos exentos de IVA, o en el caso de que haya diferentes valores de IVA por el tipo de productos que estés en dicho grupo.
-        \item GrupoLinea: Código de la línea a la cuál pertenece el grupo.
-        \item GrupoSigla: Nombre del grupo para desplegar en la interfaz de usuario.
-    \end{itemize}
+          \begin{itemize}
+              \item GrupoGrupo: Código interno del grupo.
+              \item GrupoIVA: porcentaje del iva para el grupo, con este se realiza un control del requerimiento legal del IVA, y se pueden tener grupos exentos de IVA, o en el caso de que haya diferentes valores de IVA por el tipo de productos que estés en dicho grupo.
+              \item GrupoLinea: Código de la línea a la cuál pertenece el grupo.
+              \item GrupoSigla: Nombre del grupo para desplegar en la interfaz de usuario.
+          \end{itemize}
     \item HistoricosMes: Contiene los históricos de clientes y de pedidos, por mes(cuando el año y el mes están definidos), por año (cuando el mes es cero y el año está definido) y el total (cuando el año y mes son cero). Contiene los dos siguientes subnodos:
-    \begin{enumerate}
-        \item HistoricosMesClientes: Contiene los siguientes atributos:
-        \begin{itemize}
-            \item HistoricosMesClientesCompran: De la totalidad de clientes, cantidad que ha realizado por lo menos un pedido en este lapso.
-            \item HistoricosMesClientesMonth: Mes correspondiente al lapso, puede tomar valores desde cero hasta doce.
-            \item HistoricosMesClientesNuevos: Cantidad de clientes que se han registrado en este lapso.
-            \item HistoricosMesClientesTotal: Total acumulado de clientes que se han registrado hasta este lapso.
-            \item HistoricosMesClientesYear: Año correspondiente al lapso.
-        \end{itemize}
-        \item HistoricosMesPedidos: Históricos de pedidos con respecto a un lapso y al estado de pedido. Contiene los siguientes atributos:
-        \begin{itemize}
-            \item HistoricosMesPedidosArticulosCantidad: Cantidad de artículos asociados a pedidos con dicho estado realizados en el lapso.
-            \item HistoricosMesPedidosCantidad: Cantidad de pedidos con dicho estado realizados en el lapso.
-            \item HistoricosMesPedidosEstado: Estado de pedidos al que corresponde este registro.
-            \item HistoricosMesPedidosMonth: Mes correspondiente al lapso, puede tomar valores desde cero hasta doce.
-            \item HistoricosMesPedidosValor: Suma del valor de los pedidos con dicho estado realizados en el lapso.
-            \item HistoricosMesPedidosYear: Año correspondiente al lapso.
-        \end{itemize}
-    \end{enumerate}
+          \begin{enumerate}
+              \item HistoricosMesClientes: Contiene los siguientes atributos:
+                    \begin{itemize}
+                        \item HistoricosMesClientesCompran: De la totalidad de clientes, cantidad que ha realizado por lo menos un pedido en este lapso.
+                        \item HistoricosMesClientesMonth: Mes correspondiente al lapso, puede tomar valores desde cero hasta doce.
+                        \item HistoricosMesClientesNuevos: Cantidad de clientes que se han registrado en este lapso.
+                        \item HistoricosMesClientesTotal: Total acumulado de clientes que se han registrado hasta este lapso.
+                        \item HistoricosMesClientesYear: Año correspondiente al lapso.
+                    \end{itemize}
+              \item HistoricosMesPedidos: Históricos de pedidos con respecto a un lapso y al estado de pedido. Contiene los siguientes atributos:
+                    \begin{itemize}
+                        \item HistoricosMesPedidosArticulosCantidad: Cantidad de artículos asociados a pedidos con dicho estado realizados en el lapso.
+                        \item HistoricosMesPedidosCantidad: Cantidad de pedidos con dicho estado realizados en el lapso.
+                        \item HistoricosMesPedidosEstado: Estado de pedidos al que corresponde este registro.
+                        \item HistoricosMesPedidosMonth: Mes correspondiente al lapso, puede tomar valores desde cero hasta doce.
+                        \item HistoricosMesPedidosValor: Suma del valor de los pedidos con dicho estado realizados en el lapso.
+                        \item HistoricosMesPedidosYear: Año correspondiente al lapso.
+                    \end{itemize}
+          \end{enumerate}
     \item Lineas: Clasificación más general de los productos, reúne y organiza todo bajo un criterio. Cada nodo tiene los siguientes atributos:
-    \begin{itemize}
-        \item LineaLinea: Código interno de la línea.
-        \item LineaSigla: Nombre de la línea para desplegar en la interfaz de usuario.
-    \end{itemize}
+          \begin{itemize}
+              \item LineaLinea: Código interno de la línea.
+              \item LineaSigla: Nombre de la línea para desplegar en la interfaz de usuario.
+          \end{itemize}
     \item Logs: Contiene los registros de seguridad definidos para operaciones importantes o sensibles. Cada log cuenta con una base genérica independiente del tipo de log, constituida por los siguientes atributos:
-    \begin{itemize}
-        \item LogUsuarioUid: Identificador de Firebase Authentication del usuario que realizó la operación.
-        \item LogUsuarioCodigo: Código interno del usuario que realizó la operación.
-        \item LogUsuarioNombre: Nombre del usuario que realizó la operación.
-        \item LogFechaHora: Marca de tiempo cuando la operación fue realizada.
-        \item LogTabla: A qué tabla de la base de datos afectó la operación.
-        \item LogLog: Tipo de log o descripción del log.
-        \item LogLlaveFirebase: Identificador auto-generado de Firebase del registro de la base de datos el cuál específicamente es afectado por la operación.
-    \end{itemize}
-    Además de esta base genérica, dependiendo de la tabla que afecta y el tipo de log guarda información específica de la operación:
-    \begin{itemize}
-        \item Tabla-Productos:
-        \begin{enumerate}
-            \item Log-Crear: Guarda toda la información del nuevo producto creado. Tiene los siguientes atributos específicos:
-            \begin{itemize}
-                \item ProductoCodigo.
-                \item ProductoColeccion.
-                \item ProductoComprometidas.
-                \item ProductoDescuentoPorcentaje.
-                \item ProductoExisten.
-                \item ProductoGrupo.
-                \item ProductoLinea.
-                \item ProductoMarca.
-                \item ProductoPrecioActual.
-                \item ProductoPrecioLista.
-                \item ProductoProducto.
-            \end{itemize}
-            \item Log-Modificar Porcentaje de Descuento: Tiene los siguientes atributos específicos:
-            \begin{itemize}
-                \item ProductoCodigoInventario.
-                \item ProductoDescuentoPorcentajeAnterior
-                \item ProductoDescuentoPorcentajeNuevo
-            \end{itemize}
-            \item Log-Modificar Precio de Lista: Tiene los siguientes atributos específicos:
-            \begin{itemize}
-                \item ProductoCodigoInventario.
-                \item ProductoPrecioListaAnterior.
-                \item ProductoPrecioListaNuevo.
-            \end{itemize}
-            \item Log-Eliminar: Tiene el siguiente atributo específico:
-            \begin{itemize}
-                \item ProductoCodigoInventario.
-            \end{itemize}
-        \end{enumerate}
-        \item Tabla-Pedidos:
-        \begin{enumerate}
-            \item Log-Modificar Estado: Tiene los siguientes atributos específicos:
-            \begin{itemize}
-                \item PedidoEstadoAnterior
-                \item PedidoEstadoNuevo
-                \item PedidoNumero
-            \end{itemize}
-        \end{enumerate}
-        \item Tabla-Usuarios:
-        \begin{enumerate}
-            \item Log-Crear: Guarda toda la información del usuario creado, exceptuando la clave. Tiene los siguientes atributos específicos:
-            \begin{itemize}
-                \item UsuarioActivo.
-                \item UsuarioApellidos.
-                \item UsuarioCodigo.
-                \item UsuarioEmail.
-                \item UsuarioFechaCreacion
-                \item UsuarioNombres
-                \item UsuarioSuperusuario
-            \end{itemize}
-            \item Log-Modificar Clave: Tiene el siguiente atributo específico:
-            \begin{itemize}
-                \item UsuarioEmail.
-            \end{itemize}
-            \item Log-Modificar Información: Tiene los siguientes atributos específicos:
-            \begin{itemize}
-                \item UsuarioActivoAnterior.
-                \item UsuarioActivoNuevo.
-                \item UsuarioApellidosAnterior.
-                \item UsuarioApellidosNuevo.
-                \item UsuarioCodigoAnterior.
-                \item UsuarioCodigoNuevo.
-                \item UsuarioNombresAnterior.
-                \item UsuarioNombresNuevo.
-            \end{itemize}
-            \item Log-Eliminar: Tiene el siguiente atributo específico:
-            \begin{itemize}
-                \item UsuarioEmail.
-            \end{itemize}
-        \end{enumerate}
-    \end{itemize}
+          \begin{itemize}
+              \item LogUsuarioUid: Identificador de Firebase Authentication del usuario que realizó la operación.
+              \item LogUsuarioCodigo: Código interno del usuario que realizó la operación.
+              \item LogUsuarioNombre: Nombre del usuario que realizó la operación.
+              \item LogFechaHora: Marca de tiempo cuando la operación fue realizada.
+              \item LogTabla: A qué tabla de la base de datos afectó la operación.
+              \item LogLog: Tipo de log o descripción del log.
+              \item LogLlaveFirebase: Identificador auto-generado de Firebase del registro de la base de datos el cuál específicamente es afectado por la operación.
+          \end{itemize}
+          Además de esta base genérica, dependiendo de la tabla que afecta y el tipo de log guarda información específica de la operación:
+          \begin{itemize}
+              \item Tabla-Productos:
+                    \begin{enumerate}
+                        \item Log-Crear: Guarda toda la información del nuevo producto creado. Tiene los siguientes atributos específicos:
+                              \begin{itemize}
+                                  \item ProductoCodigo.
+                                  \item ProductoColeccion.
+                                  \item ProductoComprometidas.
+                                  \item ProductoDescuentoPorcentaje.
+                                  \item ProductoExisten.
+                                  \item ProductoGrupo.
+                                  \item ProductoLinea.
+                                  \item ProductoMarca.
+                                  \item ProductoPrecioActual.
+                                  \item ProductoPrecioLista.
+                                  \item ProductoProducto.
+                              \end{itemize}
+                        \item Log-Modificar Porcentaje de Descuento: Tiene los siguientes atributos específicos:
+                              \begin{itemize}
+                                  \item ProductoCodigoInventario.
+                                  \item ProductoDescuentoPorcentajeAnterior
+                                  \item ProductoDescuentoPorcentajeNuevo
+                              \end{itemize}
+                        \item Log-Modificar Precio de Lista: Tiene los siguientes atributos específicos:
+                              \begin{itemize}
+                                  \item ProductoCodigoInventario.
+                                  \item ProductoPrecioListaAnterior.
+                                  \item ProductoPrecioListaNuevo.
+                              \end{itemize}
+                        \item Log-Eliminar: Tiene el siguiente atributo específico:
+                              \begin{itemize}
+                                  \item ProductoCodigoInventario.
+                              \end{itemize}
+                    \end{enumerate}
+              \item Tabla-Pedidos:
+                    \begin{enumerate}
+                        \item Log-Modificar Estado: Tiene los siguientes atributos específicos:
+                              \begin{itemize}
+                                  \item PedidoEstadoAnterior
+                                  \item PedidoEstadoNuevo
+                                  \item PedidoNumero
+                              \end{itemize}
+                    \end{enumerate}
+              \item Tabla-Usuarios:
+                    \begin{enumerate}
+                        \item Log-Crear: Guarda toda la información del usuario creado, exceptuando la clave. Tiene los siguientes atributos específicos:
+                              \begin{itemize}
+                                  \item UsuarioActivo.
+                                  \item UsuarioApellidos.
+                                  \item UsuarioCodigo.
+                                  \item UsuarioEmail.
+                                  \item UsuarioFechaCreacion
+                                  \item UsuarioNombres
+                                  \item UsuarioSuperusuario
+                              \end{itemize}
+                        \item Log-Modificar Clave: Tiene el siguiente atributo específico:
+                              \begin{itemize}
+                                  \item UsuarioEmail.
+                              \end{itemize}
+                        \item Log-Modificar Información: Tiene los siguientes atributos específicos:
+                              \begin{itemize}
+                                  \item UsuarioActivoAnterior.
+                                  \item UsuarioActivoNuevo.
+                                  \item UsuarioApellidosAnterior.
+                                  \item UsuarioApellidosNuevo.
+                                  \item UsuarioCodigoAnterior.
+                                  \item UsuarioCodigoNuevo.
+                                  \item UsuarioNombresAnterior.
+                                  \item UsuarioNombresNuevo.
+                              \end{itemize}
+                        \item Log-Eliminar: Tiene el siguiente atributo específico:
+                              \begin{itemize}
+                                  \item UsuarioEmail.
+                              \end{itemize}
+                    \end{enumerate}
+          \end{itemize}
     \item Marcas: Usado en la clasificación de productos. Cada nodo tiene los siguietes atributos:
-    \begin{itemize}
-        \item MarcaImageLocation: Ubicación en el almacenamiento de la imagen asociada a la marca, para desplegarla en la interfaz de usuario.
-        \item MarcaMarca: Código interno de la marca.
-        \item MarcaSigla: Nombre de la marca para desplegar en la interfaz de usuario.
-    \end{itemize}
+          \begin{itemize}
+              \item MarcaImageLocation: Ubicación en el almacenamiento de la imagen asociada a la marca, para desplegarla en la interfaz de usuario.
+              \item MarcaMarca: Código interno de la marca.
+              \item MarcaSigla: Nombre de la marca para desplegar en la interfaz de usuario.
+          \end{itemize}
     \item Numeracion: Información relevante para la numeración de las facturas generadas por el sistema. Cada nodo tiene los siguientes atributos:
-    \begin{itemize}
-        \item NumeracionFactura: Número auto-incremental de la factura.
-        \item NumeracionObs1: Primer segmento de las observaciones a imprimir en factura.
-        \item NumeracionObs2: Segundo segmento de las observaciones a imprimir en factura.
-        \item NumeracionObs3: Tercer segmento de las observaciones a imprimir en factura.
-        \item NumeracionPedido: Número auto-incremental del pedido.
-        \item NumeracionPrefijo: Prefijo antepuesto al número de factura.
-        \item NumeracionRes1: Primer segmento de la resolución de la DIAN a imprimir en factura.
-        \item NumeracionRes2: Segundo segmento de la resolución de la DIAN a imprimir en factura.
-        \item NumeracionRes3: Tercer segmento la resolución de la DIAN a imprimir en factura.
-    \end{itemize}
+          \begin{itemize}
+              \item NumeracionFactura: Número auto-incremental de la factura.
+              \item NumeracionObs1: Primer segmento de las observaciones a imprimir en factura.
+              \item NumeracionObs2: Segundo segmento de las observaciones a imprimir en factura.
+              \item NumeracionObs3: Tercer segmento de las observaciones a imprimir en factura.
+              \item NumeracionPedido: Número auto-incremental del pedido.
+              \item NumeracionPrefijo: Prefijo antepuesto al número de factura.
+              \item NumeracionRes1: Primer segmento de la resolución de la DIAN a imprimir en factura.
+              \item NumeracionRes2: Segundo segmento de la resolución de la DIAN a imprimir en factura.
+              \item NumeracionRes3: Tercer segmento la resolución de la DIAN a imprimir en factura.
+          \end{itemize}
     \item Pedidos: Cada nodo tiene los siguientes atributos:
-    \begin{itemize}
-        \item PedidoADomicilio: Bandera de tipo booleano que indica si el pedido será entregado a domicilio o es para ser recogido en punto de venta.
-        \item PedidoBarrio: Barrio al que se entrega el pedido, en caso de ser a domicilio.
-        \item PedidoCantidadEntregada: Cantidad total de artículos que fueron entregados al cliente.
-        \item PedidoCantidadPedida: Cantidad total de artículos que pidió el cliente.
-        \item PedidoCiudad: Ciudad en la cuál se entrega el pedido, en caso de ser a domicilio.
-        \item PedidoClienteDocumento: Documento de identidad del cliente.
-        \item PedidoClienteId: Identificador interno del cliente.
-        \item PedidoClienteNombre: Nombre del cliente.
-        \item PedidoDireccion: Dirección de entrega del pedido, en caso de ser a domicilio.
-        \item PedidoEstado: Estado actual del pedido.
-        \item PedidoFacturaFecha: Fecha en la cual se generó la factura.
-        \item PedidoFacturaNumero: Número de factura asociado al pedido.
-        \item PedidoFacturaPrefijo: Prefijo de la factura asociada al pedido.
-        \item PedidoFecha: Fecha de realización del pedido por parte del cliente.
-        \item PedidoFletes: Valor del servicio de entrega a domicilio.
-        \item PedidoFormaDePago: Forma de pago elegida por el cliente.
-        \item PedidoNota: Comentario o anotación escrita por el cliente de cualquier información extra con relación al pedido.
-        \item PedidoNumero: Número único de identificación de pedido, autoincremental.
-        \item PedidoObservacion: Comentario u observación escrita por el usuario de cualquier información extra con relación al pedido.
-        \item PedidoTelefono: Teléfono de contacto del cliente.
-        \item PedidoValorEntregado: Valor total de la mercancía entregada al cliente.
-        \item PedidoValorMercancia: Valor total de la mercancía pedida por el cliente.
-    \end{itemize}
+          \begin{itemize}
+              \item PedidoADomicilio: Bandera de tipo booleano que indica si el pedido será entregado a domicilio o es para ser recogido en punto de venta.
+              \item PedidoBarrio: Barrio al que se entrega el pedido, en caso de ser a domicilio.
+              \item PedidoCantidadEntregada: Cantidad total de artículos que fueron entregados al cliente.
+              \item PedidoCantidadPedida: Cantidad total de artículos que pidió el cliente.
+              \item PedidoCiudad: Ciudad en la cuál se entrega el pedido, en caso de ser a domicilio.
+              \item PedidoClienteDocumento: Documento de identidad del cliente.
+              \item PedidoClienteId: Identificador interno del cliente.
+              \item PedidoClienteNombre: Nombre del cliente.
+              \item PedidoDireccion: Dirección de entrega del pedido, en caso de ser a domicilio.
+              \item PedidoEstado: Estado actual del pedido.
+              \item PedidoFacturaFecha: Fecha en la cual se generó la factura.
+              \item PedidoFacturaNumero: Número de factura asociado al pedido.
+              \item PedidoFacturaPrefijo: Prefijo de la factura asociada al pedido.
+              \item PedidoFecha: Fecha de realización del pedido por parte del cliente.
+              \item PedidoFletes: Valor del servicio de entrega a domicilio.
+              \item PedidoFormaDePago: Forma de pago elegida por el cliente.
+              \item PedidoNota: Comentario o anotación escrita por el cliente de cualquier información extra con relación al pedido.
+              \item PedidoNumero: Número único de identificación de pedido, autoincremental.
+              \item PedidoObservacion: Comentario u observación escrita por el usuario de cualquier información extra con relación al pedido.
+              \item PedidoTelefono: Teléfono de contacto del cliente.
+              \item PedidoValorEntregado: Valor total de la mercancía entregada al cliente.
+              \item PedidoValorMercancia: Valor total de la mercancía pedida por el cliente.
+          \end{itemize}
     \item PedidosItems: Cada nodo tiene los siguientes atributos:
-    \begin{itemize}
-        \item PedidoItemCantidadEntregada: Cantidad de artículos de dicho producto-talla-color que fueron entregados al cliente.
-        \item PedidoItemCantidadPedida: Cantidad de artículos de dicho producto-talla-color que fueron pedidos por el cliente.
-        \item PedidoItemColor: Color del producto solicitado por el cliente.
-        \item PedidoItemDescuentoPorcentaje: Porcentaje de descuento del producto al momento de la compra.
-        \item PedidoItemDescuentoValor: Valor del descuento aplicado al producto al momento de la compra.
-        \item PedidoItemIVA: IVA del producto, derivado del grupo.
-        \item PedidoItemPedidoNumero: Número del pedido al que este ítem corresponde.
-        \item PedidoItemPrecioLista: Precio de lista del producto al momento de la compra.
-        \item PedidoItemPrecioVenta: Precio de venta del producto, después de aplicar el descuento, al momento de la compra.
-        \item PedidoItemProductoCodigo: Código de inventario del producto.
-        \item PedidoItemProductoProducto: Nombre del producto.
-        \item PedidoItemSinCosto: Bandera de tipo booleano que indica si el ítem del pedido viene sin costo o gratuito.
-        \item PedidoItemTalla: Talla del producto solicitado por el cliente.
-        \item PedidoItemValorEntregado:
-    \end{itemize}
+          \begin{itemize}
+              \item PedidoItemCantidadEntregada: Cantidad de artículos de dicho producto-talla-color que fueron entregados al cliente.
+              \item PedidoItemCantidadPedida: Cantidad de artículos de dicho producto-talla-color que fueron pedidos por el cliente.
+              \item PedidoItemColor: Color del producto solicitado por el cliente.
+              \item PedidoItemDescuentoPorcentaje: Porcentaje de descuento del producto al momento de la compra.
+              \item PedidoItemDescuentoValor: Valor del descuento aplicado al producto al momento de la compra.
+              \item PedidoItemIVA: IVA del producto, derivado del grupo.
+              \item PedidoItemPedidoNumero: Número del pedido al que este ítem corresponde.
+              \item PedidoItemPrecioLista: Precio de lista del producto al momento de la compra.
+              \item PedidoItemPrecioVenta: Precio de venta del producto, después de aplicar el descuento, al momento de la compra.
+              \item PedidoItemProductoCodigo: Código de inventario del producto.
+              \item PedidoItemProductoProducto: Nombre del producto.
+              \item PedidoItemSinCosto: Bandera de tipo booleano que indica si el ítem del pedido viene sin costo o gratuito.
+              \item PedidoItemTalla: Talla del producto solicitado por el cliente.
+              \item PedidoItemValorEntregado:
+          \end{itemize}
     \item PreguntasFrecuentes: Preguntas frecuentes para mostrar al usuario, primera instancia de soporte antes de comunicarse directamente con personal de la tienda. Cada nodo tiene los siguientes atributos:
-        \begin{itemize}
-            \item PreguntasFrecuentesPregunta.
-            \item PreguntasFrecuentesRespuesta.
-        \end{itemize}
+          \begin{itemize}
+              \item PreguntasFrecuentesPregunta.
+              \item PreguntasFrecuentesRespuesta.
+          \end{itemize}
     \item Productos: Productos que se encuentran en el catálogo de la empresa. El código de inventario del producto corresponde a la unión del código de línea, el código de grupo y el código interno del producto, siendo tal un código de trece caracteres numéricos. Cada nodo tiene los siguientes atributos:
-    \begin{itemize}
-        \item ProductoCodigo: Código de seis caracteres interno del producto. Tercera parte del código de inventario del producto.
-        \item ProductoColeccion: Código de la colección a la que pertenece el producto.
-        \item ProductoComprometidas: Cantidad de unidades comprometidas del producto, independiente de la talla y color.
-        \item ProductoDescuentoPorcentaje: Porcentaje de descuento actual del producto.
-        \item ProductoExisten: Cantidad de unidades existentes del producto, independiente de la talla y color, poseídas por la empresa para la venta.
-        \item ProductoGrupo: Código del grupo al que pertenece el producto. Segunda parte del código de inventario del producto.
-        \item ProductoImageLocation:
-        \item ProductoLinea: Código de tres caracteres de la línea a la que pertenece el producto. Primera parte del código de inventario del producto.
-        \item ProductoMarca: Código de la marca a la que pertenece el producto.
-        \item ProductoPrecioActual: Precio de venta actual del producto después de aplicar el descuento.
-        \item ProductoPrecioLista: Precio base del producto antes de aplicar el descuento.
-        \item ProductoProducto: Nombre del producto.
-    \end{itemize}
+          \begin{itemize}
+              \item ProductoCodigo: Código de seis caracteres interno del producto. Tercera parte del código de inventario del producto.
+              \item ProductoColeccion: Código de la colección a la que pertenece el producto.
+              \item ProductoComprometidas: Cantidad de unidades comprometidas del producto, independiente de la talla y color.
+              \item ProductoDescuentoPorcentaje: Porcentaje de descuento actual del producto.
+              \item ProductoExisten: Cantidad de unidades existentes del producto, independiente de la talla y color, poseídas por la empresa para la venta.
+              \item ProductoGrupo: Código del grupo al que pertenece el producto. Segunda parte del código de inventario del producto.
+              \item ProductoImageLocation:
+              \item ProductoLinea: Código de tres caracteres de la línea a la que pertenece el producto. Primera parte del código de inventario del producto.
+              \item ProductoMarca: Código de la marca a la que pertenece el producto.
+              \item ProductoPrecioActual: Precio de venta actual del producto después de aplicar el descuento.
+              \item ProductoPrecioLista: Precio base del producto antes de aplicar el descuento.
+              \item ProductoProducto: Nombre del producto.
+          \end{itemize}
     \item ProductosColores: Contiene las imágenes para cada producto de acuerdo a su color. Cada nodo tiene los siguientes atributos:
-    \begin{itemize}
-        \item ProductoColorColorColor: Código del color.
-        \item ProductoColorImagenURL: Ubicación en el almacenamiento de la imagen asociada a dicho par producto-color, para desplegarla en la interfaz de usuario.
-        \item ProductoColorProductoCodigo: Código de inventario del producto.
-    \end{itemize}
+          \begin{itemize}
+              \item ProductoColorColorColor: Código del color.
+              \item ProductoColorImagenURL: Ubicación en el almacenamiento de la imagen asociada a dicho par producto-color, para desplegarla en la interfaz de usuario.
+              \item ProductoColorProductoCodigo: Código de inventario del producto.
+          \end{itemize}
     \item PuntosVenta: Puntos de venta autorizados por la empresa. Cada nodo tiene los siguientes atributos:
-        \begin{itemize}
-            \item PuntoVentaCodigo: Código interno del punto de venta.
-            \item PuntoVentaDescripcion: Descripción textual, que puede contener información al respecto de la ubicación, términos y condiciones, a discreción del administrador.
-            \item PuntoVentaHorario: Texto en el cuál se describe el horario de atención del punto de venta.
-            \item PuntoVentaImageURL: Ubicación en el almacenamiento de la imagen asociada al punto de venta, para desplegarla en la interfaz de usuario.
-        \end{itemize}
+          \begin{itemize}
+              \item PuntoVentaCodigo: Código interno del punto de venta.
+              \item PuntoVentaDescripcion: Descripción textual, que puede contener información al respecto de la ubicación, términos y condiciones, a discreción del administrador.
+              \item PuntoVentaHorario: Texto en el cuál se describe el horario de atención del punto de venta.
+              \item PuntoVentaImageURL: Ubicación en el almacenamiento de la imagen asociada al punto de venta, para desplegarla en la interfaz de usuario.
+          \end{itemize}
     \item Tallas: Usado en la clasificación de productos e interfaz de usuario, cada instancia o unidad del producto, en este caso prenda, hace referencia a una existencia del producto, y tiene una talla asociada, siendo tal que aunque sea el mismo producto puede venir en diferentes tallas. Cada nodo tiene los siguientes atributos:
-    \begin{itemize}
-        \item TallaTalla: Código interno de la talla.
-        \item TallaSigla: Nombre de la talla para desplegar en la interfaz de usuario.
-    \end{itemize}
+          \begin{itemize}
+              \item TallaTalla: Código interno de la talla.
+              \item TallaSigla: Nombre de la talla para desplegar en la interfaz de usuario.
+          \end{itemize}
     \item Usuarios: Registrados en la aplicación del administrador, que pueden ser de tipo superusuario o repartidor. Cada nodo tiene los siguientes atributos:
-    \begin{itemize}
-        \item UsuarioActivo: Bandera de tipo booleano para identificar que el usuario se encuentra activo en el sistema, y puede ingresar e interactuar con la aplicación, o se le deniega el acceso.
-        \item UsuarioApellidos.
-        \item UsuarioCodigo: Código interno del usuario.
-        \item UsuarioEmail: Correo electrónico del usuario, parte de las credenciales para el login.
-        \item UsuarioFechaCreacion: Marca de tiempo de registro del usuario en la plataforma.
-        \item UsuarioImageURL: Imagen de perfil de usuario.
-        \item UsuarioNombres.
-        \item UsuarioSuperusuario: Bandera de tipo booleano para identificar el tipo de usuario, si es superusuario y puede acceder a las funcionalidades completas del sistema, o si es repartidor y sólo tiene acceso a las funcionalidades asociadas al despacho.
-    \end{itemize}
+          \begin{itemize}
+              \item UsuarioActivo: Bandera de tipo booleano para identificar que el usuario se encuentra activo en el sistema, y puede ingresar e interactuar con la aplicación, o se le deniega el acceso.
+              \item UsuarioApellidos.
+              \item UsuarioCodigo: Código interno del usuario.
+              \item UsuarioEmail: Correo electrónico del usuario, parte de las credenciales para el login.
+              \item UsuarioFechaCreacion: Marca de tiempo de registro del usuario en la plataforma.
+              \item UsuarioImageURL: Imagen de perfil de usuario.
+              \item UsuarioNombres.
+              \item UsuarioSuperusuario: Bandera de tipo booleano para identificar el tipo de usuario, si es superusuario y puede acceder a las funcionalidades completas del sistema, o si es repartidor y sólo tiene acceso a las funcionalidades asociadas al despacho.
+          \end{itemize}
 \end{enumerate}
 
 
@@ -610,462 +670,448 @@ A continuación se presentan la lista de requerimientos de software,\\
 % \usepackage{longtable}
 % Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
 \begin{longtable}{|l|l|c|c|}\hline
-\multicolumn{4}{|c|}{Requerimientos funcionales}                                                                     \\ \hline
-\endfirsthead
-%
-\endhead
-%
-\multicolumn{1}{|c|}{Identificador} & \multicolumn{1}{c|}{Nombre}                                            & U & D \\ \hline
-RF00                                & Registro de usuario                                                    & \checkmark & \checkmark \\ \hline
-RF01                                & Inicio sesión                                                          & \checkmark & \checkmark \\ \hline
-RF02                                & Cierre sesión                                                          & \checkmark & \checkmark \\ \hline
-RF03                                & Edición de cuenta                                                      & \checkmark & \checkmark \\ \hline
-RF04                                & Despliegue de algoritmos de visión por computador                      &   & \checkmark \\ \hline
-RF05                                & Visualización de algoritmos desplegados                                &   & \checkmark \\ \hline
-RF06                                & Visualización de la información de despliegue de algoritmos desplegados &   & \checkmark \\ \hline
-RF07                                & Visualización de pruebas de algoritmos desplegados                     &   & \checkmark \\ \hline
-RF08                                & Eliminación de pruebas de algoritmos desplegados                       &   & \checkmark \\ \hline
-RF09                                & Clonación de pruebas de algoritmos desplegados                         &   & \checkmark \\ \hline
-RF10                                & Agregación de suscripciones a algoritmos desplegados                   &   & \checkmark \\ \hline
-RF11                                & Eliminación de suscripciones a algoritmos desplegados                  &   & \checkmark \\ \hline
-RF12                                & Detención de algoritmos desplegados                                   &   & \checkmark \\ \hline
-RF13                                & Inicio de algoritmos desplegados                                       &   & \checkmark \\ \hline
-RF14                                & Eliminación de algoritmos desplegados                                  &   & \checkmark \\ \hline
-FR15                                & Notificación de los cambios de estado de las pruebas                   & \checkmark & \checkmark \\ \hline
-FR16                                & Notificación de los cambios de estado de los algoritmos desplegados    &   & \checkmark \\ \hline
-FR17                                & Visualización de notificaciones                                        & \checkmark & \checkmark \\ \hline
-FR18                                & Visualización de algoritmos activos                                    & \checkmark &   \\ \hline
-FR19                                & Suscripción a algoritmos activos                                       & \checkmark &   \\ \hline
-FR20                                & Dar de baja una suscripción                                            & \checkmark &   \\ \hline
-FR21                                & Ejecución de algoritmos suscritos                                      & \checkmark &   \\ \hline
-FR22                                & Visualización de pruebas de algoritmos suscritos                       & \checkmark &   \\ \hline
-FR23                                & Elimicación de pruebas de algoritmos suscritos                         & \checkmark &   \\ \hline
-FR24                                & Clonación de pruebas de algoritmos suscritos                           & \checkmark &   \\ \hline
-FR25                                & Visualización de algoritmos suscritos                                  & \checkmark &   \\ \hline
-FR26                                & Visualizar pruebas de algoritmos activos                               & \checkmark &   \\ \hline
-FR27                                & Visualizar pruebas de algoritmos desplegados                           & \checkmark &   \\ \hline
-FR28                                & Visualización de pruebas en ejecución                                  & \checkmark & \checkmark \\ \hline
-FR29                                & Visualización de una vista resumen al iniciar sesión                   & \checkmark & \checkmark \\ \hline
-FR30                                & Filtrar por palabras claves los algoritmos activos                     & \checkmark & \checkmark \\ \hline
-FR31                                & Visualización de usuarios con algoritmos activos                       & \checkmark &   \\ \hline
-FR32                                & Visualización de usuarios suscritos a algoritmos desplegados           &   & \checkmark \\ \hline
+    \multicolumn{4}{|c|}{Requerimientos funcionales}                                                                                       \\ \hline
+    \endfirsthead
+    %
+    \endhead
+    %
+    \multicolumn{1}{|c|}{Identificador} & \multicolumn{1}{c|}{Nombre}                                            & U          & D          \\ \hline
+    RF00                                & Registro de usuario                                                    & \checkmark & \checkmark \\ \hline
+    RF01                                & Inicio sesión                                                          & \checkmark & \checkmark \\ \hline
+    RF02                                & Cierre sesión                                                          & \checkmark & \checkmark \\ \hline
+    RF03                                & Edición de cuenta                                                      & \checkmark & \checkmark \\ \hline
+    RF04                                & Despliegue de algoritmos de visión por computador                      &            & \checkmark \\ \hline
+    RF05                                & Visualización de algoritmos desplegados                                &            & \checkmark \\ \hline
+    RF06                                & Visualización de la información de despliege de algoritmos desplegados &            & \checkmark \\ \hline
+    RF07                                & Visualización de pruebas de algoritmos desplegados                     &            & \checkmark \\ \hline
+    RF08                                & Elimicación de pruebas de algoritmos desplegados                       &            & \checkmark \\ \hline
+    RF09                                & Clonación de pruebas de algoritmos desplegados                         &            & \checkmark \\ \hline
+    RF10                                & Agregación de suscripciones a algoritmos desplegados                   &            & \checkmark \\ \hline
+    RF11                                & Eliminación de suscripciones a algoritmos desplegados                  &            & \checkmark \\ \hline
+    RF12                                & Deteneción de algoritmos desplegados                                   &            & \checkmark \\ \hline
+    RF13                                & Inicio de algoritmos desplegados                                       &            & \checkmark \\ \hline
+    RF14                                & Eliminación de algoritmos desplegados                                  &            & \checkmark \\ \hline
+    FR15                                & Notificación de los cambios de estado de las pruebas                   & \checkmark & \checkmark \\ \hline
+    FR16                                & Notificación de los cambios de estado de los algoritmos desplegados    &            & \checkmark \\ \hline
+    FR17                                & Visualización de notificaciones                                        & \checkmark & \checkmark \\ \hline
+    FR18                                & Visualización de algoritmos activos                                    & \checkmark &            \\ \hline
+    FR19                                & Suscripción a algoritmos activos                                       & \checkmark &            \\ \hline
+    FR20                                & Dar de baja una suscripción                                            & \checkmark &            \\ \hline
+    FR21                                & Ejecución de algoritmos suscritos                                      & \checkmark &            \\ \hline
+    FR22                                & Visualización de pruebas de algoritmos suscritos                       & \checkmark &            \\ \hline
+    FR23                                & Elimicación de pruebas de algoritmos suscritos                         & \checkmark &            \\ \hline
+    FR24                                & Clonación de pruebas de algoritmos suscritos                           & \checkmark &            \\ \hline
+    FR25                                & Visualización de algoritmos suscritos                                  & \checkmark &            \\ \hline
+    FR26                                & Visualizar pruebas de algoritmos activos                               & \checkmark &            \\ \hline
+    FR27                                & Visualizar pruebas de algoritmos desplegados                           & \checkmark &            \\ \hline
+    FR28                                & Visualización de pruebas en ejecución                                  & \checkmark & \checkmark \\ \hline
+    FR29                                & Visualización de una vista resumen al iniciar sesión                   & \checkmark & \checkmark \\ \hline
+    FR30                                & Filtrar por palabras claves los algoritmos activos                     & \checkmark & \checkmark \\ \hline
+    FR31                                & Visualización de usuarios con algoritmos activos                       & \checkmark &            \\ \hline
+    FR32                                & Visualización de usuarios suscritos a algoritmos desplegados           &            & \checkmark \\ \hline
 \end{longtable}
 
-\subsection{Metodología Scrum para validación de progreso}
-    Se acuerda con la administración de MOI  realizar 4 Sprints tal como lo establece la metodología de desarrollo Ágil, que se definieron como sigue:\\
-    \begin{longtable}{|p{2.5cm}|p{10cm}|}\hline
-        \textbf{No. Sprint} & \textbf{Sprint}\\\hline
-        1 & Verificación de requerimientos y diseño de la Aplicación\\\hline
-        2 & Catálogo de productos\\\hline
-        3 & Canastilla de compras\\\hline
-        4 & Generación de pedidos a partir de la canastilla de compras\\\hline
-        5 & Gestión de pedidos y facturación de pedidos pendientes\\\hline
-        6 & Históricos, logs y preguntas frecuentes\\\hline
-        7 & Importación y exportación masiva\\\hline
-        8 & Manejo de sesiones y autenticación\\\hline
-        9 & Menú, corrección de errores y ajustes finales\\\hline
-    \end{longtable}
 
 \subsection{Desarrollo de Sprints}
-    \subsubsection{Primer Sprint: Verificación de requerimientos y diseño de la Aplicación.}
-        Para la realización de este este primer Sprint se realizó un análisis de requerimientos profundo, resolución de dudas con la administración de la compañía con base en el análisis y primeros pasos para la creación de una óptima estructura de datos.\\
-
-        El primer Sprint se resume a continuación en las siguientes historias de usuario:\\
-
-        \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
-            \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
-            1 & Muestra de casos de éxito por parte de Juan Camilo Moreno y visualización de Mockup hecho por él & Juan Camilo Moreno\\\hline
-            2 & Validación de requerimientos: Se explica a Juan Camilo las dificultades que existen para la activación de pagos en línea debido a la falta de paquetes en el framework para realizar una transacción de forma segura & Luis Páez\\\hline
-            3 & Definición de una estructura mínima funcional de la base de datos. & Diego Medina - Luis Páez\\\hline
-            4 & Definición de roles de usuario & Diego Medina - Luis Páez\\\hline
-            5 & Formalización de las vistas principales de la aplicación del cliente & Diego Medina - Luis Páez\\\hline
-            6 & Definición de las vistas principales asociadas al catálogo de productos app Moi Admin & Diego Medina - Luis Páez\\\hline
-            7 & Diseño de diagrama UML Entidad relación. & Diego Medina - Luis Páez\\\hline
-        \end{longtable}
-
-        Al finalizar el primer Sprint pudimos obtener una consolidación de requerimientos válidos con base en las expectativas del cliente y las capacidades del sistema, así como también se definió la estructura de datos base mínima del sistema y los roles de usuario presentes en la solución software.
-
-
-
-    \subsubsection{Segundo Sprint: Catálogo de productos}
-        Primeros pasos de aplicación móvil de cliente mostrando catálogo de productos en la interfaz inicial. Durante este Sprint se hizo uso de la estructura de datos de productos y su implementación para ser mostrados. Esta etapa permitió identificar la necesidad de crear una nueva Entidad en la estructura de datos llamada Existencia para poder realizar un manejo adecuado de los productos y su inventario. Primeros pasos de aplicación móvil de administración, definiendo las vistas para el soporte y cargue inicial del catálogo de productos.\\
-
-        El segundo Sprint se resume a continuación en las siguientes historias de usuario:\\
-
-        \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
-            \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
-            1 & Configuración de la base de datos utilizando el SDK de Firebase para Flutter junto con las normas de seguridad & Luis Ernesto Páez Ortiz\\\hline
-            2 & Configuración de ambiente de trabajo & Diego Medina - Luis Páez\\\hline
-            3 & Agregar datos de prueba a la base de datos & Luis Ernesto Páez\\\hline
-            4 & Construcción de vistas para la muestra de productos app Moi &  Luis Páez\\\hline
-            5 & Construcción de vistas para CRUD de Líneas app Moi Admin & Diego Medina\\\hline
-            6 & Construcción de vistas para CRUD de Grupos app Moi Admin & Diego Medina\\\hline
-            7 & Construcción de vistas para CRUD de Colecciones app Moi Admin & Diego Medina\\\hline
-            8 & Construcción de vistas para CRUD de Marcas app Moi Admin & Diego Medina\\\hline
-            9 & Construcción de vistas para CRUD de Productos app Moi Admin & Diego Medina\\\hline
-            10 & Construcción de vistas para CRUD de Tallas app Moi Admin & Diego Medina\\\hline
-            11 & Construcción de vistas para CRUD de Colores app Moi Admin & Diego Medina\\\hline
-            12 & Construcción de vistas para CRUD de Imágenes para Producto por Color app Moi Admin & Diego Medina\\\hline
-            13 & Construcción de vistas para CRUD de Existencias app Moi Admin & Diego Medina\\\hline
-            14 & Validación con el administrador de la tienda & Luis Ernesto Páez - Juan Camilo Moreno\\\hline
-        \end{longtable}
-
-        Al finalizar el segundo Sprint fue posible obtener una vista funcional para mostrar productos recientes, ver los detalles del producto así como los colores, tallas y unidades disponibles en la aplicación Moi Cliente. Se pueden apreciar las vistas correspondientes de este Sprint en las figuras \ref{homeView}, \ref{drawerMenu}, \ref{detailProductView}.
-        Como resultado de este sprint en la aplicación Moi Admin se obtuvieron las vistas funcionales para realizar el CRUD hacia todas las entidades necesarias para la creación de los productos y sus correspondientes existencias. Para cada entidad se siguió el mismo patrón de diseño, se desarrolló una página para visualización como la que se puede apreciar en la figura \ref{fig:crudmostrarproductospage} con una barra de búsqueda y filtros como se puede apreciar en la figura \ref{fig:crudmostrarproductosfiltrospage} y otra para creación y edición, que se puede apreciar en la figura \ref{fig:crudcreareditarproductospage}. La vista construida para la visualización de existencias se puede apreciar en la figura \ref{fig:crudmostrarexistenciaspage} y la desarrollada para la modificación de existencias (añadir o sustraer) se puede observar en la figura \ref{fig:crudmodificarexistenciaspage}.
-        \newpage
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista inicial de la aplicación móvil del cliente}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Home.png}\\
-            \label{homeView}
-        \end{figure}\newpage
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Menú lateral principal aplicación móvil del cliente}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Drawer.png}\\
-            \label{drawerMenu}
-        \end{figure}\newpage
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista para conocer los detalles de un producto con base en los requerimientos de la empresa}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/DetalleProducto.png}\\
-            \label{detailProductView}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista para visualizar Productos}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Mostrar Productos Page.png}\\
-            \label{fig:crudmostrarproductospage}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista para buscar y filtrar productos}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Mostrar Productos Barra Búsqueda Page.png}\\
-            \label{fig:crudmostrarproductosfiltrospage}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista para crear o editar Productos}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Crear o Editar Productos Page.png}\\
-            \label{fig:crudcreareditarproductospage}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista para visualizar existencias}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Mostrar Existencias Page.png}\\
-            \label{fig:crudmostrarexistenciaspage}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista para modificar Existencias}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Modificar Existencias Page.png}\\
-            \label{fig:crudmodificarexistenciaspage}
-        \end{figure}
-
-    \subsubsection{Tercer Sprint: Canastilla de Compras}
-        Durante este Sprint se creó una vista para la canastilla de compras así como la validación de diferentes escenarios a los que un cliente se puede someter a la hora de utilizar una canastilla de compras, además de complementar la definición inicial de la base de datos y preparar las funcionalidades extra necesarias para la generación del pedido desde la app Moi Admin en el siguiente sprint.
-
-        El tercer Sprint se resume a continuación en las siguientes historias de usuario:\\
-
-        \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
-            \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
-            1 & Creación de la vista de canastilla de compras & Luis Ernesto Páez\\\hline
-            2 & Envío de productos a la canastilla de compras del cliente en la base de datos desde la vista de detalles. & Luis Ernesto Páez\\\hline
-            3 & Validación de existencias antes de agregar el producto a la canastilla & Luis Ernesto Páez\\\hline
-            4 & Validación de existencias en la vista de la canastilla de compras antes de proceder al pago.. & Luis Ernesto Páez\\\hline
-            5 & Construcción de vistas para CRUD de Ciudades app Moi Admin & Diego Medina\\\hline
-            6 & Construcción de vistas para CRUD de Puntos de Venta app Moi Admin & Diego Medina\\\hline
-            7 & Construcción de vista para visualización y edición de Numeración app Moi Admin & Diego Medina\\\hline
-            8 & Ajustes de la interfaz y validación con el administrador de la tienda & Luis Ernesto Páez - Juan Camilo Moreno\\\hline
-        \end{longtable}
-
-        Al finalizar el tercer Sprint el cliente cuenta la capacidad de agregar los productos que desea a su canastilla de compras, verificando que los productos existan. En la app Moi Admin se obtienen las vistas para realizar el CRUD de ciudades y puntos de venta que serán asociados a los, con una estructura muy similar a las de CRUD obtenidas en el sprint 2. También se obtiene la vista para visualización y edición de Numeración que se puede apreciar en la figura \ref{fig:numeracionpage}
-
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de la canastilla de compras}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Carrito.png}\\
-            \label{carritoView}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de la numeración}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Numeración Page.png}\\
-            \label{fig:numeracionpage}
-        \end{figure}
-
-    \subsubsection{Cuarto Sprint: Generación de pedidos a partir de la canastilla de compras}
-        Durante este Sprint se creó una vista para la ejecutar la generación de pedidos a partir de los datos recibidos en una canastilla de compras en la aplicación del cliente. Se tuvieron en cuenta diferentes escenarios tales como recoger el producto en un punto de venta o recibirlo a domicilio. Por otro lado, se realiza la transición desde la vista de la canastilla de compras a la vista de generación de pedido.
-        En la app Moi Admin se implementan los descuentos para productos y las vistas para manejar el CRUD de los usuarios.
-
-        El cuarto Sprint se resume a continuación en las siguientes historias de usuario:\\
-
-        \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
-            \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
-            1 & Creación de la vista para la captación de datos de envío definidos en la estructura de datos & Luis Ernesto Páez\\\hline
-            2 & Generación de pedidos para envío a domicilio & Luis Ernesto Páez \\\hline
-            3 & Generación de pedidos para recoger en punto de venta & Luis Ernesto Páez \\\hline
-            4 & Persistencia de datos del pedido & Luis Ernesto Páez \\\hline
-            5 & Comprometer prendas y realizar registros necesarios para mantener la integridad de los datos & Luis Ernesto Páez \\\hline
-            6 & Construcción de vista para aplicar descuentos a productos & Diego Medina \\\hline
-            6 & Construcción de vistas para CRUD de usuarios & Diego Medina \\\hline
-            7 & Validación de interfaz. & Juan Camilo Moreno \\\hline
-        \end{longtable}
-
-        Al finalizar el cuarto Sprint el cliente cuenta con la posibilidad de realizar un pedido con todos los items que contiene su canastilla de compras, como se puede evidenciar en las figuras \ref{pedidoDomicilioView} y \ref{pedidoTiendaView} En la app Moi Admin se obtienen la vista funcional para que el usuario pueda aplicar descuentos a los productos por Línea, Grupo, Colección o Marca, como se puede apreciar en la figura \ref{fig:admindescuentospage}. Y las vistas para el manejo del CRUD de usuarios con una estructura similar a la evidenciada en las vistas de CRUD de los anteriores dos sprints.
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista para la creación de pedidos a domicilio en la aplicación del cliente}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/PedidoDomicilio.png}\\
-            \label{pedidoDomicilioView}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista para la creación de pedidos que serán recogidos en la tienda en la aplicación del cliente}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/PedidoTienda.png}\\
-            \label{pedidoTiendaView}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de descuentos por tabla}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Descuentos Page.png}
-            \label{fig:admindescuentospage}
-        \end{figure}
-
-    \subsubsection{Quinto Sprint: Gestión de pedidos y facturación de pedidos pendientes}
-        Durante este Sprint se procedió a implementar las vistas y la lógica para ver y entregar pedidos con facturación incluida por parte del usuario con rol de repartidor, y para ver y cancelar pedidos por parte del usuario con rol de administrador con la posibilidad de reimprimir factura.
-
-        El quinto Sprint se resume a continuación en las siguientes historias de usuario:\\
-
-        \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
-            \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
-            1 & Creación de la vista de pedidos pendientes para el usuario de rol repartidor & Diego Medina\\\hline
-            2 & Creación de la vista de detalles del pedido y entrega para el usuario de rol repartidor & Diego Medina\\\hline
-            3 & Creación de la vista de notas y observaciones del pedido para el usuario de rol repartidor & Diego Medina\\\hline
-            4 & Creación de la vista de pedidos con la funcionalidad de cancelación para el usuario de rol de administrador & Diego Medina\\\hline
-            5 & Creación de la vista de detalles del pedido y reimpresión de factura para el usuario de rol de administrador & Diego Medina\\\hline
-            6 & Creación de la vista de notas y observaciones del pedido para el usuario de rol de administrador & Diego Medina\\\hline
-            7 & Vista para la gestión de usuarios. & Diego Medina\\\hline
-            8 & Validación de progreso con el administrador. & Diego Medina - Luis Páez - Juan Camilo Moreno\\\hline
-        \end{longtable}
-
-        Al finalizar el quinto Sprint el administrador puede visualizar y gestionar los pedidos filtrando y cancelando en caso de ser necesario, y reimprimir facturas, como se puede apreciar en las figuras \ref{fig:adminmostrarpedidospage}, \ref{fig:adminmostrarpedidosfiltrospage} y \ref{fig:adminmostrarpedidositemspage}. También se obtienen las vistas para que el repartidor pueda visualizar y gestionar los pedidos pendientes, filtrando y entregando eligiendo la cantidad entregada, pasando el pedido a un estado ya sea completo o incompleto, y generando la factura correspondiente, como se puede apreciar en las figuras \ref{fig:repartidormostrarpedidospage}, \ref{fig:repartidormostrarpedidositemspage} y \ref{fig:repartidorverfacturapage}.
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de Pedidos para administrador}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Mostrar Pedidos Page.png}
-            \label{fig:adminmostrarpedidospage}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de filtros para Pedidos para administrador}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Mostrar Pedidos Filtros Page.png}
-            \label{fig:adminmostrarpedidosfiltrospage}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de detalles del pedido para administrador}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Mostrar Detalles del Pedido Page.png}
-            \label{fig:adminmostrarpedidositemspage}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de pedidos pendientes para repartidor}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Repartidor/Repartidor Mostrar Pedidos Page.png}
-            \label{fig:repartidormostrarpedidospage}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de detalles del pedido para repartidor}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Repartidor/Repartidor Mostrar Detalles del Pedido Page.png}
-            \label{fig:repartidormostrarpedidositemspage}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de visualización factura para repartidor}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Repartidor/Repartidor Ver Factura Page.png}
-            \label{fig:repartidorverfacturapage}
-        \end{figure}
-
-    \subsubsection{Sexto Sprint: Históricos, logs y preguntas frecuentes}
-        Durante este Sprint se procedió a implementar la parte de análisis y seguridad del sistema, con los históricos y los logs de operaciones definidas como sensibles en el sistema.
-
-        El sexto Sprint se resume a continuación en las siguientes historias de usuario:\\
-
-        \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
-            \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
-            1 & Implementación de la lógica para guardar históricos de pedidos e históricos de clientes & Diego Medina - Luis Páez\\\hline
-            2 & Creación de la vista de consultar estadísticas para visualizar históricos de pedidos y clientes & Diego Medina\\\hline
-            3 & Definición de las operaciones sensibles que requieren el registro de logs de seguridad & Diego Medina\\\hline
-            4 & Definición de la estructura de los logs de seguridad & Diego Medina\\\hline
-            5 & Implementación de la lógica para realizar el registro de logs de seguridad en todas las operaciones definidas como sensibles & Diego Medina\\\hline
-            6 & Creación de vistas para el CRUD de preguntas frecuentes en la app Moi Admin & Diego Medina\\\hline
-            7 & Creación de vista para visualización de preguntas frecuentes en la aplicación del cliente & Luis Páez\\\hline
-            8 & Validación de progreso con el administrador. & Diego Medina - Luis Páez - Juan Camilo Moreno\\\hline
-        \end{longtable}
-
-        Al finalizar el sexto Sprint el administrador puede visualizar los históricos en el apartado de consultar estadísticas, por mes, año y desde el inicio del uso de la solución, como se puede apreciar en la figura \ref{fig:adminhistoricosmespedidospage}. Asimismo, se obtuvo el diseño de una estructura de log para las operaciones definidas como sensibles y luego de crear estos logs se registran en la base de datos. También se obtuvieron las vistas de CRUD de preguntas frecuentes en la app Moi Admin con una estructura muy similar a utilizada en sprints anteriores, y se obtuvo la vista para visualización de preguntas frecuentes en la aplicación de cliente.
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de consulta de estadísticas, históricos de pedidos}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Historicos Mes Pedidos Page.png}
-            \label{fig:adminhistoricosmespedidospage}
-        \end{figure}
-
-    \subsubsection{Séptimo Sprint: Importación y exportación masiva}
-        Durante este Sprint se procedió a implementar la funcionalidad de importación para el cargue masivo de datos para las entidades pertinentes en la base de datos, además de la exportación del contenido de estas "tablas" de entidades.
-
-        El séptimo Sprint se resume a continuación en las siguientes historias de usuario:\\
-
-        \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
-            \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
-            1 & Definición de entidades a importar, cabeceras y formatos de importación & Diego Medina\\\hline
-            2 & Definición de entidades a exportar, cabeceras y formatos de exportación & Diego Medina\\\hline
-            3 & Implementación de la lógica de importación para cada entidad determinada & Diego Medina\\\hline
-            4 & Creación de vista para importación & Diego Medina\\\hline
-            5 & Implementación de la lógica de exportación para cada entidad determinada & Diego Medina\\\hline
-            6 & Creación de vista para exportación & Diego Medina\\\hline
-            7 & Validación de progreso con el administrador. & Diego Medina - Luis Páez - Juan Camilo Moreno\\\hline
-        \end{longtable}
-
-        Al finalizar el séptimo Sprint el administrador puede realizar por medio de archivos con formato csv el cargue masivo de Marcas, Colecciones, Tallas, Colores, Líneas, Grupos, Productos y Existencias con las cabeceras y estructura definidas como se puede apreciar en las vistas ilustradas en las figuras \ref{fig:adminimportarpage} y \ref{fig:adminimportartablaspage}, así como también puede realizar la exportación de tablas de las entidades mencionadas anteriormente además de Pedidos, con la particularidad de que para esta última permite el filtrado de dichos pedidos a exportar por estado, por tipo de entrega y/o a un lapso de tiempo, como se puede apreciar en la figura \ref{fig:adminexportarpedidospage}. Un ejemplo de archivo exportado de pedidos se puede observar en la figura \ref{fig:csvexportarpedidos}, así como un ejemplo de archivo para importación de existencias en la figura \ref{fig:csvimportarexistencias}.
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de importación}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Importar Page.png}
-            \label{fig:adminimportarpage}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de importación tablas}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Importar Tablas Page.png}
-            \label{fig:adminimportartablaspage}
-        \end{figure}
-
-        %\begin{figure}[h!]
-        %    \centering
-        %    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Exp%ortar Page.png}
-        %    \caption{Vista de exportación}
-        %    \label{fig:adminexportarpage}
-        %\end{figure}
-
-        % \begin{figure}[h!]
-        %    \centering
-        %    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Exp%ortar Tablas Page.png}
-        %    \caption{Vista de exportación tablas}
-        %    \label{fig:adminexportartablaspage}
-        %\end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de exportación de pedidos}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Exportar Pedidos Page.png}
-            \label{fig:adminexportarpedidospage}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Archivo ejemplo de exportación de pedidos}
-            \includegraphics[width=1.0\textwidth]{Figs/Exportación Pedidos.png}
-            \label{fig:csvexportarpedidos}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Archivo ejemplo de importación de existencias}
-            \includegraphics[width=1.0\textwidth]{Figs/Importación Existencias.png}
-            \label{fig:csvimportarexistencias}
-        \end{figure}
-
-
-    \subsubsection{Octavo Sprint: Manejo de sesiones y autenticación}.
-
-    En este sprint se construyeron las vistas y funcionalidades ligadas al manejo de sesiones y autenticación dentro de la aplicación.
-
-        \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
-            \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
-            1 & Desarrollo de la lógica para creación de usuarios y clientes en Firebase Authentication ligados a los registros de usuarios y clientes en la base de datos & Diego Medina - Luis Páez\\\hline
-            2 & Desarrollo de la lógica para inicio de sesión, generación y guardado de información de sesión activa y token de autenticación de Firebase Authentication & Diego Medina - Luis Páez\\\hline
-            3 & Refactor para envío del token de autenticación en las consultas http en la app MoiAdmin & Diego Medina\\\hline
-            4 & Construir la vista de inicio de sesión y reinicio de clave para la app Moi Admin & Diego Medina\\\hline
-            5 & Construir la vista de registro, inicio de sesión y restauración de clave en la aplicación del cliente & Luis Páez\\\hline
-            6 & Implementar la funcionalidad de envío de email para restaurar clave & Diego Medina\\\hline
-            7 & Validación de progreso con el administrador & Diego Medina - Luis Páez - Juan Camilo Moreno\\\hline
-        \end{longtable}
-
-        Al finalizar el octavo Sprint se obtienen las vistas funcionales para el inicio y manejo de sesiones de usuario, junto con su relación a las llamadas a la base de datos. Para la app Moi Admin se puede apreciar la vista del inicio de sesión en la figura \ref{fig:admininiciosesion}, la vista de restauración de clave en la figura \ref{fig:adminrestablecercontraseña}.
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de inicio de sesión Moi Admin}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Inicio de Sesión.png}
-            \label{fig:admininiciosesion}
-        \end{figure}
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Vista de restablecer contraseña Moi Admin}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Restablecer Contraseña.png}
-            \label{fig:adminrestablecercontraseña}
-        \end{figure}
-
-
-
-    \subsubsection{Noveno Sprint: Menú, corrección de errores y ajustes finales}.
-
-        \begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
-            \textbf{No.} & \textbf{Nombre} & \textbf{Encargado}\\\hline
-            1 & Adición de módulo para lista de deseos en la aplicación del cliente & Luis Ernesto Páez\\\hline
-            2 & Consolidación y versión definitiva del menú de navegación de tipo Drawer para la app Moi Admin & Diego Medina\\\hline
-            3 & Correción y ajustes de navegación para la app Moi Admin & Diego Medina\\\hline
-            4 & Adición de módulo para preguntas, quejas, reclamos y felicitaciones en la aplicación del cliente. & Diego Medina\\\hline
-            5 & Adición de módulo para ubicación de las tiendas en la aplicación del cliente. & Luis Ernesto Páez\\\hline
-            6 & Verificación del funcionamiento de las dos aplicaciones en conjunto. & Diego Medina - Luis Páez - Juan Camilo Moreno\\\hline
-        \end{longtable}
-
-        Al finalizar el noveno Sprint se validó el correcto funcionamiento de la solución integrada a través de la creación de pedidos, verificando diferentes escenarios tales como entrega completa de pedido, cancelación, entrega parcial, así como el uso de la canastilla de compras en tiempos asíncronos para la correcta gestión del inventario en el sistema. Se válida un prototipo de software útil.
-
-        Para la app Moi Admin para el rol de administrador se puede apreciar el menú drawer en la figura \ref{fig:admindrawermenu}, el menú seleccionando la opción de Personalización del sistema en la figura \ref{fig:admindrawermenupersonalizacion} y el menú seleccionando las opciones clasificación y codificación en la figura \ref{fig:admindrawermenupersonalizacionclasificacioncodificacion}.
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Menú drawer de la app Moi Admin rol administrador}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Drawer Menu.png}\\
-            \label{fig:admindrawermenu}
-        \end{figure}\newpage
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Menú drawer seleccionando personalización del sistema de la app Moi Admin rol administrador}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Drawer Menu Personalización del sistema.png}\\
-            \label{fig:admindrawermenupersonalizacion}
-        \end{figure}\newpage
-
-        \begin{figure}[h!]
-            \centering
-            \caption{Menú drawer seleccionando codificación y clasificación de la app Moi Admin rol administrador}
-            \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Drawer Menu Personalización Clasificación y Codificación.png}\\
-            \label{fig:admindrawermenupersonalizacionclasificacioncodificacion}
-        \end{figure}\newpage
+\subsubsection{Primer Sprint: Verificación de requerimientos y diseño de la Aplicación.}
+Para la realización de este este primer Sprint se realizó un análisis de requerimientos profundo, resolución de dudas con la administración de la compañía con base en el análisis y primeros pasos para la creación de una óptima estructura de datos.\\
+
+El primer Sprint se resume a continuación en las siguientes historias de usuario:\\
+
+\begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
+    \textbf{No.} & \textbf{Nombre}                                                                                                                                                                                                      & \textbf{Encargado}       \\\hline
+    1            & Muestra de casos de éxito por parte de Juan Camilo Moreno y visualización de Mockup hecho por él                                                                                                                     & Juan Camilo Moreno       \\\hline
+    2            & Validación de requerimientos: Se explica a Juan Camilo las dificultades que existen para la activación de pagos en línea debido a la falta de paquetes en el framework para realizar una transacción de forma segura & Luis Páez                \\\hline
+    3            & Definición de una estructura mínima funcional de la base de datos.                                                                                                                                                   & Diego Medina - Luis Páez \\\hline
+    4            & Definición de roles de usuario                                                                                                                                                                                       & Diego Medina - Luis Páez \\\hline
+    5            & Formalización de las vistas principales de la aplicación del cliente                                                                                                                                                 & Diego Medina - Luis Páez \\\hline
+    6            & Definición de las vistas principales asociadas al catálogo de productos app Moi Admin                                                                                                                                & Diego Medina - Luis Páez \\\hline
+    7            & Diseño de diagrama UML Entidad relación.                                                                                                                                                                             & Diego Medina - Luis Páez \\\hline
+\end{longtable}
+
+Al finalizar el primer Sprint pudimos obtener una consolidación de requerimientos válidos con base en las expectativas del cliente y las capacidades del sistema, así como también se definió la estructura de datos base mínima del sistema y los roles de usuario presentes en la solución software.
+
+
+
+\subsubsection{Segundo Sprint: Catálogo de productos}
+Primeros pasos de aplicación móvil de cliente mostrando catálogo de productos en la interfaz inicial. Durante este Sprint se hizo uso de la estructura de datos de productos y su implementación para ser mostrados. Esta etapa permitió identificar la necesidad de crear una nueva Entidad en la estructura de datos llamada Existencia para poder realizar un manejo adecuado de los productos y su inventario. Primeros pasos de aplicación móvil de administración, definiendo las vistas para el soporte y cargue inicial del catálogo de productos.\\
+
+El segundo Sprint se resume a continuación en las siguientes historias de usuario:\\
+
+\begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
+    \textbf{No.} & \textbf{Nombre}                                                                                                & \textbf{Encargado}                     \\\hline
+    1            & Configuración de la base de datos utilizando el SDK de Firebase para Flutter junto con las normas de seguridad & Luis Ernesto Páez Ortiz                \\\hline
+    2            & Configuración de ambiente de trabajo                                                                           & Diego Medina - Luis Páez               \\\hline
+    3            & Agregar datos de prueba a la base de datos                                                                     & Luis Ernesto Páez                      \\\hline
+    4            & Construcción de vistas para la muestra de productos app Moi                                                    & Luis Páez                              \\\hline
+    5            & Construcción de vistas para CRUD de Líneas app Moi Admin                                                       & Diego Medina                           \\\hline
+    6            & Construcción de vistas para CRUD de Grupos app Moi Admin                                                       & Diego Medina                           \\\hline
+    7            & Construcción de vistas para CRUD de Colecciones app Moi Admin                                                  & Diego Medina                           \\\hline
+    8            & Construcción de vistas para CRUD de Marcas app Moi Admin                                                       & Diego Medina                           \\\hline
+    9            & Construcción de vistas para CRUD de Productos app Moi Admin                                                    & Diego Medina                           \\\hline
+    10           & Construcción de vistas para CRUD de Tallas app Moi Admin                                                       & Diego Medina                           \\\hline
+    11           & Construcción de vistas para CRUD de Colores app Moi Admin                                                      & Diego Medina                           \\\hline
+    12           & Construcción de vistas para CRUD de Imágenes para Producto por Color app Moi Admin                             & Diego Medina                           \\\hline
+    13           & Construcción de vistas para CRUD de Existencias app Moi Admin                                                  & Diego Medina                           \\\hline
+    14           & Validación con el administrador de la tienda                                                                   & Luis Ernesto Páez - Juan Camilo Moreno \\\hline
+\end{longtable}
+
+Al finalizar el segundo Sprint fue posible obtener una vista funcional para mostrar productos recientes, ver los detalles del producto así como los colores, tallas y unidades disponibles en la aplicación Moi Cliente. Se pueden apreciar las vistas correspondientes de este Sprint en las figuras \ref{homeView}, \ref{drawerMenu}, \ref{detailProductView}.
+Como resultado de este sprint en la aplicación Moi Admin se obtuvieron las vistas funcionales para realizar el CRUD hacia todas las entidades necesarias para la creación de los productos y sus correspondientes existencias. Para cada entidad se siguió el mismo patrón de diseño, se desarrolló una página para visualización como la que se puede apreciar en la figura \ref{fig:crudmostrarproductospage} con una barra de búsqueda y filtros como se puede apreciar en la figura \ref{fig:crudmostrarproductosfiltrospage} y otra para creación y edición, que se puede apreciar en la figura \ref{fig:crudcreareditarproductospage}. La vista construida para la visualización de existencias se puede apreciar en la figura \ref{fig:crudmostrarexistenciaspage} y la desarrollada para la modificación de existencias (añadir o sustraer) se puede observar en la figura \ref{fig:crudmodificarexistenciaspage}.
+\newpage
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista inicial de la aplicación móvil del cliente}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Home.png}\\
+    \label{homeView}
+\end{figure}\newpage
+
+\begin{figure}[h!]
+    \centering
+    \caption{Menú lateral principal aplicación móvil del cliente}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Drawer.png}\\
+    \label{drawerMenu}
+\end{figure}\newpage
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista para conocer los detalles de un producto con base en los requerimientos de la empresa}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/DetalleProducto.png}\\
+    \label{detailProductView}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista para visualizar Productos}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Mostrar Productos Page.png}\\
+    \label{fig:crudmostrarproductospage}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista para buscar y filtrar productos}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Mostrar Productos Barra Búsqueda Page.png}\\
+    \label{fig:crudmostrarproductosfiltrospage}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista para crear o editar Productos}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Crear o Editar Productos Page.png}\\
+    \label{fig:crudcreareditarproductospage}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista para visualizar existencias}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Mostrar Existencias Page.png}\\
+    \label{fig:crudmostrarexistenciaspage}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista para modificar Existencias}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/CRUD Modificar Existencias Page.png}\\
+    \label{fig:crudmodificarexistenciaspage}
+\end{figure}
+
+\subsubsection{Tercer Sprint: Canastilla de Compras}
+Durante este Sprint se creó una vista para la canastilla de compras así como la validación de diferentes escenarios a los que un cliente se puede someter a la hora de utilizar una canastilla de compras, además de complementar la definición inicial de la base de datos y preparar las funcionalidades extra necesarias para la generación del pedido desde la app Moi Admin en el siguiente sprint.
+
+El tercer Sprint se resume a continuación en las siguientes historias de usuario:\\
+
+\begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
+    \textbf{No.} & \textbf{Nombre}                                                                                           & \textbf{Encargado}                     \\\hline
+    1            & Creación de la vista de canastilla de compras                                                             & Luis Ernesto Páez                      \\\hline
+    2            & Envío de productos a la canastilla de compras del cliente en la base de datos desde la vista de detalles. & Luis Ernesto Páez                      \\\hline
+    3            & Validación de existencias antes de agregar el producto a la canastilla                                    & Luis Ernesto Páez                      \\\hline
+    4            & Validación de existencias en la vista de la canastilla de compras antes de proceder al pago..             & Luis Ernesto Páez                      \\\hline
+    5            & Construcción de vistas para CRUD de Ciudades app Moi Admin                                                & Diego Medina                           \\\hline
+    6            & Construcción de vistas para CRUD de Puntos de Venta app Moi Admin                                         & Diego Medina                           \\\hline
+    7            & Construcción de vista para visualización y edición de Numeración app Moi Admin                            & Diego Medina                           \\\hline
+    8            & Ajustes de la interfaz y validación con el administrador de la tienda                                     & Luis Ernesto Páez - Juan Camilo Moreno \\\hline
+\end{longtable}
+
+Al finalizar el tercer Sprint el cliente cuenta la capacidad de agregar los productos que desea a su canastilla de compras, verificando que los productos existan. En la app Moi Admin se obtienen las vistas para realizar el CRUD de ciudades y puntos de venta que serán asociados a los, con una estructura muy similar a las de CRUD obtenidas en el sprint 2. También se obtiene la vista para visualización y edición de Numeración que se puede apreciar en la figura \ref{fig:numeracionpage}
+
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de la canastilla de compras}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Carrito.png}\\
+    \label{carritoView}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de la numeración}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Numeración Page.png}\\
+    \label{fig:numeracionpage}
+\end{figure}
+
+\subsubsection{Cuarto Sprint: Generación de pedidos a partir de la canastilla de compras}
+Durante este Sprint se creó una vista para la ejecutar la generación de pedidos a partir de los datos recibidos en una canastilla de compras en la aplicación del cliente. Se tuvieron en cuenta diferentes escenarios tales como recoger el producto en un punto de venta o recibirlo a domicilio. Por otro lado, se realiza la transición desde la vista de la canastilla de compras a la vista de generación de pedido.
+En la app Moi Admin se implementan los descuentos para productos y las vistas para manejar el CRUD de los usuarios.
+
+El cuarto Sprint se resume a continuación en las siguientes historias de usuario:\\
+
+\begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
+    \textbf{No.} & \textbf{Nombre}                                                                              & \textbf{Encargado} \\\hline
+    1            & Creación de la vista para la captación de datos de envío definidos en la estructura de datos & Luis Ernesto Páez  \\\hline
+    2            & Generación de pedidos para envío a domicilio                                                 & Luis Ernesto Páez  \\\hline
+    3            & Generación de pedidos para recoger en punto de venta                                         & Luis Ernesto Páez  \\\hline
+    4            & Persistencia de datos del pedido                                                             & Luis Ernesto Páez  \\\hline
+    5            & Comprometer prendas y realizar registros necesarios para mantener la integridad de los datos & Luis Ernesto Páez  \\\hline
+    6            & Construcción de vista para aplicar descuentos a productos                                    & Diego Medina       \\\hline
+    6            & Construcción de vistas para CRUD de usuarios                                                 & Diego Medina       \\\hline
+    7            & Validación de interfaz.                                                                      & Juan Camilo Moreno \\\hline
+\end{longtable}
+
+Al finalizar el cuarto Sprint el cliente cuenta con la posibilidad de realizar un pedido con todos los items que contiene su canastilla de compras, como se puede evidenciar en las figuras \ref{pedidoDomicilioView} y \ref{pedidoTiendaView} En la app Moi Admin se obtienen la vista funcional para que el usuario pueda aplicar descuentos a los productos por Línea, Grupo, Colección o Marca, como se puede apreciar en la figura \ref{fig:admindescuentospage}. Y las vistas para el manejo del CRUD de usuarios con una estructura similar a la evidenciada en las vistas de CRUD de los anteriores dos sprints.
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista para la creación de pedidos a domicilio en la aplicación del cliente}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/PedidoDomicilio.png}\\
+    \label{pedidoDomicilioView}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista para la creación de pedidos que serán recogidos en la tienda en la aplicación del cliente}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/PedidoTienda.png}\\
+    \label{pedidoTiendaView}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de descuentos por tabla}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Descuentos Page.png}
+    \label{fig:admindescuentospage}
+\end{figure}
+
+\subsubsection{Quinto Sprint: Gestión de pedidos y facturación de pedidos pendientes}
+Durante este Sprint se procedió a implementar las vistas y la lógica para ver y entregar pedidos con facturación incluida por parte del usuario con rol de repartidor, y para ver y cancelar pedidos por parte del usuario con rol de administrador con la posibilidad de reimprimir factura.
+
+El quinto Sprint se resume a continuación en las siguientes historias de usuario:\\
+
+\begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
+    \textbf{No.} & \textbf{Nombre}                                                                                              & \textbf{Encargado}                            \\\hline
+    1            & Creación de la vista de pedidos pendientes para el usuario de rol repartidor                                 & Diego Medina                                  \\\hline
+    2            & Creación de la vista de detalles del pedido y entrega para el usuario de rol repartidor                      & Diego Medina                                  \\\hline
+    3            & Creación de la vista de notas y observaciones del pedido para el usuario de rol repartidor                   & Diego Medina                                  \\\hline
+    4            & Creación de la vista de pedidos con la funcionalidad de cancelación para el usuario de rol de administrador  & Diego Medina                                  \\\hline
+    5            & Creación de la vista de detalles del pedido y reimpresión de factura para el usuario de rol de administrador & Diego Medina                                  \\\hline
+    6            & Creación de la vista de notas y observaciones del pedido para el usuario de rol de administrador             & Diego Medina                                  \\\hline
+    7            & Vista para la gestión de usuarios.                                                                           & Diego Medina                                  \\\hline
+    8            & Validación de progreso con el administrador.                                                                 & Diego Medina - Luis Páez - Juan Camilo Moreno \\\hline
+\end{longtable}
+
+Al finalizar el quinto Sprint el administrador puede visualizar y gestionar los pedidos filtrando y cancelando en caso de ser necesario, y reimprimir facturas, como se puede apreciar en las figuras \ref{fig:adminmostrarpedidospage}, \ref{fig:adminmostrarpedidosfiltrospage} y \ref{fig:adminmostrarpedidositemspage}. También se obtienen las vistas para que el repartidor pueda visualizar y gestionar los pedidos pendientes, filtrando y entregando eligiendo la cantidad entregada, pasando el pedido a un estado ya sea completo o incompleto, y generando la factura correspondiente, como se puede apreciar en las figuras \ref{fig:repartidormostrarpedidospage}, \ref{fig:repartidormostrarpedidositemspage} y \ref{fig:repartidorverfacturapage}.
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de Pedidos para administrador}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Mostrar Pedidos Page.png}
+    \label{fig:adminmostrarpedidospage}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de filtros para Pedidos para administrador}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Mostrar Pedidos Filtros Page.png}
+    \label{fig:adminmostrarpedidosfiltrospage}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de detalles del pedido para administrador}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Mostrar Detalles del Pedido Page.png}
+    \label{fig:adminmostrarpedidositemspage}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de pedidos pendientes para repartidor}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Repartidor/Repartidor Mostrar Pedidos Page.png}
+    \label{fig:repartidormostrarpedidospage}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de detalles del pedido para repartidor}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Repartidor/Repartidor Mostrar Detalles del Pedido Page.png}
+    \label{fig:repartidormostrarpedidositemspage}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de visualización factura para repartidor}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Repartidor/Repartidor Ver Factura Page.png}
+    \label{fig:repartidorverfacturapage}
+\end{figure}
+
+\subsubsection{Sexto Sprint: Históricos, logs y preguntas frecuentes}
+Durante este Sprint se procedió a implementar la parte de análisis y seguridad del sistema, con los históricos y los logs de operaciones definidas como sensibles en el sistema.
+
+El sexto Sprint se resume a continuación en las siguientes historias de usuario:\\
+
+\begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
+    \textbf{No.} & \textbf{Nombre}                                                                                                              & \textbf{Encargado}                            \\\hline
+    1            & Implementación de la lógica para guardar históricos de pedidos e históricos de clientes                                      & Diego Medina - Luis Páez                      \\\hline
+    2            & Creación de la vista de consultar estadísticas para visualizar históricos de pedidos y clientes                              & Diego Medina                                  \\\hline
+    3            & Definición de las operaciones sensibles que requieren el registro de logs de seguridad                                       & Diego Medina                                  \\\hline
+    4            & Definición de la estructura de los logs de seguridad                                                                         & Diego Medina                                  \\\hline
+    5            & Implementación de la lógica para realizar el registro de logs de seguridad en todas las operaciones definidas como sensibles & Diego Medina                                  \\\hline
+    6            & Creación de vistas para el CRUD de preguntas frecuentes en la app Moi Admin                                                  & Diego Medina                                  \\\hline
+    7            & Creación de vista para visualización de preguntas frecuentes en la aplicación del cliente                                    & Luis Páez                                     \\\hline
+    8            & Validación de progreso con el administrador.                                                                                 & Diego Medina - Luis Páez - Juan Camilo Moreno \\\hline
+\end{longtable}
+
+Al finalizar el sexto Sprint el administrador puede visualizar los históricos en el apartado de consultar estadísticas, por mes, año y desde el inicio del uso de la solución, como se puede apreciar en la figura \ref{fig:adminhistoricosmespedidospage}. Asimismo, se obtuvo el diseño de una estructura de log para las operaciones definidas como sensibles y luego de crear estos logs se registran en la base de datos. También se obtuvieron las vistas de CRUD de preguntas frecuentes en la app Moi Admin con una estructura muy similar a utilizada en sprints anteriores, y se obtuvo la vista para visualización de preguntas frecuentes en la aplicación de cliente.
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de consulta de estadísticas, históricos de pedidos}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Historicos Mes Pedidos Page.png}
+    \label{fig:adminhistoricosmespedidospage}
+\end{figure}
+
+\subsubsection{Séptimo Sprint: Importación y exportación masiva}
+Durante este Sprint se procedió a implementar la funcionalidad de importación para el cargue masivo de datos para las entidades pertinentes en la base de datos, además de la exportación del contenido de estas "tablas" de entidades.
+
+El séptimo Sprint se resume a continuación en las siguientes historias de usuario:\\
+
+\begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
+    \textbf{No.} & \textbf{Nombre}                                                          & \textbf{Encargado}                            \\\hline
+    1            & Definición de entidades a importar, cabeceras y formatos de importación  & Diego Medina                                  \\\hline
+    2            & Definición de entidades a exportar, cabeceras y formatos de exportación  & Diego Medina                                  \\\hline
+    3            & Implementación de la lógica de importación para cada entidad determinada & Diego Medina                                  \\\hline
+    4            & Creación de vista para importación                                       & Diego Medina                                  \\\hline
+    5            & Implementación de la lógica de exportación para cada entidad determinada & Diego Medina                                  \\\hline
+    6            & Creación de vista para exportación                                       & Diego Medina                                  \\\hline
+    7            & Validación de progreso con el administrador.                             & Diego Medina - Luis Páez - Juan Camilo Moreno \\\hline
+\end{longtable}
+
+Al finalizar el séptimo Sprint el administrador puede realizar por medio de archivos con formato csv el cargue masivo de Marcas, Colecciones, Tallas, Colores, Líneas, Grupos, Productos y Existencias con las cabeceras y estructura definidas como se puede apreciar en las vistas ilustradas en las figuras \ref{fig:adminimportarpage} y \ref{fig:adminimportartablaspage}, así como también puede realizar la exportación de tablas de las entidades mencionadas anteriormente además de Pedidos, con la particularidad de que para esta última permite el filtrado de dichos pedidos a exportar por estado, por tipo de entrega y/o a un lapso de tiempo, como se puede apreciar en la figura \ref{fig:adminexportarpedidospage}. Un ejemplo de archivo exportado de pedidos se puede observar en la figura \ref{fig:csvexportarpedidos}, así como un ejemplo de archivo para importación de existencias en la figura \ref{fig:csvimportarexistencias}.
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de importación}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Importar Page.png}
+    \label{fig:adminimportarpage}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de importación tablas}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Importar Tablas Page.png}
+    \label{fig:adminimportartablaspage}
+\end{figure}
+
+%\begin{figure}[h!]
+%    \centering
+%    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Exp%ortar Page.png}
+%    \caption{Vista de exportación}
+%    \label{fig:adminexportarpage}
+%\end{figure}
+
+% \begin{figure}[h!]
+%    \centering
+%    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Exp%ortar Tablas Page.png}
+%    \caption{Vista de exportación tablas}
+%    \label{fig:adminexportartablaspage}
+%\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de exportación de pedidos}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Exportar Pedidos Page.png}
+    \label{fig:adminexportarpedidospage}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Archivo ejemplo de exportación de pedidos}
+    \includegraphics[width=1.0\textwidth]{Figs/Exportación Pedidos.png}
+    \label{fig:csvexportarpedidos}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Archivo ejemplo de importación de existencias}
+    \includegraphics[width=1.0\textwidth]{Figs/Importación Existencias.png}
+    \label{fig:csvimportarexistencias}
+\end{figure}
+
+
+\subsubsection{Octavo Sprint: Manejo de sesiones y autenticación}.
+
+En este sprint se construyeron las vistas y funcionalidades ligadas al manejo de sesiones y autenticación dentro de la aplicación.
+
+\begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
+    \textbf{No.} & \textbf{Nombre}                                                                                                                                            & \textbf{Encargado}                            \\\hline
+    1            & Desarrollo de la lógica para creación de usuarios y clientes en Firebase Authentication ligados a los registros de usuarios y clientes en la base de datos & Diego Medina - Luis Páez                      \\\hline
+    2            & Desarrollo de la lógica para inicio de sesión, generación y guardado de información de sesión activa y token de autenticación de Firebase Authentication   & Diego Medina - Luis Páez                      \\\hline
+    3            & Refactor para envío del token de autenticación en las consultas http en la app MoiAdmin                                                                    & Diego Medina                                  \\\hline
+    4            & Construir la vista de inicio de sesión y reinicio de clave para la app Moi Admin                                                                           & Diego Medina                                  \\\hline
+    5            & Construir la vista de registro, inicio de sesión y restauración de clave en la aplicación del cliente                                                      & Luis Páez                                     \\\hline
+    6            & Implementar la funcionalidad de envío de email para restaurar clave                                                                                        & Diego Medina                                  \\\hline
+    7            & Validación de progreso con el administrador                                                                                                                & Diego Medina - Luis Páez - Juan Camilo Moreno \\\hline
+\end{longtable}
+
+Al finalizar el octavo Sprint se obtienen las vistas funcionales para el inicio y manejo de sesiones de usuario, junto con su relación a las llamadas a la base de datos. Para la app Moi Admin se puede apreciar la vista del inicio de sesión en la figura \ref{fig:admininiciosesion}, la vista de restauración de clave en la figura \ref{fig:adminrestablecercontraseña}.
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de inicio de sesión Moi Admin}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Inicio de Sesión.png}
+    \label{fig:admininiciosesion}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Vista de restablecer contraseña Moi Admin}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Restablecer Contraseña.png}
+    \label{fig:adminrestablecercontraseña}
+\end{figure}
+
+
+
+\subsubsection{Noveno Sprint: Menú, corrección de errores y ajustes finales}.
+
+\begin{longtable}{|p{0.6cm}|p{10cm}|p{6cm}|}\hline
+    \textbf{No.} & \textbf{Nombre}                                                                                   & \textbf{Encargado}                            \\\hline
+    1            & Adición de módulo para lista de deseos en la aplicación del cliente                               & Luis Ernesto Páez                             \\\hline
+    2            & Consolidación y versión definitiva del menú de navegación de tipo Drawer para la app Moi Admin    & Diego Medina                                  \\\hline
+    3            & Correción y ajustes de navegación para la app Moi Admin                                           & Diego Medina                                  \\\hline
+    4            & Adición de módulo para preguntas, quejas, reclamos y felicitaciones en la aplicación del cliente. & Diego Medina                                  \\\hline
+    5            & Adición de módulo para ubicación de las tiendas en la aplicación del cliente.                     & Luis Ernesto Páez                             \\\hline
+    6            & Verificación del funcionamiento de las dos aplicaciones en conjunto.                              & Diego Medina - Luis Páez - Juan Camilo Moreno \\\hline
+\end{longtable}
+
+Al finalizar el noveno Sprint se validó el correcto funcionamiento de la solución integrada a través de la creación de pedidos, verificando diferentes escenarios tales como entrega completa de pedido, cancelación, entrega parcial, así como el uso de la canastilla de compras en tiempos asíncronos para la correcta gestión del inventario en el sistema. Se válida un prototipo de software útil.
+
+Para la app Moi Admin para el rol de administrador se puede apreciar el menú drawer en la figura \ref{fig:admindrawermenu}, el menú seleccionando la opción de Personalización del sistema en la figura \ref{fig:admindrawermenupersonalizacion} y el menú seleccionando las opciones clasificación y codificación en la figura \ref{fig:admindrawermenupersonalizacionclasificacioncodificacion}.
+
+\begin{figure}[h!]
+    \centering
+    \caption{Menú drawer de la app Moi Admin rol administrador}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Drawer Menu.png}\\
+    \label{fig:admindrawermenu}
+\end{figure}\newpage
+
+\begin{figure}[h!]
+    \centering
+    \caption{Menú drawer seleccionando personalización del sistema de la app Moi Admin rol administrador}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Drawer Menu Personalización del sistema.png}\\
+    \label{fig:admindrawermenupersonalizacion}
+\end{figure}\newpage
+
+\begin{figure}[h!]
+    \centering
+    \caption{Menú drawer seleccionando codificación y clasificación de la app Moi Admin rol administrador}
+    \includegraphics[height=1.2\textwidth]{Figs/Vistas/Admin/Admin Drawer Menu Personalización Clasificación y Codificación.png}\\
+    \label{fig:admindrawermenupersonalizacionclasificacioncodificacion}
+\end{figure}\newpage
