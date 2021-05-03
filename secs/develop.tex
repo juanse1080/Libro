@@ -33,7 +33,7 @@ La suscripción representa el interés de un usuario hacia un algoritmos en espe
 \subsubsection{Ejecución}
 La ejecución se refiere al registro que deja un algoritmos especifico es la base de datos de pla plataforma. La cardinalidad de las ejecuciones es 1 a n, luego un usuario suscrito a un algoritmo puede tener muchas ejecuciones por algoritmo.
 
-\subsubsection{Elementos}
+\subsubsection{Elementos} \label{sub:elements}
 Algunos algoritmos de IA requieren analizar imágenes, audio, vídeos, entre otros tipos de datos, para solucionar alguna problemática, además de esto la respuesta a este problema también requiere alguno de estos. Estos son llamados elementos y se refiere a todo dato que el usuario debe proveer al algoritmos y los datos que el algoritmo response representado de una manera amena al usuario.
 
 Cada algoritmo tiene distintos elementos los cuales son seleccionados previamente por el desarrollador, además no solo los elementos si no el tipo de dato y su cantidad, estos deben ser preestablecidos antes de desplegar un algoritmo.
@@ -50,7 +50,13 @@ Debido a la alta aplicabilidad de estos algoritmos se tiene que acotar estos ele
 \end{itemize}
 
 \subsubsection{Visualización}
+
 La visualización de un algoritmo se refiere la acción de observar los resultados de una ejecución de un algoritmo desplegado. Esta se limita a los elementos del algoritmo, dado esto solo se podrán visualizar algoritmos compatibles con los elementos preestablecidos por el desarrollador antes de su desplegué.
+
+\begin{itemize}
+    \item \textbf{Algoritmo: } La visualización de un algoritmo se refiere la acción de observar  resultados de una ejecución de un algoritmo desplegado. Esta se limita a los elementos del algoritmo, dado esto solo se podrán visualizar algoritmos compatibles con los elementos preestablecidos por el desarrollador antes de su desplegué.
+    \item \textbf{Ejecución: } La visualización de una ejecución se refiere la acción de observar los resultados de una prueba de un algoritmo desplegado. Esta se limita a los elementos preestablecidos durante la fase de análisis (Subsección \ref{sub:elements}), dado esto solo se podrán visualizar algoritmos compatibles con los elementos establecidos por el desarrollador antes de su desplegué.
+\end{itemize}
 
 \section{Planificación de requerimientos}
 En esta fase se definió el alcance del proyecto mediante reuniones con el director, codirector y integrantes del grupo de investigación Bivl2ab para analizar las distintas problemáticas en el despliegue de algoritmos de visión por computador, se generaron de modelos y documentos que facilitaron proponer una visión general de la arquitectura de software y la producción del plan de acción de las siguientes fases de desarrollo.
@@ -77,28 +83,28 @@ En esta etapa se realizó el levantamiento de requerimientos funcionales para co
     \textbf{RF04} & Despliegue de algoritmos de visión por computador                       & -          & \checkmark \\ \hline
     \textbf{RF05} & Visualización de algoritmos desplegados                                 & -          & \checkmark \\ \hline
     \textbf{RF06} & Visualización de la información de despliegue de algoritmos desplegados & -          & \checkmark \\ \hline
-    \textbf{RF07} & Visualización de pruebas de algoritmos desplegados                      & -          & \checkmark \\ \hline
-    \textbf{RF08} & Eliminación de pruebas de algoritmos desplegados                        & -          & \checkmark \\ \hline
-    \textbf{RF09} & Clonación de pruebas de algoritmos desplegados                          & -          & \checkmark \\ \hline
+    \textbf{RF07} & Visualización de ejecuciones de algoritmos desplegados                  & -          & \checkmark \\ \hline
+    \textbf{RF08} & Eliminación de ejecuciones de algoritmos desplegados                    & -          & \checkmark \\ \hline
+    \textbf{RF09} & Clonación de ejecuciones de algoritmos desplegados                      & -          & \checkmark \\ \hline
     \textbf{RF10} & Agregación de suscripciones a algoritmos desplegados                    & -          & \checkmark \\ \hline
     \textbf{RF11} & Eliminación de suscripciones a algoritmos desplegados                   & -          & \checkmark \\ \hline
     \textbf{RF12} & Detención de algoritmos desplegados                                     & -          & \checkmark \\ \hline
     \textbf{RF13} & Inicio de algoritmos desplegados                                        & -          & \checkmark \\ \hline
     \textbf{RF14} & Eliminación de algoritmos desplegados                                   & -          & \checkmark \\ \hline
-    \textbf{FR15} & Notificación de los cambios de estado de las pruebas                    & \checkmark & \checkmark \\ \hline
+    \textbf{FR15} & Notificación de los cambios de estado de las ejecuciones                & \checkmark & \checkmark \\ \hline
     \textbf{FR16} & Notificación de los cambios de estado de los algoritmos desplegados     & -          & \checkmark \\ \hline
     \textbf{FR17} & Visualización de notificaciones                                         & \checkmark & \checkmark \\ \hline
     \textbf{FR18} & Visualización de algoritmos activos                                     & \checkmark &            \\ \hline
     \textbf{FR19} & Suscripción a algoritmos activos                                        & \checkmark &            \\ \hline
     \textbf{FR20} & Dar de baja una suscripción                                             & \checkmark &            \\ \hline
     \textbf{FR21} & Ejecución de algoritmos suscritos                                       & \checkmark &            \\ \hline
-    \textbf{FR22} & Visualización de pruebas de algoritmos suscritos                        & \checkmark &            \\ \hline
-    \textbf{FR23} & Eliminación de pruebas de algoritmos suscritos                          & \checkmark &            \\ \hline
-    \textbf{FR24} & Clonación de pruebas de algoritmos suscritos                            & \checkmark &            \\ \hline
+    \textbf{FR22} & Visualización de ejecuciones de algoritmos suscritos                    & \checkmark &            \\ \hline
+    \textbf{FR23} & Eliminación de ejecuciones de algoritmos suscritos                      & \checkmark &            \\ \hline
+    \textbf{FR24} & Clonación de ejecuciones de algoritmos suscritos                        & \checkmark &            \\ \hline
     \textbf{FR25} & Visualización de algoritmos suscritos                                   & \checkmark &            \\ \hline
-    \textbf{FR26} & Visualizar pruebas de algoritmos activos                                & \checkmark &            \\ \hline
-    \textbf{FR27} & Visualizar pruebas de algoritmos desplegados                            & \checkmark &            \\ \hline
-    \textbf{FR28} & Visualización de pruebas en ejecución                                   & \checkmark & \checkmark \\ \hline
+    \textbf{FR26} & Visualizar ejecuciones de algoritmos activos                            & \checkmark &            \\ \hline
+    \textbf{FR27} & Visualizar ejecuciones de algoritmos desplegados                        & \checkmark &            \\ \hline
+    \textbf{FR28} & Visualización de ejecuciones en ejecución                               & \checkmark & \checkmark \\ \hline
     \textbf{FR29} & Visualización de una vista resumen al iniciar sesión                    & \checkmark & \checkmark \\ \hline
     \textbf{FR30} & Filtrar por palabras claves los algoritmos activos                      & \checkmark & \checkmark \\ \hline
     \textbf{FR31} & Visualización de usuarios con algoritmos activos                        & \checkmark &            \\ \hline
@@ -148,44 +154,43 @@ Una vez identificados los actores y los requerimientos funcionales podemos dise�
     \caption{Casos de uso}
     \label{tab:use_cases}
     \\ \hline
-    Id   & Nombre                                                          & RF/RNF                       \\
-         &                                                                 &                            & \\ \hline \hline
+    \textbf{Id}   & \textbf{Nombre}                                                 & \textbf{RF/RNF}                    \\ \hline
     \endfirsthead
     %
     \endhead
     %
-    CU01 & Iniciar sesión (Tabla \ref{table:CU01})                         & RF01                         \\
-    CU02 & Cerrar sesión (Tabla \ref{table:CU02})                          & RF02                         \\
-    CU03 & Registrar usuario DeepTools (Tabla \ref{table:CU03})            & RF00                         \\
+    \textbf{CU01} & Iniciar sesión (Tabla \ref{table:CU01})                         & RF01                               \\ \hline
+    \textbf{CU02} & Cerrar sesión (Tabla \ref{table:CU02})                          & RF02                               \\ \hline
+    \textbf{CU03} & Registrar usuario DeepTools (Tabla \ref{table:CU03})            & RF00                               \\ \hline
 
-    CU04 & Ver perfil de usuario (Tabla \ref{table:CU04})                  & -                            \\
-    CU05 & Editar perfil de usuario (Tabla \ref{table:CU05})               & RF03                         \\
-    CU06 & Ver perfil de usuarios desarrolladores (Tabla \ref{table:CU06}) & -                            \\
+    \textbf{CU04} & Ver perfil de usuario (Tabla \ref{table:CU04})                  & -                                  \\ \hline
+    \textbf{CU05} & Editar perfil de usuario (Tabla \ref{table:CU05})               & RF03                               \\ \hline
+    \textbf{CU06} & Ver perfil de usuarios desarrolladores (Tabla \ref{table:CU06}) & -                                  \\ \hline
 
-    CU07 & Listar notificaciones (Tabla \ref{table:CU07})                  & FR17                         \\
-    CU08 & Notificar novedades a los usuarios (Tabla \ref{table:CU11})     & \begin{tabular}[c]{@{}l@{}}RF15,\\ RF16\end{tabular}    \\
+    \textbf{CU07} & Listar notificaciones (Tabla \ref{table:CU07})                  & FR17                               \\ \hline
+    \textbf{CU08} & Notificar novedades a los usuarios (Tabla \ref{table:CU11})     & RF15, RF16                         \\ \hline
 
-    CU09 & Suscribirse a un algoritmo (Tabla \ref{table:CU08})             & RF10                         \\
-    CU10 & Cancelar suscripción (Tabla \ref{table:CU09})                   & RF11                         \\
-    CU11 & Listar suscripciones (Tabla \ref{table:CU10})                   & -                            \\
+    \textbf{CU09} & Suscribirse a un algoritmo (Tabla \ref{table:CU08})             & RF10                               \\ \hline
+    \textbf{CU10} & Cancelar suscripción (Tabla \ref{table:CU09})                   & RF11                               \\ \hline
+    \textbf{CU11} & Listar suscripciones (Tabla \ref{table:CU10})                   & -                                  \\ \hline
 
-    CU12 & Crear solicitud (Tabla \ref{table:CU12})                        & \begin{tabular}[c]{@{}l@{}}RF03,\\ RF24,\\ RF13,\\ RF21,\\ RF22,\\ RF23\end{tabular}    \\
-    CU13 & Inactivar solicitud (Tabla \ref{table:CU13})                    & RF28                         \\
-    CU14 & Crear propuesta (Tabla \ref{table:CU14})                        & \begin{tabular}[c]{@{}l@{}}RF23,\\ RF21,\\ RF22\end{tabular}   \\
-    CU15 & Rechazar propuesta (Tabla \ref{table:CU15})                     & -                            \\ \hline
-    CU16 & Asignar usuario (Tabla \ref{table:CU16})                        & \begin{tabular}[c]{@{}l@{}}RF27,\\ RF21,\\ RF22,\\ RF23\end{tabular}   \\
-    CU17 & Entregar actividad (Tabla \ref{table:CU17})                     & -                            \\
-    CU18 & Aprobar actividad (Tabla \ref{table:CU18})                      & -                            \\
-    CU19 & CR una versión de archivo (Tabla \ref{table:CU19})              & \begin{tabular}[c]{@{}l@{}}RF09,\\ RF25\end{tabular}   \\
-    CU20 & Editar versión abierta de archivo (Tabla \ref{table:CU20})      & RF25                         \\
-    CU21 & CR comentar (Tabla \ref{table:CU21})                            & RF05                         \\ \hline
-    CU22 & Visualizar modelo (Tabla \ref{table:CU22})                      & RF06                         \\
-    CU23 & CRD marcadores (Tabla \ref{table:CU23})                         & RF06                         \\
-    CU24 & Cerrar modelo (Tabla \ref{table:CU24})                          & -                            \\
-    CU25 & CR comentar modelo (Tabla \ref{table:CU25})                     & RF06                         \\
-    CU26 & Screenshoot (Tabla \ref{table:CU26})                            & RF06                         \\
-    CU27 & Visualizar y crear flujos (Tabla \ref{table:CU27})              & \begin{tabular}[c]{@{}l@{}}RF20,\\ RNF01\end{tabular}   \\
-    CU28 & Visualizar DICOMs (Tabla \ref{table:CU28})                      & RNF01                        \\ \hline
+    \textbf{CU12} & Crear solicitud (Tabla \ref{table:CU12})                        & RF03, RF24, RF13, RF21, RF22, RF23 \\ \hline
+    \textbf{CU13} & Inactivar solicitud (Tabla \ref{table:CU13})                    & RF28                               \\ \hline
+    \textbf{CU14} & Crear propuesta (Tabla \ref{table:CU14})                        & RF23, RF21, RF22                   \\ \hline
+    \textbf{CU15} & Rechazar propuesta (Tabla \ref{table:CU15})                     & -                                  \\ \hline
+    \textbf{CU16} & Asignar usuario (Tabla \ref{table:CU16})                        & RF27, RF21, RF22, RF23             \\ \hline
+    \textbf{CU17} & Entregar actividad (Tabla \ref{table:CU17})                     & -                                  \\ \hline
+    \textbf{CU18} & Aprobar actividad (Tabla \ref{table:CU18})                      & -                                  \\ \hline
+    \textbf{CU19} & CR una versión de archivo (Tabla \ref{table:CU19})              & RF09, RF25                         \\ \hline
+    \textbf{CU20} & Editar versión abierta de archivo (Tabla \ref{table:CU20})      & RF25                               \\ \hline
+    \textbf{CU21} & CR comentar (Tabla \ref{table:CU21})                            & RF05                               \\ \hline
+    \textbf{CU22} & Visualizar modelo (Tabla \ref{table:CU22})                      & RF06                               \\ \hline
+    \textbf{CU23} & CRD marcadores (Tabla \ref{table:CU23})                         & RF06                               \\ \hline
+    \textbf{CU24} & Cerrar modelo (Tabla \ref{table:CU24})                          & -                                  \\ \hline
+    \textbf{CU25} & CR comentar modelo (Tabla \ref{table:CU25})                     & RF06                               \\ \hline
+    \textbf{CU26} & Screenshoot (Tabla \ref{table:CU26})                            & RF06                               \\ \hline
+    \textbf{CU27} & Visualizar y crear flujos (Tabla \ref{table:CU27})              & RF20, RNF01                        \\ \hline
+    \textbf{CU28} & Visualizar DICOMs (Tabla \ref{table:CU28})                      & RNF01                              \\ \hline
 \end{longtable}
 
 \section{Arquitectura}
